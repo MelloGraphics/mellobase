@@ -31,11 +31,8 @@
 @mixin for-phone-only {
 	@media (max-width: 599px) { @content; }
 }
-@mixin for-tablet-portrait-down {
-	@media (max-width: 782px) { @content; } // was 600px, changed to match Wordpress Columns Breakpoint
-}
 @mixin for-tablet-portrait-up {
-	@media (min-width: 782px) { @content; } // was 600px, changed to match Wordpress Columns Breakpoint
+	@media (min-width: 600px) { @content; }
 }
 @mixin for-tablet-landscape-up {
 	@media (min-width: 900px) { @content; }

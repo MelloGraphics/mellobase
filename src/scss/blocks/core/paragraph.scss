@@ -1,26 +1,7 @@
-// paragraph block syling
+// Core details block syling
 
 @use "../../utils" as *;
 
-.custom-ease-bounce {
-	animation: animation-test $ease-bounce infinite alternate-reverse 1s;
-}
-.custom-ease-circ {
-	animation: animation-test $ease-circ infinite alternate-reverse 1s;
-}
-
-@keyframes animation-test {
-	to {
-		translate: 0 -100px;
-	}
-}
-
-p a[target="_blank"],
-.wp-block-heading a[target="_blank"] {
-	display: inline-flex;
-	align-items: center;
-	flex-wrap: nowrap;
-	gap: 0.1em;
-
-	@include external-icon-after();
+.is-style-icon{
+    font-family: $font-icon;
 }

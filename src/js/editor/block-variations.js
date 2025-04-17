@@ -1,3 +1,7 @@
+console.log('this is file src/editor/block-variations.js');
+
+import { registerBlockVariation } from '@wordpress/blocks';
+import domReady from '@wordpress/dom-ready';
 
 /**
  * Register block variations
@@ -46,3 +50,10 @@
 	// 	],
 	// 	scope: ["block"],
 	// },
+
+
+domReady(() => {
+    Object.entries(registerBlockVariations).forEach(([block, variation]) => {
+        registerBlockVariation(block, variation);
+    });
+});

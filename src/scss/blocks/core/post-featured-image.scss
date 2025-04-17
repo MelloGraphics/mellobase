@@ -3,56 +3,5 @@
 @use "../../utils" as *;
 
 .wp-block-post-featured-image{
-    overflow: clip;
-    border-radius: $radius-medium;
-
-    img, video{
-        transition:
-            filter 1s $ease-circ,
-            scale 2s $ease-circ;
-    }
-}
-
-
-//
-// Has hover-squiggles
-//
-
-.wp-block-post-featured-image:has(.hover-squiggles){
-    overflow: visible;
-
-    img{
-        border-radius: $radius-medium;
-        overflow: clip;
-    }
-
-    .hover-squiggles {
-        position: absolute;
-        inset: 0;
-        overflow: visible;
-        pointer-events: none;
-        opacity: 1;
-    
-        img, svg{
-            position: absolute;
-            aspect-ratio: 1;
-            width: 30%;
-            object-fit: contain;
-            animation: rotate-small 1s infinite alternate-reverse steps(4);
-
-            * {
-                fill: $color-secondary;
-            }
-    
-            &:nth-child(1) {
-                top: -3%;
-                left: -3%;
-            }
-        }
-    }
-
-}
-
-.has-background .wp-block-post-featured-image{
-    filter: brightness(1.05);
+    overflow: hidden;
 }

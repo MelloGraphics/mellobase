@@ -1,9 +1,0 @@
-// Widths base styling
-
-@use "../utils/" as *;
-
-@include for-big-desktop-up{
-    .is-layout-constrained > .alignwide{
-        max-width: 1800px;
-    }
-}

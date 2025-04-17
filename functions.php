@@ -50,11 +50,6 @@ require_once get_template_directory() . '/inc/register-block-patterns.php';
 require_once get_template_directory() . '/inc/style-svg.php';
 
 /**
- * add a class 'is-pattern-[pattern-name]' to all patterns
- */
-// require_once get_template_directory() . '/inc/patterns-add-class.php';
-
-/**
  * Register Block binding sources
  */
 // require_once get_template_directory() . '/inc/binding-sources.php';
@@ -62,12 +57,12 @@ require_once get_template_directory() . '/inc/style-svg.php';
 /**
  * Register shortcodes
  */
-require_once get_template_directory() . '/inc/shortcodes.php';
+// require_once get_template_directory() . '/inc/shortcodes.php';
 
 /**
  * Redirect taxonomies to CPT pages
  */
-require_once get_template_directory() . '/inc/taxonomy-redirects.php';
+// require_once get_template_directory() . '/inc/taxonomy-redirects.php';
 
 /**
  * Required plugins
@@ -75,14 +70,9 @@ require_once get_template_directory() . '/inc/taxonomy-redirects.php';
 require_once get_template_directory() . '/inc/required-plugins.php';
 
 /**
- * Render team squiggles on hover
- */
-require_once get_template_directory() . '/inc/render-team-squiggle.php';
-
-/**
  * Setup post formats
  */
-require_once get_template_directory() . '/inc/post-formats.php';
+// require_once get_template_directory() . '/inc/post-formats.php';
 
 /**
  * Print block attributes

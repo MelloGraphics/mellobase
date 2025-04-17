@@ -2,21 +2,25 @@
 
 @use "../../utils" as *;
 
+
 // Default core details styling
 
 .wp-block-details {
-	border-bottom: $color-tertiary 1px solid;
+	border-bottom: $color-contrast 1px solid;
 	counter-increment: details 1;
 	overflow: unset;
 
-	summary {
+	summary{
+		// position: relative;
 		padding: $spacing-small 0;
 		display: flex;
 		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: start;
 		gap: $spacing-small;
-		position: relative;
+		font-size: $font-size-x-large;
+		background-color: $color-base;
+		position: sticky;
 		top: 0;
 		z-index: +1;
 
@@ -26,42 +30,48 @@
 			margin: 0;
 			font-size: inherit;
 			font-weight: inherit;
+			max-width: 90%;
 
-			> span {
+			> span{
 				color: $color-primary;
 				font-size: $font-size-small;
 			}
 		}
 
-		@include cross-after();
-		&::after {
+		&::after{
+			content: "+";
+			font-family: $font-icon;
+			font-weight: 100;
+			font-size: inherit;
 			color: $color-primary;
+			line-height: 1;
 			position: absolute;
-			inset: auto $spacing-small auto auto;
-			transition: rotate 0.25s ease-out;
+			right: 0;
+			left: auto;
+			transition: rotate .25s ease-out;
 		}
 	}
 
-	&.has-faq-schema summary {
+	&.has-faq-schema summary{
 		font-size: $font-size-large;
 	}
 
-	::marker,
-	::-webkit-details-marker {
+
+
+	::marker, ::-webkit-details-marker {
 		display: none;
 		visibility: hidden;
 	}
 
-	> *:not(summary) {
-		margin-block-start: $spacing-small;
-		margin-block-end: $spacing-large;
+	> *:not(summary){
+		margin-block-end: $spacing-x-large!important;
 	}
 
-	&[open] {
-		> *:not(summary) {
+	&[open]{
+		> *:not(summary){
 			z-index: 1;
-			animation: details-open-fade 0.5s ease-out;
-			transition-behavior: allow-discrete;
+			animation: details-open-fade .5s ease-out;
+			transition-behavior: allow-discreate;
 
 			// @for $i from 2 through 15{
 			// 	&:nth-child(#{$i}) {
@@ -70,103 +80,47 @@
 			// }
 		}
 
-		summary:after {
+		summary:after{
 			rotate: 45deg;
 		}
 	}
 }
 
 //
-// Has FAQ schema
+// Registered style - Tabbed
 //
 
-.wp-block-details.mello-has-faq-schema {
-	summary {
-		font-size: $font-size-large;
-	}
+.is-pattern-tabbed-top{
+	@include for-tablet-landscape-up{
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		gap: $spacing-large;
 
-	&[open] {
-		padding-bottom: $spacing-large;
-	}
-}
+		.wp-block-details.is-style-tabbed{
+			display: contents;
 
-//
-// has background colour
-//
+			summary{
+				font-size: $font-size-small;
+				flex: 1 0;
+				position: unset;
+			}
 
-.wp-block-details.has-background {
-	border-radius: $radius-small;
-	padding: $spacing-small;
-	border: unset;
+			&[open]{
+				summary{
+				border-bottom: solid $color-contrast 2px;
+				}
+			}
 
-	summary{
-		padding: unset;
+			> *:not(summary){
+				flex: 1 0 100%;
+				margin: 0;
+				padding: 0;
 
-		&::after{
-			inset: auto 0 auto auto;
+				object-fit: cover;
+				order: +1;
+			}
 		}
-	}
-}
-
-// //
-// // Registered style - Tabbed
-// //
-
-// .is-pattern-tabbed-top{
-// 	@include for-tablet-landscape-up{
-// 		position: relative;
-// 		display: flex;
-// 		flex-wrap: wrap;
-// 		gap: $spacing-large;
-
-// 		.wp-block-details.is-style-tabbed{
-// 			display: contents;
-
-// 			summary{
-// 				font-size: $font-size-small;
-// 				flex: 1 0;
-// 				position: unset;
-// 			}
-
-// 			&[open]{
-// 				summary{
-// 				border-bottom: solid $color-contrast 2px;
-// 				}
-// 			}
-
-// 			> *:not(summary){
-// 				flex: 1 0 100%;
-// 				margin: 0;
-// 				padding: 0;
-
-// 				object-fit: cover;
-// 				order: +1;
-// 			}
-// 		}
-// 	}
-// }
-
-// 
-// Registered style - icon-check
-//
-
-.wp-block-details.is-style-icon-check summary {
-	@include check-before();
-
-	&:before{
-		background-color: $color-secondary;
-	}
-}
-
-// 
-// Registered style - icon-star
-//
-
-.wp-block-details.is-style-icon-star summary {
-	@include star-before();
-
-	&:before{
-		background-color: $color-primary;
 	}
 }
 
@@ -174,88 +128,132 @@
 // Pattern style - Tabbed / Pattern Tabbed Side
 //
 
-.is-pattern-tabbed {
-	&__right,
-	&__left {
-		position: relative;
+.is-pattern-tabbed-side{
+	position: relative;
 
-		.wp-block-details.is-style-tabbed {
-			border-bottom: unset;
-			padding: 0;
-			position: unset;
+	.wp-block-details.is-style-tabbed{
+		border-bottom: unset;
+		padding: 0;
 
-			summary {
+		@include for-tablet-landscape-up{
+
+			summary{
 				font-size: $font-size-large;
 				flex: 1 0;
+				background-color: $transparent;
 				position: relative;
-				padding: $spacing-small $spacing-medium;
-				border-radius: $radius-small;
-				font-style: italic;
 			}
 
-			> *:not(summary) {
+			&[open]{
+				summary{
+					font-weight: bold;
+				}
+			}
+
+			> *:not(summary){
 				margin: 0;
 				padding: 0;
 				object-fit: cover;
-				margin-block-end: unset !important;
+				margin-block-end: unset!important;
+			}
+			.is-pattern-tabbed-side-content-left{
+				width: 40%;
+				padding-bottom: $spacing-large;
+			}
+			.is-pattern-tabbed-side-content-right{
+				position: absolute;
+				z-index: 10;
+				inset: 0 0 0 auto;
+				width: 50%;
 			}
 
-			.is-style-tabbed__content-under {
-				padding: $spacing-medium;
-				border-radius: 0 0 $radius-small $radius-small;
-			}
-
-			&:nth-child(even) {
-				summary,
-				.is-style-tabbed__content-under {
-					background-color: $color-tertiary-2;
-				}
-			}
-
-			&[open] {
-				summary {
-					font-weight: bold;
-					color: $color-secondary;
-					border-radius: $radius-small $radius-small 0 0;
-				}
-			}
-
-			@include for-tablet-landscape-up {
-				summary,
-				.is-style-tabbed__content-under {
-					max-width: 45%;
-				}
-
-				.is-style-tabbed__content-aside {
-					position: absolute;
-					z-index: 10;
-					inset: 0 0 0 auto;
-					width: 50%;
-					overflow: clip;
-					padding: 0;
-				}
-			}
-		}
-	}
-
-	&__right {
-		.wp-block-details.is-style-tabbed {
-			@include for-tablet-landscape-up {
-				summary,
-				.is-style-tabbed__content-under {
-					margin-left: 55%;
-					margin-right: 0;
-				}
-				.is-style-tabbed__content-aside {
-					inset: 0 auto 0 0;
-				}
-			}
 		}
 	}
 }
 
-@keyframes details-open-fade {
-	from {
+
+// // Registered style hover reveal
+
+// .wp-block-cover.alignfull:has(.wp-block-details.is-style-hover-reveal){
+// 	overflow: visible;
+// 	z-index: 2;
+// }
+
+// .wp-block-group:has(.wp-block-details.is-style-hover-reveal){
+// 	counter-reset: details;
+// 	position: relative;
+// }
+
+// .wp-block-details{
+// 	&.is-style-hover-reveal{
+// 		summary{
+// 			transition: translate .5s ease-out;
+
+// 			&:before{
+// 				content: counter(details, decimal-leading-zero)".";
+// 				color: $color-primary;
+// 				transition: margin .5s ease-out;
+// 			}
+// 		}
+
+// 		@include breakpoint-min-max(large, unlimited){
+// 			> *:not(summary, .block-editor-block-list__block){ // affects details content
+// 				position: absolute;
+// 				width: 60%;
+// 				inset: 0 30px 0 auto;
+// 			}
+
+// 			.wp-block-cover{
+// 				// pointer-events: none;
+
+// 				.wp-block-cover__image-background, .wp-block-cover__video-background{
+// 					scale: .8;
+// 					transform-origin: top left;
+// 				}
+// 			}
+// 		}
+
+// 		.wp-block-cover{
+// 			min-height: 50svh;
+// 		}
+
+// 		&[open]{
+// 			summary{
+// 				color: $color-primary;
+// 			}
+// 			summary::before{
+// 				margin-right: $spacing-small;
+// 				transition: margin .5s ease-out;
+// 			}
+// 			> .wp-block-cover{
+// 				.wp-block-cover__image-background, .wp-block-cover__video-background{
+// 					animation: details-open-img .5s ease-out both;
+// 				}
+// 				.wp-block-cover__inner-container{
+// 					animation: details-open-inner-container .5s ease-out both;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// Animation when content opens
+
+// @keyframes details-open-img{
+// 	from{
+// 		opacity: 0;
+// 		translate: 0 1rem;
+// 	}
+// }
+// @keyframes details-open-inner-container{
+// 	from{
+// 		opacity: 0;
+// 		translate: 0 -1rem;
+// 	}
+// }
+
+@keyframes details-open-fade{
+	from{
 		opacity: 0;
 	}
 }

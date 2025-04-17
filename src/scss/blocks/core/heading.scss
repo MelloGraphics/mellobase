@@ -2,30 +2,6 @@
 
 @use "../../utils" as *;
 
-.wp-block-heading{
-    text-wrap: balance;
-
-    @include heading-font-sizes()
-}
-
-.wp-block-heading{
-    &:has(img, svg){
-        img, svg{
-            height: 1em;
-            width: auto!important;
-            display: inline-block;
-            margin-bottom: -0.1em;
-
-            transform-origin: center;
-            animation: rotate-small 1s infinite alternate-reverse steps(4);
-        }
-        svg:has(#squiggle-bulb){
-            height: 1.2em;
-        }
-    }
-}
-
-.is-style-after-line{
-        font-weight: 800;
-        @include line-after()
-}
+// h2.wp-block-heading{
+//     opacity: 0;
+// }

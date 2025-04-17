@@ -1,28 +1,16 @@
 // This is an example of how you can style forms using CSS variables from theme.json.
 
-@use "../utils/" as *;
-
-
 input[type="submit"] {
 	appearance: none;
-	background-color: $color-primary;
+	background-color: var(--wp--preset--color--primary);
 	border-radius: 0px;
-	border-color: $color-contrast;
+	border-color: var(--wp--preset--color--background);
 	border-style: solid;
 	border-width: 2px;
-	color: $color-contrast;
-	padding-top: $spacing-small;
-	padding-right: $spacing-medium;
-	padding-bottom: $spacing-small;
-	padding-left: $spacing-medium;
+	color: var(--wp--preset--color--background);
+	padding-top: var(--wp--preset--spacing--20);
+	padding-right: var(--wp--preset--spacing--50);
+	padding-bottom: var(--wp--preset--spacing--20);
+	padding-left: var(--wp--preset--spacing--50);
 	text-decoration: none;
-}
-
-// search and filter
-
-.search-filter-base{
-	.search-filter-label{
-		font-size: $font-size-small;
-		font-weight: 700;
-	}
 }

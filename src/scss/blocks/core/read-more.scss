@@ -2,39 +2,33 @@
 
 @use "../../utils" as *;
 
-
-//
-//  Default style
-//
-
-.wp-block-read-more{
-    font-weight: 700;
-    padding: $spacing-small 0;
-    border-radius: unset;
+.wp-block-read-more:not(.is-query-featured-work .wp-block-read-more){
     background-color: $transparent;
+    color: $color-primary;
     position: relative;
+    padding: $spacing-small $spacing-medium;
+    padding-left: 0;
 
-    @include line-under-always();
+    &::after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        width: 0;
+        height: 100%;
+        background-color: currentColor;
+    }
 
-}
+    &:hover{
+        color: $color-base;
+        padding-left: $spacing-medium;
+        transition: all .25s $custom-transition;
 
-//
-// Registered style - Secondary
-//
-
-.wp-block-read-more.is-style-secondary{
-    @include arrow-right-medium-after()
-}
-
-//
-// Registered style - Tertiary
-//
-
-.wp-block-read-more.is-style-tertiary{
-    padding: $spacing-small 0;
-    border-radius: unset;
-    background-color: $transparent;
-    position: relative;
-
-    @include line-under();
+        &::after{
+            content: '';
+            width: 100%;
+            background-color: $color-primary;
+            transition: width .25s $custom-transition;
+        }
+    }
 }

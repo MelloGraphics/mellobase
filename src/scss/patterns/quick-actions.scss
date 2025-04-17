@@ -1,0 +1,86 @@
+// Part styles - Quick actions
+
+@use "../utils" as *;
+
+.wp-block-template-part:has(.is-template-quick-actions){
+	z-index: 100;
+	position: fixed;
+	inset: auto 0 0 0;
+	padding: $spacing-medium;
+
+	> .is-template-quick-actions{
+		padding: $spacing-small $spacing-small $spacing-small $spacing-medium;
+		border-radius: 50px;
+		font-size: calc($font-size-small * .8);
+		width: fit-content;
+		max-width: $width-content;
+		margin: auto;
+		overflow: hidden;
+		transition: width .5s linear(0, 0.324 9.1%, 0.584 18.6%, 0.782 28.6%, 0.858 33.8%, 0.92 39.2%, 0.997 49.5%, 1.021 55.1%, 1.033 61%, 1.035 71.7%, 1);
+
+		animation: slide-up .6s linear(0, 0.49 7.4%, 0.864 15.3%, 1.005 19.4%, 1.12 23.7%, 1.206 28.1%, 1.267 32.8%, 1.296 36.4%, 1.311 40.2%, 1.313 44.2%, 1.301 48.6%, 1.252 56.9%, 1.105 74.4%, 1.048 82.5%, 1.011 91.1%, 1),
+					expand .5s .5s both linear(0, 0.324 9.1%, 0.584 18.6%, 0.782 28.6%, 0.858 33.8%, 0.92 39.2%, 0.997 49.5%, 1.021 55.1%, 1.033 61%, 1.035 71.7%, 1);
+
+		> *{
+			animation: fade .5s $transition-style .75s both;
+			min-width: max-content;
+		}
+	}
+
+	.wp-block-buttons{
+		gap: calc($spacing-small * .5);
+	}
+
+	.wp-block-button{
+		box-sizing: border-box;
+
+		&:last-child .wp-block-button__link{
+			background-color: $color-primary;
+			border-color: $color-primary;
+		}
+	}
+	
+	.wp-block-button__link{
+		border-radius: 30px;
+		padding: calc($spacing-small * .25) $spacing-small;
+		background-color: $transparent;
+		border: solid currentColor 1px;
+	}
+
+	.quick-actions_close .wp-block-button__link{
+		padding: calc($spacing-small * .25);
+		min-width: 30px;
+		background-color: $color-base!important;
+		border-color: $color-base!important;
+		color: $color-contrast;
+		font-family: $font-icon;
+		rotate: 45deg;
+		transition: rotate .25s ease-in-out;
+	}
+
+	&.hidden{
+		.wp-block-buttons:first-of-type{
+			width: 0;
+			@include visually-hidden;
+		}
+		.quick-actions_close .wp-block-button__link{
+			rotate: 0deg;
+		}
+	}
+}
+
+@keyframes slide-up {
+	from{
+		translate: 0 150%;
+	}
+}
+@keyframes expand {
+	from{
+		width: 50px;
+	}
+}
+@keyframes fade{
+	from{
+		opacity: 0;
+	}
+}

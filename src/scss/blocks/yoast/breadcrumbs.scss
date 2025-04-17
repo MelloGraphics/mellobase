@@ -1,0 +1,16 @@
+// Yoast Breadcrums Block
+
+@use "../../utils" as *;
+
+.yoast-breadcrumbs{
+    span > span:first-child{ // home link icon is set in the yoast settings
+        font-family: $font-icon;
+    }
+    span, a{
+        font-size: $font-size-small;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $color-tertiary;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,69 @@
+// Core Block - Posts
+
+@use "../../utils" as *;
+
+.wp-block-post{
+    a{
+        text-decoration: none;
+    }
+    > .wp-block-group{
+        position: sticky;
+        top: 0;
+        z-index: +1;
+        background-color: $color-base;
+
+        .wp-block-read-more{
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            font-family: $font-icon;
+            border: solid currentColor;
+            height: 2em;
+            min-width: 2em;
+            transition: all .25s $custom-transition;
+
+            &::after{
+                content: '';
+                position: absolute;
+                z-index: -1;
+                inset: 0;
+                width: 0;
+                height: 100%;
+                background-color: currentColor;
+                }
+        }
+
+        .wp-block-post-title a{
+            text-decoration: none;
+
+            &:hover{
+                color: $color-primary;
+            }
+        }
+
+        .wp-block-read-more:hover, h3:hover ~ .wp-block-read-more{
+            color: $color-base;
+            transition: all .25s $custom-transition;
+
+            &::after{
+                content: '';
+                width: 100%;
+                background-color: $color-primary;
+                transition: width .25s $custom-transition;
+            }
+        }
+
+    }
+
+    img{
+        scale: 1.2;
+        transition: scale $custom-transition .5s;
+    }
+    &:has(.wp-block-read-more:hover, a img:hover){
+        img{
+            scale: 1.3;
+            transition-duration: 5s;
+        }
+    }
+}

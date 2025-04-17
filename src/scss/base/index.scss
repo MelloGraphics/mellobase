@@ -2,9 +2,7 @@
 @forward "typography";
 @forward "visually-hidden";
 @forward "forms";
-// @forward "widths";
 
 html{
     interpolate-size: allow-keywords;
-    scroll-behavior: smooth;
 }

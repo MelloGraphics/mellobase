@@ -2,20 +2,12 @@
 
 @use "../../utils" as *;
 
-.wp-block-search{
-	&__input{
-		background-color: transparent;
-		color: $color-contrast;
-		border-radius: $radius-small;
-	}
-
-	::placeholder{
-		color: $color-contrast;
-	}
+.wp-block-search__input{
+	background-color: transparent;
+	color: $color-base;
+	border: $color-base 2px solid;
 }
 
-:root :where(.wp-block-search .wp-block-search__label, .wp-block-search .wp-block-search__input, .wp-block-search .wp-block-search__button){
-	font-size: $font-size-large;
+::placeholder{
+	color: $color-base;
 }
-
-

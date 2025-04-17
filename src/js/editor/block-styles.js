@@ -10,156 +10,84 @@ import domReady from '@wordpress/dom-ready';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-styles/
  */
 const registerBlockStyles = {
-	'core/button': [
-		{
-			name: 'primary',
-			label: 'Primary',
-		},
-		{
-			name: 'secondary',
-			label: 'Secondary',
-		},
-		{
-			name: 'tertiary',
-			label: 'Tertiary',
-		},
-	],
-	'core/image': [
-		{
-			name: 'rounded-medium',
-			label: 'Rounded Medium',
-		},
-	],
-	'core/details': [
-		{
-			name: 'tabbed',
-			label: 'Tabbed',
-		},
-		{
-			name: 'icon-check',
-			label: 'Check',
-		},
-		{
-			name: 'icon-star',
-			label: 'Star',
-		},
-	],
-	'core/cover': [
-		{
-			name: 'rounded-medium',
-			label: 'Rounded Medium',
-		},
-	],
-	'core/columns': [
-		{
-			name: 'offset',
-			label: 'OffSet',
-		},
-	],
-	'core/column': [
-		{
-			name: 'mobile-row',
-			label: 'Mobile Row',
-		},
-	],
-	'core/paragraph': [
-		{
-			name: 'after-line',
-			label: 'After line',
-		},
-		{
-			name: 'tag',
-			label: 'Tag',
-		},
-	],
-	'core/list': [
-		{
-			name: 'tags',
-			label: 'Tags',
-		},
-		{
-			name: 'checks',
-			label: 'Checks',
-		},
-	],
-	'core/heading': [
-		{
-			name: 'after-line',
-			label: 'After line',
-		},
-	],
-	'core/navigation': [
-		{
-			name: 'mega-menu',
-			label: 'Mega Menu',
-		},
-	],
-	'core/navigation-link': [
-		{
-			name: 'link-chevron',
-			label: 'Chevron',
-		},
-		{
-			name: 'link-box',
-			label: 'Box',
-		},
-		{
-			name: 'link-button',
-			label: 'Button',
-		},
-		{
-			name: 'link-tag',
-			label: 'Tag',
-		},
-	],
-	'core/navigation-submenu': [
-		{
-			name: 'link-icon',
-			label: 'Icon only',
-		},
-	],
-	'core/post-terms': [
-		{
-			name: 'tags',
-			label: 'Tags',
-		},
-		{
-			name: 'after-line',
-			label: 'After-line',
-		},
-	],
-	'core/post-title': [
-		{
-			name: 'arrow-after',
-			label: 'Arrow after',
-		},
-	],
-	'core/site-logo': [
-		{
-			name: 'reversed',
-			label: 'Reversed',
-		},
-	],
-	'core/read-more': [
-		{
-			name: 'secondary',
-			label: 'Secondary',
-		},
-		{
-			name: 'tertiary',
-			label: 'Tertiary',
-		},
-	],
-	'mellobase/post-type': [
-		{
-			name: 'after-line',
-			label: 'After line',
-		},
-	],
+    "core/button": [
+        {
+            name: "primary",
+            label: "Primary",
+        }
+    ],
+    "core/details": [
+        {
+            name: "hover-reveal",
+            label: "Hover Reveal",
+        },
+        {
+            name: "tabbed",
+            label: "Tabbed",
+        }
+    ],
+    "core/cover": [
+        {
+            name: "blurred",
+            label: "Blurred",
+        },
+        {
+            name: "faded",
+            label: "Faded",
+        }
+    ],
+    "core/paragraph": [
+        {
+            name: "icon",
+            label: "Icon",
+        }
+    ],
+    "core/navigation": [
+        {
+            name: "mello-menu",
+            label: "Mello Menu",
+        }
+    ],
+    "core/navigation-link": [
+        {
+            name: "link-primary",
+            label: "Primary",
+        },
+        {
+            name: "link-box",
+            label: "Box",
+        },
+    ],
+    "core/query": [
+        {
+            name: "carousel",
+            label: "Carousel",
+        },
+        {
+            name: "scrollable",
+            label: "Scrollable",
+        }
+    ],
+    "core/gallery": [
+        {
+            name: "booklet",
+            label: "Booklet",
+        }
+    ],
+    "wpgb/grid": [
+        {
+            name: "large-grid",
+            label: "Large Grid",
+        },
+        {
+            name: "stepped-grid",
+            label: "Stepped Grid",
+        }
+    ]
 };
 
 domReady(() => {
-	Object.entries(registerBlockStyles).forEach(([block, styles]) => {
-		registerBlockStyle(block, styles);
-	});
+    Object.entries(registerBlockStyles).forEach(([block, styles]) => {
+        registerBlockStyle(block, styles);
+    });
 });

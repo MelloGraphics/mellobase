@@ -1,34 +1,43 @@
-@use "utils";
+@use "utils" as *;
 @use "vendors";
 @use "base";
 @use "layout";
 @use "patterns";
-@use "templates";
 @use "blocks";
+
 
 //
 // allow more space in the header editor
 //
 
-// .edit-site-visual-editor.is-focus-mode .components-resizable-box__container{
-//   height: stretch!important;
-// }
-
-.is-root-container:has(nav) {
-	min-height: 70ch !important;
+.is-root-container:has(nav){
+  min-height: 70ch!important;
 }
 
 //
 // Fix ACF styling to match wordpress
 //
 
-.edit-post-meta-boxes-area #poststuff h2.hndle {
-	color: #1e1e1e;
-	font-size: inherit;
-	font-weight: 500;
-	padding: 0 17px;
+.edit-post-meta-boxes-area #poststuff h2.hndle{
+  color: #1e1e1e;
+  font-size: inherit;
+  font-weight: 500;
+  padding: 0 17px;
 }
 
-.edit-post-meta-boxes-area .postbox .handlediv {
-	margin-right: 6px;
+.edit-post-meta-boxes-area .postbox .handlediv{
+  margin-right: 6px;
+}
+
+.wp-block-query.is-style-carousel{
+  ul{
+    display: flex;
+    gap: $spacing-large;
+    contain: paint;
+    overflow-x: scroll;
+    li{
+      min-width: 33.33%;
+      margin: 0;
+    }
+  }
 }

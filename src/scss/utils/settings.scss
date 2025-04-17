@@ -14,6 +14,15 @@ $breakpoints: (
 	xxxl: 1920px
 );
 
+// $breakpoints: (
+//         small: 0,
+//         medium: 768px,
+//         large: 1024px,
+//         xlarge: 1126px,
+//         xxlarge: 1360px,
+//         unlimited: 9999px
+// );
+
 /**
  * Theme.json Set Color Variables
  */
@@ -23,8 +32,6 @@ $color-contrast: var(--wp--preset--color--contrast);
 $color-primary: var(--wp--preset--color--primary);
 $color-secondary: var(--wp--preset--color--secondary);
 $color-tertiary: var(--wp--preset--color--tertiary);
-$color-tertiary-2: var(--wp--preset--color--tertiary-2);
-$color-tertiary-3: var(--wp--preset--color--tertiary-3);
 $transparent: var(--wp--preset--color--transparent);
 
 /**
@@ -50,21 +57,11 @@ $spacing-section: var(--wp--preset--spacing--section);
 /**
  * Theme.json Custom Variables
  */
-$ease-bounce: var(--wp--custom--ease-bounce);
-$ease-circ: var(--wp--custom--ease-circ);
+$custom-transition: var(--wp--custom--transition);
+$custom-transition-quick: var(--wp--custom--transition-quick);
 $custom-fade: var(--wp--custom--mask);
 
-$speed-fast: var(--wp--custom--speed-fast);
-$speed-medium: var(--wp--custom--speed-medium);
-$speed-slow: var(--wp--custom--speed-slow);
-$speed: $speed-medium; // default animation speed
-
-$radius-small: var(--wp--custom--radius-small);
-$radius-medium: var(--wp--custom--radius-medium);
-$radius-large: var(--wp--custom--radius-large);
-
-
-// Theme.json Fonts
+// Fonts
 $font-colour: $color-base;
 $font-light: normal;
 $font-heavy: bold;
@@ -73,7 +70,7 @@ $font-heavy: bold;
 // $font-semi: 600;
 // $font-bold: 700;
 $font-primary: var(--wp--preset--font-family--primary);
-$font-icon: var(--wp--preset--font-icon);
+$font-icon: var(--wp--preset--font-family--icon);
 
 // Transitions
 $transition-duration: 0.25s;
@@ -87,5 +84,3 @@ $admin-bar: var(--wp-admin--admin-bar--height);
 /**
  * Misc.
  */
-
- $icon-check: url('data:image/svg+xml,<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_4806_39956)"><path d="M0.946945 20.5442C0.0835362 16.0285 2.11126 11.1062 5.59552 7.26611C9.07962 3.42614 13.8783 0.828125 18.3103 0.828125C22.8846 0.828125 26.962 2.09151 29.8804 4.48582C32.7809 6.86542 34.5955 10.4078 34.5955 15.116C34.5955 19.8563 32.7537 24.8472 29.7665 28.647C26.7774 32.4493 22.7159 34.9729 18.3103 34.9729C13.7485 34.9729 9.86536 33.692 6.9049 31.2777C3.94592 28.8646 1.85088 25.2722 0.946947 20.5442L0.210466 20.685L0.946945 20.5442Z" stroke="%23A37FCC" stroke-width="1.5"/><path d="M10.5324 20.7413C8.9845 18.6833 11.1773 16.6252 12.4672 18.2717C14.0538 20.2967 14.9181 23.0737 16.466 21.1529C18.0138 19.2321 22.8871 11 24.7214 11C26.3982 11 26.2692 12.0976 25.2373 13.6068C24.2054 15.116 18.1428 25.2689 15.563 24.9945C12.9832 24.7201 10.5324 20.7413 10.5324 20.7413Z" fill="%23A37FCC"/></g><defs><clipPath id="clip0_4806_39956"><rect width="35.3459" height="35.6448" fill="white" transform="translate(0 0.0776367)"/></clipPath></defs></svg>');

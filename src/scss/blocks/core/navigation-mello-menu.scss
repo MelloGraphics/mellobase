@@ -1,0 +1,293 @@
+// Navigation Mello Menu Styling
+
+@use "../../utils" as *;
+
+
+.wp-block-navigation.is-style-mello-menu{
+  margin-left: auto;
+
+  .block-list-appender.wp-block{
+    display: none;
+  } // hides the plus block icon in the editor to fix styling. This stops the user from changing the menu structure.
+
+  .wp-block-navigation__responsive-container-open{
+    align-items: center;
+    padding: $spacing-x-large;
+
+    svg{ // open icon size
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &:hover{
+      &:before{
+        transition: translate .25s $custom-transition;
+        translate: -.5rem 0;
+      }
+    }
+  }
+
+  .wp-block-navigation__responsive-container{
+
+    &.is-menu-open{
+      animation: is-menu-open .25s ease-out; // set the modal animation when the menu open
+
+      @keyframes is-menu-open {
+        from{
+          clip-path: inset(100% 0 0 0);
+        }
+        to{
+          clip-path: inset(0 0 0 0);
+        }
+      }
+    }
+
+    // overlay wrapper styling
+    .wp-block-navigation__responsive-close{
+      height: 100%;
+      min-width: 100%;
+      overflow: scroll;
+
+      .wp-block-navigation__responsive-dialog{
+        margin: 0;
+        padding: $spacing-medium; //match up to your header padding
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .wp-block-navigation__responsive-container-close{
+          padding: $spacing-x-large;
+
+          svg{ // close icon size
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+
+        .wp-block-navigation__responsive-container-content{
+          padding: $spacing-x-large;
+          flex: 1 0 100%;
+          max-width: 1440px;
+          margin: auto;
+          max-width: 100%;
+
+          .wp-block-navigation__container{
+            justify-content: center;
+            max-width: 400px;
+
+            @include breakpoint('md') {
+              display: grid;
+              grid-template-columns: 1fr .6fr;
+              grid-template-rows: 1fr .05fr;
+              gap: $spacing-x-large;
+              flex: 1;
+              align-items: center;
+              width: 100%;
+              max-width: $width-wide;
+            }
+
+            .is-nav-links-wrapper{
+              display: flex;
+              flex-wrap: nowrap;
+              flex-direction: column;
+              height: 100%;
+              max-height: 50svh;
+              width: 100%;
+              @include breakpoint(lg) {
+                justify-content: center;
+                flex: 0 1 0;
+              }
+              @include breakpoint(md){
+                align-content: center;
+                align-items: center;
+              }
+            }
+            .is-nav-cta-wrapper{
+              height: 100%;
+              max-height: 50svh;
+              width: 100%;
+              @include breakpoint(md){
+                // max-height: 30svh;
+                flex-wrap: nowrap;
+                text-align: center;
+                flex: 0;
+              }
+            }
+            .is-nav-footer-wrapper{
+              grid-column: 1 / 3;
+              display: flex;
+              flex: 0;
+              align-items: center;
+              font-size: $font-size-small;
+              position: relative;
+              font-size: .9rem;
+
+              @include breakpoint(md){
+                justify-content: center;
+
+                .is-layout-flex{
+                  justify-content: center;
+                  text-align: center;
+                }
+              }
+
+              .wp-block-navigation-item__label{
+                display: flex;
+                gap: $spacing-small;
+        
+                img, svg{
+                  width: 1em;
+                }
+        
+                svg path{
+                  fill: currentColor;
+                }
+
+                &:hover, &:focus-within{
+                  color: $color-primary;
+                }
+              }
+
+              // &::before{
+              //   content: '';
+              //   position: absolute;
+              //   top: 0;
+              //   left: -100%;
+              //   margin: auto;
+              //   width: 300vw;
+              //   height: 1px;
+              //   background-color: currentColor;
+              // }
+
+            }
+            
+            // registered style link primary
+            .is-style-link-primary{
+              font-size: $font-size-xx-large;
+              img{
+                pointer-events: none;
+                position: absolute;
+                inset: 0;
+                margin: auto;
+                animation: clip-swipe-out .25s $custom-transition-quick both;
+                mix-blend-mode: difference;
+                width: 100%;
+                height: auto;
+              }
+              &:hover{
+                transform-origin: center left;
+                transform: skewX(-10deg);
+                translate: .15em 0;
+
+                img{
+                  animation: clip-swipe-in .25s $custom-transition-quick both;
+                }
+              }
+            }
+
+            // registered boxed link styling
+            .is-style-link-box{
+            background-color: $color-base;
+            border: solid $color-contrast 3px;
+            overflow: hidden;
+            width: 100%;
+            margin: 0;
+            flex: 1 0;
+
+              > a{
+                height: 100%;
+                width: 100%;
+                padding: $spacing-large;
+              }
+
+              > img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+                scale: 1.1;
+                transition: scale 5s $custom-transition;
+                animation: clip-swipe-out .25s $custom-transition-quick both;
+              }
+
+              &:hover, &:focus-within{
+                > img{
+                  scale: 1;
+                  filter: blur(0);
+                  animation: clip-swipe-in .25s $custom-transition-quick both;
+                }
+
+                @keyframes clip-swipe-in{
+                  from{
+                    clip-path: inset(0 100% 0 0);
+                  }
+                  to{
+                    clip-path: inset(0 0 0 0);
+                  }
+                }
+                @keyframes clip-swipe-out{
+                  from{
+                    clip-path: inset(0 0 0 0);
+                  }
+                  to{
+                    clip-path: inset(0 0 0 100%);
+                  }
+                }
+              }
+            }
+
+            .wp-block-navigation-item{
+              a, .wp-block-navigation-item__content{
+              display: flex;
+              flex-grow: 1;
+              flex-direction: column;
+              justify-content: flex-end;
+              box-sizing: border-box;
+              height: 100%;
+              width: 100%;
+
+                .wp-block-navigation-item__label{
+                  font-weight: 600;
+                }
+
+                // Unhide all navigation item descriptions
+                .wp-block-navigation-item__description{
+                  display: block;
+                  font-size: calc($font-size-small - 10%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// Navigation animations
+
+@keyframes menu-open {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+}
+
+.is-style-mello-menu{
+  .wp-block-navigation-item:not(.is-nav-footer-wrapper .wp-block-navigation-item) {
+    animation: menu-open 500ms;
+    animation-timing-function: $custom-transition;
+    animation-fill-mode: both;
+
+    @for $i from 1 through 10 { // create a loop of animation delay for each child
+      &:nth-child(#{$i}n) {
+          animation-delay: #{$i * 0.05}s;
+      }
+    }
+  }
+
+}

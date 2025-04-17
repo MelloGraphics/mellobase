@@ -10,21 +10,3 @@
 		padding-bottom: 1.25em;
 	}
 }
-
-.wp-block-group.horizontal-scroll{
-	max-width: 100%;
-
-	> * {
-		@include scroll-x();
-	}
-	.search-filter-input-button-group{
-		flex-wrap: nowrap;
-	}
-	.search-filter-input-button{
-		min-width: max-content;
-	}
-}
-
-.wp-block-group .alignfull:first-of-type:not(.swiper-wrapper){
-	overflow-x: clip;
-}

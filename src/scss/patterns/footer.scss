@@ -2,28 +2,164 @@
 
 @use "../utils" as *;
 
-footer{
+footer, .is-pattern-footer{
 	margin-top: 0;
 
-	nav{
-		flex: 1;
-	}
-
-	.wp-block-navigation-item__content{
-		padding: calc($spacing-small / 2) 0;
+	> .wp-block-group > .wp-block-group{
+		flex-wrap: wrap;
+		gap: $spacing-x-large;
 	}
 
 	a{
 		text-decoration: none;
-		font-weight: 400;
 
 		&:hover{
 			color: $color-primary!important;
 		}
 	}
 
-	summary{
-		font-weight: 700;
-		color: $color-primary;
+	.wp-block-image{
+		display: flex;
+		flex: 1 1 250px;
+		max-width: 500px;
+		@include breakpoint(md) {
+			margin: auto;
+		}
+	}
+
+	.is-pattern-footer-links{
+		gap: $spacing-xx-large;
+		flex: 1 0 1;
+		flex-wrap: wrap;
+
+		@include breakpoint(md) {
+			flex-basis: 100%;
+			flex-wrap: wrap;
+		}
+
+		nav{
+			min-width: 120px;
+
+			@include breakpoint(md) {
+				flex: 1 0 100%;
+
+				p{
+					text-align: center;
+				}
+				.wp-block-navigation__container{
+					align-items: center;
+				}
+			}
+		}
 	}
 }
+
+/* Footer mobile style */
+
+// @media only screen and (max-width: 782px) {
+// 	footer .is-layout-flex:not(.footer-cta){
+// 		align-items: center!important;
+// 		justify-content: center;
+// 	}
+// 	footer .footer-cta{
+// 		text-align: center;
+// 		display: flex;
+// 		order: -1;
+// 		margin-bottom: $spacing-section!important;
+// 	}
+// }
+
+// // Cursor styling
+
+// .cursor{
+// 	position: fixed;
+// 	z-index: 9999999;
+// 	pointer-events: none;
+// 	width: 127px;
+// 	height: 127px;
+// 	translate: -50% -50%;
+// 	border-radius: 50%;
+// 	border: solid $color-primary 3px;
+// 	scale: .3;
+// 	animation: cursor-rotate 30s infinite linear;
+// 	transition: transform 0.25s $custom-transition,
+// 				width 0.25s $custom-transition,
+// 				height 0.25s $custom-transition,
+// 				scale 0.25s $custom-transition,
+// 				background-color 0.25s $custom-transition,
+// 				inset .2s ease-out;
+
+// 	@include for-phone-only{
+// 		display: none;
+// 		visibility: hidden;
+// 	}
+
+// 	.word{
+// 		visibility: hidden;
+// 		display: unset!important;
+// 	}
+// 	.char {
+// 		--i: calc(100% / (var(--char-total) + 1));
+// 		position: absolute!important;
+// 		offset-path: path("M120,60c0,33.14-26.86,60-60,60S0,93.14,0,60,26.86,0,60,0c18.49,0,35.02,8.36,46.03,21.51,8.72,10.42,13.97,23.84,13.97,38.49Z");
+// 		offset-distance: calc(var(--i) * var(--char-index));
+// 	/*  offset-anchor: top; FF only */
+// 		padding-top: $spacing-large;
+// 		font-weight: 400;
+// 		font-size: 90%;
+// 		text-transform: uppercase;
+// 	}
+
+// 	&__hover{
+// 		scale: .8;
+// 		border-width: 0;
+// 		// mix-blend-mode: difference;
+
+// 		.word{
+// 			visibility: visible;
+// 		}
+// 	}
+
+// 	&__active, &__click {
+//         scale: .2;
+// 		background-color: $color-primary;
+// 		border-width: 0;
+// 		// mix-blend-mode: difference;
+//     }
+
+
+// }
+
+// @keyframes cursor-rotate {
+// 	to{
+// 		rotate: -360deg;
+// 	}
+// }
+
+// loader styles
+
+// #loader {
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 9999;
+//     background: $color-base;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// .spinner {
+//     width: 50px;
+//     height: 50px;
+//     border: 5px solid rgba(0, 0, 0, 0.1);
+//     border-top-color: $color-primary;
+//     border-radius: 50%;
+//     animation: spin 1s infinite linear;
+// }
+
+// @keyframes spin {
+//     to { transform: rotate(360deg); }
+// }
