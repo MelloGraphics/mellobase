@@ -1,0 +1,22 @@
+//  Core query pagination block styling
+
+@use "../../utils" as *;
+
+.wp-block-query-pagination{
+    font-size: $font-size-medium;
+    gap: $spacing-small!important;
+
+    .page-numbers{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border: solid 1px currentColor;
+        border-radius: $radius-small;
+    }
+
+    a{
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,16 @@
+@use "../../utils" as *;
+
+.wp-block-categories-list{
+    list-style: none;
+    display: flex;
+    gap: $spacing-medium;
+    padding-inline-start: unset;
+
+    a{
+        text-decoration: none;
+    }
+
+    [aria-current="page"]{
+        color: $color-primary;
+    }
+}

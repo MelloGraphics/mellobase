@@ -1,0 +1,19 @@
+// Patterns - Word award badge
+
+@use "../utils" as *;
+
+.work-award-badge{
+	width: clamp(100px, 20%, 150px);
+	background-color: $color-base;
+	border-radius: 100%;
+	aspect-ratio: 1/1;
+	z-index: 1;
+	margin: 0;
+
+	animation: rotate-small 1s infinite alternate-reverse steps(4);
+	transition: scale .5s $ease-bounce;
+
+	&:hover{
+		scale: 1.1;
+	}
+}

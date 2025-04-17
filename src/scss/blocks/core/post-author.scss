@@ -1,0 +1,19 @@
+//  Core post author block styling
+
+@use "../../utils" as *;
+
+.wp-block-post-author {
+    flex-direction: column;
+
+    img {
+        border-radius: 50%;
+    }
+}
+
+.wp-block-post-author__name {
+    font-weight: 600;
+}
+
+.wp-block-post-author__bio {
+    margin-top: 0;
+}

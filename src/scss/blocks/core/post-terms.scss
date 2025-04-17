@@ -1,0 +1,36 @@
+// Core Post Terms
+
+@use "../../utils" as *;
+
+.wp-block-post-terms a{
+    color: $color-secondary;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.wp-block-post-terms.is-style-tags{
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: $spacing-small;
+    padding-inline-start: unset;
+
+    a{
+        text-decoration: none;
+        color: $color-contrast;
+        background-color: $color-tertiary;
+        border-radius: $radius-small;
+        font-size: $font-size-small;
+        padding: calc($spacing-small * .75) $spacing-small;
+        list-style: none;
+    }
+
+    .wp-block-post-terms__separator{
+        @include visually-hidden()
+    }
+}
+
+// is stile line after
+
+.wp-block-post-terms.is-style-after-line{
+    @include line-after();
+}

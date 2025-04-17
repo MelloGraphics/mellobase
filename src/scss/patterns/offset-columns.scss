@@ -1,0 +1,95 @@
+// Patterns - Offset columns
+
+@use "../utils" as *;
+
+.is-pattern-offset-columns{
+		padding: unset;
+		gap: 0;
+		border-radius: $radius-medium;
+
+		> .wp-block-column:not(.offset-column){
+			padding: $spacing-xx-large $spacing-large;
+		}
+
+		&.right{
+			> .offset-column{
+				padding-left: $spacing-x-large;
+			}
+		}
+		&.left{
+			> .offset-column{
+				padding-right: $spacing-x-large;
+			}
+		}
+		&.right.mello-columns-reverse-on-phone, &.left:not(.mello-columns-reverse-on-phone){
+			> .offset-column{
+				margin-top: calc($spacing-x-large * -1);
+			}
+		}
+		&.left.mello-columns-reverse-on-phone, &.right:not(.mello-columns-reverse-on-phone){
+			> .offset-column{
+				margin-bottom: calc($spacing-x-large * -1);
+			}
+		}
+
+		// .is-pattern-offset-columns.right:not(.mello-columns-reverse-on-phone) .offset-column
+
+		@include for-tablet-portrait-up{
+			background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2268%22%20height%3D%2242%22%20viewBox%3D%220%200%2068%2042%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20id%3D%22Logomark-light%22%3E%3Cpath%20id%3D%22wing%22%20d%3D%22M61.507%204.24233H55.5376L58.5256%206.04454L56.0803%207.52516L55.0753%208.12813H48.7106L51.893%2010.0442L47.0759%2012.9586L36.5508%206.60731L41.4214%203.67286L46.7543%200.457031H67.7778L61.507%204.24233Z%22%20fill%3D%22%23FBFAFD%22%3E%3C%2Fpath%3E%3Cpath%20id%3D%22body%22%20d%3D%22M56.0833%2025.3928C56.0833%2026.4178%2055.8555%2027.3826%2055.4468%2028.2535C54.3079%2026.1766%2052.0903%2024.7697%2049.5511%2024.7697C48.3184%2024.7697%2047.1661%2025.098%2046.1745%2025.6742C46.1075%2025.7144%2046.0472%2025.7545%2045.9802%2025.788L43.9971%2026.9873L42.9922%2027.597L35.77%2031.9517H41.0359L34.3764%2041.9074V35.804L30.2964%2041.9074V26.2704L20.8901%2031.945V24.227L14.1301%2020.1469L11.745%2018.7065H30.2964L16.0931%2010.1377L19.4429%208.11437H12.7433L11.7383%207.5114L9.46045%206.13797L12.616%204.23527H6.30492L0.0273438%200.456665H21.0642L32.7685%207.5248L33.9075%208.20816L44.4192%2014.5594L51.3199%2018.7199L52.834%2019.6378C53.3632%2019.9593%2053.8389%2020.3479%2054.261%2020.7968C55.3865%2021.996%2056.0766%2023.6174%2056.0766%2025.3928%22%20fill%3D%22%23FBFAFD%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+			background-repeat: no-repeat;
+			gap: $spacing-x-large;
+
+			&.right{
+				margin-right: $spacing-section!important;
+				background-position-x: 97%;
+
+				> .wp-block-column{
+					&.offset-column{
+						margin-right: calc($spacing-section * -1)!important;
+						padding-left: unset;
+					}
+				}
+			}
+			&.left{
+				margin-left: $spacing-section!important;
+				background-position-x: 3%;
+
+				> .wp-block-column{
+					&.offset-column{
+						margin-left: calc($spacing-section * -1)!important;
+						padding-right: unset;
+					}
+				}
+			}
+
+			&.bottom{
+				margin-bottom: calc($spacing-section * 2);
+				background-position-y: 6%;
+
+				> .wp-block-column{
+					&.offset-column{
+						translate: 0 $spacing-section;
+					}
+				}
+			}
+			&.center{
+				background-position-y: 6%;
+
+				> .wp-block-column{
+					&.offset-column{
+						padding: $spacing-section $spacing-none;
+					}
+				}
+			}
+			&.top{
+				margin-top: calc($spacing-section * 2);
+				background-position-y: 94%;
+
+				> .wp-block-column{
+					&.offset-column{
+						translate: 0 calc($spacing-section * -1);
+					}
+				}
+			}
+		}
+}

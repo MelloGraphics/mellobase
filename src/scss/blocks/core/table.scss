@@ -1,0 +1,9 @@
+//  Core table block styling
+
+@use "../../utils" as *;
+
+.wp-block-table figcaption{
+    font-size: calc($font-size-small - .4vh);
+    margin: $spacing-small;
+    font-style: italic;
+}

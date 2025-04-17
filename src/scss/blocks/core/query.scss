@@ -1,0 +1,18 @@
+//  Core query block styling
+
+@use "../../utils" as *;
+
+body.post-type-archive-work .is-section-work-archive {
+	@include for-tablet-portrait-up {
+		.wp-block-query .type-work:nth-child(2n) {
+			translate: 0 25%;
+		}
+
+		.is-section-work-archive__load-more-wrapper {
+			padding-top: 8%;
+		}
+	}
+	button.search-filter-input-button.search-filter-field__input {
+		@include button-hover();
+	}
+}

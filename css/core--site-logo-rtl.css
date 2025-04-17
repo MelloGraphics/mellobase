@@ -1,0 +1,101 @@
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/blocks/core/site-logo.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Misc.
+ */
+.wp-block-site-logo .replaced-svg {
+  overflow: visible;
+}
+.wp-block-site-logo * {
+  transition: all var(--wp--custom--speed-medium) var(--wp--custom--ease-bounce);
+  transform-box: fill-box;
+}
+.wp-block-site-logo:hover #Logotype path, .wp-block-site-logo:focus-within #Logotype path, .wp-block-site-logo:active #Logotype path {
+  translate: 0.25em 0;
+}
+.wp-block-site-logo:hover #Logotype path:nth-child(1n), .wp-block-site-logo:focus-within #Logotype path:nth-child(1n), .wp-block-site-logo:active #Logotype path:nth-child(1n) {
+  transition-delay: 0.05s;
+}
+.wp-block-site-logo:hover #Logotype path:nth-child(2n), .wp-block-site-logo:focus-within #Logotype path:nth-child(2n), .wp-block-site-logo:active #Logotype path:nth-child(2n) {
+  transition-delay: 0.1s;
+}
+.wp-block-site-logo:hover #Logotype path:nth-child(3n), .wp-block-site-logo:focus-within #Logotype path:nth-child(3n), .wp-block-site-logo:active #Logotype path:nth-child(3n) {
+  transition-delay: 0.15s;
+}
+.wp-block-site-logo:hover #Logotype path:nth-child(4n), .wp-block-site-logo:focus-within #Logotype path:nth-child(4n), .wp-block-site-logo:active #Logotype path:nth-child(4n) {
+  transition-delay: 0.2s;
+}
+.wp-block-site-logo:hover #Logotype path:nth-child(5n), .wp-block-site-logo:focus-within #Logotype path:nth-child(5n), .wp-block-site-logo:active #Logotype path:nth-child(5n) {
+  transition-delay: 0.25s;
+}
+.wp-block-site-logo:hover #Logotype path:nth-child(6n), .wp-block-site-logo:focus-within #Logotype path:nth-child(6n), .wp-block-site-logo:active #Logotype path:nth-child(6n) {
+  transition-delay: 0.3s;
+}
+.wp-block-site-logo:hover #Logotype path:nth-child(7n), .wp-block-site-logo:focus-within #Logotype path:nth-child(7n), .wp-block-site-logo:active #Logotype path:nth-child(7n) {
+  transition-delay: 0.35s;
+}
+.wp-block-site-logo:hover #Logotype path:nth-child(8n), .wp-block-site-logo:focus-within #Logotype path:nth-child(8n), .wp-block-site-logo:active #Logotype path:nth-child(8n) {
+  transition-delay: 0.4s;
+}
+.wp-block-site-logo:hover #Logotype path:nth-child(9n), .wp-block-site-logo:focus-within #Logotype path:nth-child(9n), .wp-block-site-logo:active #Logotype path:nth-child(9n) {
+  transition-delay: 0.45s;
+}
+.wp-block-site-logo:hover #Logotype path:nth-child(10n), .wp-block-site-logo:focus-within #Logotype path:nth-child(10n), .wp-block-site-logo:active #Logotype path:nth-child(10n) {
+  transition-delay: 0.5s;
+}
+
+header.scrolled #Logotype path {
+  opacity: 0;
+  translate: -0.5em 0;
+}
+header.scrolled .wp-block-site-logo:hover #Logotype path {
+  opacity: 1;
+  translate: 0;
+}
+header.scrolled .wp-block-site-logo:hover #Logotype path:nth-child(1n) {
+  transition-delay: 0.05s;
+}
+header.scrolled .wp-block-site-logo:hover #Logotype path:nth-child(2n) {
+  transition-delay: 0.1s;
+}
+header.scrolled .wp-block-site-logo:hover #Logotype path:nth-child(3n) {
+  transition-delay: 0.15s;
+}
+header.scrolled .wp-block-site-logo:hover #Logotype path:nth-child(4n) {
+  transition-delay: 0.2s;
+}
+header.scrolled .wp-block-site-logo:hover #Logotype path:nth-child(5n) {
+  transition-delay: 0.25s;
+}
+header.scrolled .wp-block-site-logo:hover #Logotype path:nth-child(6n) {
+  transition-delay: 0.3s;
+}
+header.scrolled .wp-block-site-logo:hover #Logotype path:nth-child(7n) {
+  transition-delay: 0.35s;
+}
+header.scrolled .wp-block-site-logo:hover #Logotype path:nth-child(8n) {
+  transition-delay: 0.4s;
+}
+header.scrolled .wp-block-site-logo:hover #Logotype path:nth-child(9n) {
+  transition-delay: 0.45s;
+}
+header.scrolled .wp-block-site-logo:hover #Logotype path:nth-child(10n) {
+  transition-delay: 0.5s;
+}
+
+.wp-block-site-logo.is-style-reversed {
+  filter: brightness(0) invert(1);
+}

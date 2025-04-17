@@ -1,0 +1,159 @@
+// Gravity form style. Change the variables to make quick styling edits
+
+@use "../../utils" as *;
+
+body .gform-theme--framework {
+	// Primary
+	--gf-color-primary: var(--wp--preset--color--primary) !important;
+
+	// Grid spacing
+	--gf-form-gap-y: var(--wp--preset--spacing--small) !important;
+
+	// Input labels
+	--gf-ctrl-label-font-size-primary: var(
+		--wp--preset--font-size--medium
+	) !important;
+	--gf-ctrl-label-font-size-secondary: var(
+		--wp--preset--font-size--small
+	) !important;
+	--gf-ctrl-label-font-size-req: inherit;
+	// --gf-ctrl-label-color-primary: var(--wp--preset--color--base)!important;
+	// --gf-ctrl-label-color-secondary: var(--wp--preset--color--base)!important;
+	// --gf-ctrl-accent-color: var(--wp--preset--color--base)!important;
+	--gf-ctrl-choice-check-color: var(--wp--preset--color--primary) !important;
+
+	// Input upload
+	--gf-color-in-ctrl-primary: var(--wp--preset--color--primary) !important;
+	--gf-color-in-ctrl-primary: var(--wp--preset--color--primary) !important;
+	--gf-color-in-ctrl-contrast-rgb: var(--wp--preset--color--base) !important;
+	--gf-ctrl-file-zone-padding-x: var(--wp--preset--spacing--small) !important;
+	--gf-ctrl-file-zone-padding-y: var(--wp--preset--spacing--small) !important;
+
+	//Progess steps
+
+	--gf-field-pg-steps-number-color: var(--wp--preset--color--base);
+	--gf-color-out-ctrl-light: var(--wp--preset--color--base) !important;
+	--gf-color-out-ctrl-light-darker: var(--wp--preset--color--base) !important;
+	--gf-color-out-ctrl-dark: var(--wp--preset--color--base) !important;
+
+	--gf-field-pg-prog-text-transform: none;
+
+	// Input background
+	--gf-ctrl-bg-color: $transparent;
+	--gf-ctrl-bg-color-focus: $transparent;
+	--gf-ctrl-bg-border-color-focus: var(--wp--preset--color--secondary);
+	// --gf-ctrl-border-color: var(--wp--preset--color--base)!important;
+	--gf-ctrl-border-radius: 0;
+	--gf-ctrl-border-width: 2px;
+
+	// Shadow
+	--gf-ctrl-shadow: unset;
+
+	// Input text
+	// --gf-ctrl-color: var(--wp--preset--color--base);
+
+	// Submit button
+	--gf-ctrl-btn-color-primary: var(--wp--preset--color--base);
+	--gf-ctrl-btn-radius: var(--wp--preset--custom--radius-medium);
+	--gf-ctrl-btn-font-weight: 100;
+	--gf-ctrl-btn-font-size: var(--wp--preset--font-size--small);
+
+	--gf-ctrl-btn-bg-color-hover-primary: var(--wp--preset--color--primary);
+
+	// Error notices
+	--gf-ctrl-desc-font-size-error: var(--wp--preset--font-size--small);
+
+	::placeholder {
+		color: $color-secondary;
+		font-weight: normal;
+	}
+
+	.gform-field-label--type-sub {
+		color: $color-secondary;
+		@include visually-hidden;
+	}
+}
+
+// all inputs
+
+body .gform_wrapper .gform_body .gform_fields .gfield input[type="text"],
+body .gform_wrapper .gform_body .gform_fields .gfield select,
+body .gform_wrapper .gform_body .gform_fields .gfield textarea,
+body .gform_wrapper .gform_body .gform_fields .gfield input[type="email"],
+body .gform_wrapper .gform_body .gform_fields .gfield input[type="tel"] {
+	box-shadow: unset;
+	font-size: $font-size-medium;
+	font-weight: bold;
+}
+
+body .gform_wrapper .gform_body .gform_fields .ginput_container_consent {
+	align-items: center;
+}
+
+.gform_required_legend {
+	display: none;
+	visibility: hidden;
+}
+
+// validation error notifcation box
+
+.gform-theme--framework .gform_validation_errors {
+	display: none;
+}
+
+// // Submit spinner align into button
+
+// #field_submit .gform_button.button {
+// 	// TODO Fix spinner to align inside button when clicked
+// 	position: relative;
+
+// 	rotate: 10deg !important;
+
+// 	.gform-loader {
+// 		position: absolute;
+// 		inset: 0;
+// 		z-index: 1;
+// 		margin: auto;
+// 		filter: brightness(0);
+// 	}
+
+// 	&:has(.gform-loader) {
+// 		input {
+// 			color: transparent !important;
+// 		}
+// 	}
+
+// 	&:hover {
+// 		// TODO fix hover state to match fill button
+// 		letter-spacing: 1px;
+// 		transition: letter-spacing 0.25s $ease-circ;
+// 	}
+// }
+
+body .gform_wrapper #field_submit, body .gform_wrapper .gform_footer #field_submit  {
+    flex-wrap: nowrap;
+    background-color: $color-primary;
+    border-radius: $radius-small;
+    padding: 0 $spacing-small;
+	color: $color-base;
+
+    @include primary-button-arrow-style();
+
+    &:hover{
+		filter: brightness(1.05);
+		scale: 1.025 1;
+
+		&::before{
+			width: 0;
+			translate: 1em 0;
+		}
+		&::after{
+			width: 1em;
+			translate: 0 0;
+		}
+	}
+}
+
+body .gform_wrapper .gform_footer input[type="submit"], body .gform_wrapper input[type="submit"]{
+    padding: 0!important;
+}

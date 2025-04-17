@@ -1,0 +1,25 @@
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/blocks/core/table.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Misc.
+ */
+.wp-block-table figcaption {
+  font-size: calc(var(--wp--preset--font-size--small) - 0.4vh);
+  margin: var(--wp--preset--spacing--small);
+  font-style: italic;
+}
+
+/*# sourceMappingURL=core--table.css.map*/

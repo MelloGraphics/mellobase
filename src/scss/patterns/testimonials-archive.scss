@@ -1,0 +1,53 @@
+
+@use "../utils" as *;
+
+
+.rpi{
+    font-family: $font-primary;
+}
+
+.rpi-content .rpi-url{
+    margin-top: $spacing-x-large !important;
+    border-radius: $radius-small;
+    padding: $spacing-small $spacing-medium !important;
+    background-color: $color-primary !important;
+    color: $color-base !important;
+
+    @include button-hover();
+}
+
+// cards
+
+.rpi-cards{
+    display: block;
+    column-width: 300px;
+}
+
+.rpi-content .rpi-card{
+    display: inline-block;
+    margin-bottom: $spacing-large;
+}
+
+.rpi-text{
+    min-height: fit-content;
+    font-style: italic;
+}
+
+// Side bar two blue buttons
+
+.rpi-slider-btn{
+    display: none;
+    visibility: hidden;
+}
+
+// Side bar title
+
+a.rpi-name{
+    color: $color-contrast!important;
+}
+
+// stars in the badge
+
+.rpi .rpi-badge-left .rpi-star::after{
+    background-color: $color-primary;
+}

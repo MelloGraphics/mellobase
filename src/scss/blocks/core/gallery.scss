@@ -1,0 +1,47 @@
+// Block core gallery
+
+@use "../../utils" as *;
+
+
+.wp-block-cover:has(.is-style-booklet){
+    contain: paint;
+}
+
+.wp-block-gallery.is-style-booklet{
+    display: grid;
+    align-content: center;
+
+    .wp-block-image{
+        grid-row: 1;
+        grid-column: 1;
+        box-shadow: 1px 1px 2px #00000020, 50px 50px 50px #00000010;
+        // filter: drop-shadow(1px 1px 2px #00000020) drop-shadow(1px 2px 5px #00000020) drop-shadow(50px 50px 50px #00000020);
+
+        img{
+            aspect-ratio: 1/1.414;
+            max-height: 70svh;
+            max-width: auto;
+            object-fit: contain;
+        }
+        &:first-child{
+            z-index: +1;
+        }
+        @function random-range($min, $max) {
+            @return $min + random($max - $min + 1);
+        }
+        @for $i from 2 through 50 {
+            &:nth-child(#{$i}n) {
+                // translate: #{random-range(-100, 100)}vmax #{random-range(-15, 15)}vmax;
+                // rotate: #{random-range(-360, 360)}deg;
+
+                transform: rotate(#{random-range(-180, 180)}deg) translateX(#{random-range(-50, 50)}vmax) translateY(#{random-range(-50, 50)}vmax);
+            }
+        }
+        // &:nth-child(odd){
+        //     transform: rotateY(180deg);
+        // }
+        // &:nth-child(even){
+        //     transform: rotateY(0deg);
+        // }
+    }
+}

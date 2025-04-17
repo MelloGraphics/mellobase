@@ -1,0 +1,33 @@
+// Spline styling when added to a core/html  block
+
+@use "../../utils" as *;
+
+// spline-viewer{
+//     margin-block-start: 0;
+//     position: absolute;
+//     top: 0;
+//     box-sizing: border-box;
+// }
+
+#canvas3d{
+    position: absolute;
+    inset: 0;
+    width: 100%!important;
+    height: auto!important;
+    margin: auto;
+}
+
+.wp-block-group:has(> #canvas3d){
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wp-block-cover__inner-container:has(#canvas3d) > .wp-block-group:not(:has(#canvas3d)){
+    pointer-events: none;
+
+    .wp-block-buttons{
+        pointer-events: all;
+    }
+}

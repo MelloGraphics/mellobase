@@ -1,0 +1,236 @@
+// Core Block Image Styles
+
+@use "../../utils" as *;
+
+
+.wp-block-image{
+    position: relative;
+
+    img.size-full{
+        width: 100%;
+        max-width: unset;
+    }
+
+    &.is-style-rounded-medium{
+        border-radius: $radius-medium;
+        overflow: hidden;
+        // > img{
+        //     scale: 1.2;
+        // }
+    }
+
+    .wp-element-caption{
+        position: absolute;
+        inset: auto $spacing-small $spacing-small $spacing-small;
+        display: inline-flex!important;
+        align-items: center;
+        gap: .3rem;
+        z-index: +1;
+        margin: 0;
+        padding: $spacing-small;
+        background-color: $color-base;
+        font-size: $font-size-small;
+        border-radius: calc($radius-medium / 2);
+        line-height: 1;
+        width: fit-content;
+
+        &:before{
+            width: 1.1em;
+            height: 1.1em;
+            content: url('data:image/svg+xml,<svg viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_5151_1298)"><path d="M11.3487 10.6699C9.35568 13.4177 4.09298 13.4038 1.85806 11.0706C-0.376863 8.73731 -0.879853 5.61332 1.5997 3.27793C4.07925 0.942538 8.60252 0.279992 10.8374 2.61325C13.0724 4.9465 13.3614 7.8953 11.3487 10.6699Z" fill="%23A37FCC"/><path d="M7.40053 4.12764C7.5045 4.60151 6.91109 5.13905 6.38059 5.13905C5.85009 5.13905 5.4209 4.88437 5.4209 4.40078C5.4209 3.91719 5.85063 3.38937 6.38059 3.38937C6.91056 3.38937 7.2955 3.64891 7.40053 4.12764Z" fill="white"/><path d="M5.51153 5.80198C5.21936 5.80198 5.02475 6.73368 5.46301 6.73368H5.90074C5.90074 6.73368 5.94926 9.57301 5.90074 10.0163C5.85222 10.4595 7.16593 11.1696 7.21445 10.1937C7.26297 9.21773 7.50662 5.93466 6.92228 5.84621C6.33793 5.75775 5.511 5.80198 5.511 5.80198H5.51153Z" fill="white"/></g><defs><clipPath id="clip0_5151_1298"><rect width="13" height="13" fill="white" transform="translate(0 0.5)"/></clipPath></defs></svg>');
+        }
+    }
+
+    svg *{
+        transform-box: fill-box;
+    }
+}
+
+//
+// Red Kite Illustrations
+//
+
+
+//red kite hunting
+svg.replaced-svg{
+    overflow: visible;
+}
+#red-kite-design-illustration-hunting{
+    animation: up-down 1s infinite alternate-reverse ease-in-out;
+}
+#red-kite-design-404-message, #red-kite-design-illustration-hunting{
+    #red-kite{
+        animation: up-down 1s infinite alternate-reverse ease-in-out;
+    }
+    #wing-front, #wing-back{
+        transform-origin: bottom left;
+        animation: squish-vertical 1s infinite alternate-reverse ease-in-out;
+    }
+    #tail{
+        transform-origin: top right;
+        animation: squish-vertical 1s infinite alternate-reverse ease-in-out;
+    }
+    #head{
+        transform-origin: center right;
+        animation: rotate-small 1s infinite alternate-reverse ease-in-out;
+    }
+    #item{
+        transform-origin: top center;
+        animation: rotate-small 2s infinite alternate-reverse ease-in-out;
+    }
+    #foot-front, #foot-back{
+        transform-origin: top center;
+        animation: rotate-small 2s infinite alternate-reverse ease-in-out;
+    }
+}
+
+//red kite wing span
+#red-kite-design-illustration-wing-span{
+    animation: up-down 1s infinite alternate-reverse ease-in-out .5s;
+
+    #wing-left{
+        transform-origin: top right;
+        animation: flap-left 1s infinite alternate-reverse ease-in-out;
+    }
+    #wing-right{
+        transform-origin: top left;
+        animation: flap-right 1s infinite alternate-reverse ease-in-out;
+    }
+    #tail{
+        transform-origin: top left;
+        animation: squish-vertical-small 1s infinite alternate-reverse ease-in-out;
+    }
+    #item{
+        transform-origin: top center;
+        animation: rotate-small 2s infinite alternate-reverse ease-in-out;
+    }
+}
+
+// red kite flying
+#red-kite-design-illustration-flying{
+    animation: up-down-reverse 1s infinite alternate-reverse ease-in-out;
+
+    #wing-top{
+        transform-origin: bottom right;
+        animation: squish-vertical-small 1s infinite alternate-reverse ease-in-out;
+    }
+    #wing-bottom{
+        transform-origin: top left;
+        animation: flap-right 1s infinite alternate-reverse ease-in-out, squish-vertical 1s infinite alternate-reverse ease-in-out;
+    }
+    #tail{
+        transform-origin: top;
+        animation: squish-vertical-small 1s infinite alternate-reverse ease-in-out;
+    }
+    #item{
+        transform-origin: top right;
+        animation: rotate-small 2s infinite alternate-reverse ease-in-out;
+    }
+    #squiggle-bottom{
+        transform-origin: top;
+        animation: up-down 1s infinite alternate-reverse ease-in-out, rotate-small 1s infinite alternate-reverse ease-in-out;
+    }
+}
+
+// Solutions
+
+#red-kite-design-brand-solution-master-brand-large{
+    #background{
+        animation: rotate-full infinite 60s linear;
+        transform-origin: center;
+    }
+    #crown, #bullhorn, #browser{
+        animation: up-down-small infinite alternate-reverse 1s ease-in-out;
+        transform-origin: center;
+    }
+    #red-kite{
+        animation: up-down infinite alternate-reverse 1s ease-in-out;
+        transform-origin: center;
+    }
+    #wing-left{
+        animation: flap-left infinite alternate-reverse 1s ease-in-out;
+        transform-origin: top right;
+    }
+    #wing-right{
+        animation: flap-right infinite alternate-reverse 1s ease-in-out;
+        transform-origin: top left;
+    }
+    #tail{
+        animation: squish-vertical-small infinite alternate-reverse 1s ease-in-out;
+        transform-origin: top center;
+    }
+}
+
+//
+// bird keyframes
+//
+
+@keyframes rotate-small{
+	from{
+		rotate: -5deg;
+	}
+	to{
+		rotate: 5deg;
+	}
+}
+@keyframes rotate-full{
+	to{
+		rotate: 360deg;
+	}
+}
+@keyframes flap-left{
+	from{
+		rotate: -5deg;
+	}
+	to{
+		rotate: 5deg;
+	}
+}
+@keyframes flap-right{
+	from{
+		rotate: 5deg;
+	}
+	to{
+		rotate: -5deg;
+	}
+}
+@keyframes up-down{
+	from{
+		translate: 0 -5%;
+	}
+	to{
+		translate: 0 5%;
+	}
+}
+@keyframes up-down-small{
+	from{
+		translate: 0 .25%;
+	}
+	to{
+		translate: 0 -.25%;
+	}
+}
+@keyframes up-down-reverse{
+	from{
+		translate: 0 5%;
+	}
+	to{
+		translate: 0 -5%;
+	}
+}
+@keyframes squish-vertical{
+	from{
+		scale: 1 .5;
+	}
+	to{
+		scale: 1 1;
+	}
+}
+@keyframes squish-vertical-small{
+	from{
+		scale: 1 .8;
+	}
+	to{
+		scale: 1 1;
+	}
+}

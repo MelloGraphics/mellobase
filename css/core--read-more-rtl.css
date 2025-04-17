@@ -1,0 +1,139 @@
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/blocks/core/read-more.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Misc.
+ */
+.wp-block-read-more {
+  font-weight: 700;
+  padding: var(--wp--preset--spacing--small) 0;
+  border-radius: unset;
+  background-color: var(--wp--preset--color--transparent);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.wp-block-read-more::after {
+  content: "";
+  -webkit-mask-image: url("data:image/svg+xml,<svg width=\"60\" height=\"4\" viewBox=\"0 0 60 4\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.00464317 2.22845C0.270295 -0.0105155 17.2205 1.29019 20.8923 1.29019C52.6013 1.29019 60 -0.487744 60 1.29019C60 3.06812 39.699 3.06815 25.3016 3.06815C10.9043 3.06815 -0.261009 4.46742 0.00464317 2.22845Z\" fill=\"%23B593D4\"/></svg>");
+          mask-image: url("data:image/svg+xml,<svg width=\"60\" height=\"4\" viewBox=\"0 0 60 4\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.00464317 2.22845C0.270295 -0.0105155 17.2205 1.29019 20.8923 1.29019C52.6013 1.29019 60 -0.487744 60 1.29019C60 3.06812 39.699 3.06815 25.3016 3.06815C10.9043 3.06815 -0.261009 4.46742 0.00464317 2.22845Z\" fill=\"%23B593D4\"/></svg>");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  margin-right: calc(var(--wp--preset--spacing--small) / 2);
+  background-color: currentColor;
+  max-width: 10%;
+  min-width: 60px;
+  height: 10px;
+}
+.wp-block-read-more:after {
+  position: absolute;
+  inset: auto 0 0 0;
+  width: 100%;
+  height: 0.2em;
+  margin: 0;
+  min-width: 100%;
+  max-width: 100%;
+  transition: scale 0.25s ease-in-out;
+  transform-origin: left center;
+  scale: 1 1;
+}
+.wp-block-read-more:hover:after {
+  animation: underline-animation-in 0.4s ease-in-out both;
+  scale: 1 1;
+}
+@keyframes underline-animation-in {
+  0% {
+    transform-origin: center left;
+    scale: 1 1;
+  }
+  55% {
+    transform-origin: center left;
+    scale: 0 1;
+  }
+  56% {
+    transform-origin: center right;
+  }
+  100% {
+    transform-origin: center right;
+    scale: 1 1;
+  }
+}
+
+.wp-block-read-more.is-style-secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+  transition: 0.25s var(--wp--custom--ease-bounce);
+}
+.wp-block-read-more.is-style-secondary::after {
+  content: "";
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2232%22%20height%3D%2216%22%20viewBox%3D%220%200%2032%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20id%3D%22arrow-right%22%3E%3Cpath%20id%3D%22arrow-head%22%20d%3D%22M22.4533%2015.0001C22.4108%2013.3515%2029.2886%2010.6321%2029.2886%208.25109C29.2886%205.18956%2020.709%203.15456%2022.8899%200.624963C25.0676%201.5915%2031.1303%206.67559%2031.1303%208.25109C31.1303%209.8266%2022.5372%2018.274%2022.4533%2015.0001Z%22%20fill%3D%22%23EE255A%22%3E%3C%2Fpath%3E%3Cpath%20id%3D%22arrow-arm%22%20d%3D%22M0.00239171%208.74079C0.139231%207.01404%208.87037%208.01718%2010.7618%208.01718C27.0952%208.01718%2030.9063%206.64599%2030.9063%208.01718C30.9063%209.38836%2020.4492%209.38838%2013.033%209.38838C5.61685%209.38838%20-0.134447%2010.4675%200.00239171%208.74079Z%22%20fill%3D%22%23EE255A%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+          mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2232%22%20height%3D%2216%22%20viewBox%3D%220%200%2032%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20id%3D%22arrow-right%22%3E%3Cpath%20id%3D%22arrow-head%22%20d%3D%22M22.4533%2015.0001C22.4108%2013.3515%2029.2886%2010.6321%2029.2886%208.25109C29.2886%205.18956%2020.709%203.15456%2022.8899%200.624963C25.0676%201.5915%2031.1303%206.67559%2031.1303%208.25109C31.1303%209.8266%2022.5372%2018.274%2022.4533%2015.0001Z%22%20fill%3D%22%23EE255A%22%3E%3C%2Fpath%3E%3Cpath%20id%3D%22arrow-arm%22%20d%3D%22M0.00239171%208.74079C0.139231%207.01404%208.87037%208.01718%2010.7618%208.01718C27.0952%208.01718%2030.9063%206.64599%2030.9063%208.01718C30.9063%209.38836%2020.4492%209.38838%2013.033%209.38838C5.61685%209.38838%20-0.134447%2010.4675%200.00239171%208.74079Z%22%20fill%3D%22%23EE255A%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: left center;
+          mask-position: left center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  background-color: currentColor;
+  width: 2em;
+  height: 1em;
+}
+
+.wp-block-read-more.is-style-tertiary {
+  padding: var(--wp--preset--spacing--small) 0;
+  border-radius: unset;
+  background-color: var(--wp--preset--color--transparent);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.wp-block-read-more.is-style-tertiary::after {
+  content: "";
+  -webkit-mask-image: url("data:image/svg+xml,<svg width=\"60\" height=\"4\" viewBox=\"0 0 60 4\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.00464317 2.22845C0.270295 -0.0105155 17.2205 1.29019 20.8923 1.29019C52.6013 1.29019 60 -0.487744 60 1.29019C60 3.06812 39.699 3.06815 25.3016 3.06815C10.9043 3.06815 -0.261009 4.46742 0.00464317 2.22845Z\" fill=\"%23B593D4\"/></svg>");
+          mask-image: url("data:image/svg+xml,<svg width=\"60\" height=\"4\" viewBox=\"0 0 60 4\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.00464317 2.22845C0.270295 -0.0105155 17.2205 1.29019 20.8923 1.29019C52.6013 1.29019 60 -0.487744 60 1.29019C60 3.06812 39.699 3.06815 25.3016 3.06815C10.9043 3.06815 -0.261009 4.46742 0.00464317 2.22845Z\" fill=\"%23B593D4\"/></svg>");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  margin-right: calc(var(--wp--preset--spacing--small) / 2);
+  background-color: currentColor;
+  max-width: 10%;
+  min-width: 60px;
+  height: 10px;
+}
+.wp-block-read-more.is-style-tertiary:after {
+  position: absolute;
+  inset: auto 0 0 0;
+  width: 100%;
+  height: 0.2em;
+  margin: 0;
+  min-width: 100%;
+  max-width: 100%;
+  transition: scale 0.25s ease-in-out;
+  transform-origin: left center;
+  scale: 0 1;
+}
+.wp-block-read-more.is-style-tertiary:hover:after {
+  transform-origin: right center;
+  scale: 1 1;
+}

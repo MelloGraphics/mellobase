@@ -1,0 +1,69 @@
+// Part - Header styles
+
+@use "../utils" as *;
+
+// .wp-site-blocks > header:not(:has(.is-menu-open))
+
+.wp-site-blocks > header {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	top: 0;
+	transition: translate .5s;
+	gap: $spacing-none;
+	// pointer-events: none;
+
+	> .breadcrumbs-wrapper{
+		z-index: -1;
+		transition: translate .5s $ease-bounce;
+	}
+
+	&::after{ // website overlay
+		transition-property: display opacity;
+		transition-duration: 1s;
+		transition-delay: .1s;
+		transition-behavior: allow-discrete; // allow animating from display: none
+		display: none;
+		opacity: 0;
+		content: 'overlay';
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		inset: 0;
+		z-index: -1;
+		background-color: #00000050;
+		scale: 1.5;
+		backdrop-filter: blur(1em);
+	}
+
+	&:has([aria-expanded=true]){
+		&::after{
+			display: block;
+			opacity: 1;
+		}
+	}
+
+	&.hidden {
+		translate: 0 -100%;
+
+		&::after{
+			display: none;
+			transition-delay: 0;
+			opacity: 0;
+		}
+	}
+
+	&.scrolled{
+		.breadcrumbs-wrapper{
+			translate: 0 -100%;
+			opacity: 0;
+		}
+	}
+
+}
+
+body.admin-bar{
+	.wp-site-blocks > header {
+		top: 32px;
+	}
+}

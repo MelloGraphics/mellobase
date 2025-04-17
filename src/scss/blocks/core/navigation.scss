@@ -1,0 +1,388 @@
+// Navigation core styling
+
+@use "../../utils" as *;
+
+$navigation-breakpoint: 930px; // Where the menu changes to hamburger
+$header-height: var(--header-height);
+
+
+nav.is-style-mega-menu{
+  --header-height: 90px;
+  z-index: 999;
+  position: unset;
+
+  .is-editing>.wp-block-navigation__submenu-container>.block-list-appender{
+    @include always-visually-hidden()
+  } // hides the plus block icon in the editor to fix styling in the editor. This stops the user from changing the menu structure.
+
+  .wp-block-navigation__responsive-container .wp-block-navigation__responsive-close .wp-block-navigation__responsive-dialog .wp-block-navigation__responsive-container-content{ // overlay wrapper styling
+      flex-wrap: nowrap;
+      gap: 0;
+    
+    .wp-block-navigation__container{ // top level containers
+      padding: $spacing-large $spacing-medium;
+      flex-wrap: nowrap;
+      gap: $spacing-medium;
+      
+
+
+    &:last-child{ // targets the utility navigation part of the top menu
+      gap: $spacing-small;
+    }
+
+    > .wp-block-navigation-item{ // Top level Navigation links
+      font-size: $font-size-large;
+      font-weight: 700;
+
+      &:not(.is-style-link-button){
+        @media screen and (min-width: $navigation-breakpoint) {
+          @include line-under();
+            &:after{
+            inset: auto 0 -50% 0;
+            background-color: $color-secondary;
+          }
+        }
+      }
+
+      @media screen and (min-width: $navigation-breakpoint) {
+        &:has([aria-expanded="true"]){
+          &:after{
+            scale: 1 1;
+          }
+        }
+      }
+
+      .wp-block-navigation__submenu-icon svg{ // Button chevron icons
+        stroke: $color-secondary;
+      }
+
+      .wp-block-navigation__submenu-container { // Sub nav wrapper container
+        box-sizing: border-box;
+        justify-content: center;
+        border: unset;
+        padding: 0;
+        background-color: $color-base;
+
+        .submenu-content-wrapper{ // a custom class added to the ul.wp-block-group
+          width: 100%;
+          max-width: $width-content;
+        }
+
+        @media screen and (min-width: $navigation-breakpoint) { 
+          flex-direction: row;
+          width: 100vw;
+          position: fixed;
+          left: 0;
+          right: 0;
+          top: $header-height; // position of submenu without admin bar = height of header
+          padding: $spacing-xx-large;
+        }
+
+        p.has-large-font-size{ // Column titles
+          display: flex;
+          font-weight: 600;
+        }
+
+        .wp-block-group:has(>.is-style-after-line){
+          width: 100%;
+
+          p{
+            width: 100%;
+
+            &::after{
+              flex: 1;
+              max-width: unset;
+              max-height: 2px;
+            }
+          }
+        }
+
+        .wp-block-navigation-item{ // Sub navigation links
+          margin: unset;
+          font-weight: 700;
+
+          &__content{ // Sub navigation links clickable wp-block-navigation-item__content
+            padding: $spacing-small 0;
+          }
+
+          a:hover{
+            .wp-block-navigation-item__label{
+              color: $color-secondary;
+            }
+          }
+
+          .wp-block-navigation-item__description{
+            display: block;
+            font-size: $font-size-small;
+            font-weight: 100;
+            text-wrap-style: pretty;
+          }
+        }
+      }
+    }
+    }
+  }
+}
+
+// has admin bar open
+
+body.admin-bar{
+  .is-style-mega-menu{
+    .wp-block-navigation__submenu-container { // Sub nav wrapper
+      @include breakpoint(lg) {
+        top: calc($header-height + $admin-bar)!important; // height of header with admin bar
+      }
+    }
+    .wp-block-navigation__responsive-container.is-menu-open{
+      top: $admin-bar;
+    }
+  }
+}
+
+// When the menu is scrolled hide the subnavigation (class is added from navigation.js)
+
+header{
+  &.hidden{
+    .is-style-mega-menu{
+      .wp-block-navigation__submenu-container { // Sub nav wrapper
+        @include breakpoint(lg) {
+          display: none;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}
+
+
+
+//
+//
+// Mobile specific styling
+//
+//
+//
+
+@media (min-width: $navigation-breakpoint) {
+  .wp-block-navigation__responsive-container-open:not(.always-shown){
+    display: none!important;
+  }
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open){
+    display: block!important;
+  }
+}
+
+@media screen and (max-width: $navigation-breakpoint) {
+
+  .wp-block-navigation__responsive-container-open:not(.always-shown){
+    display: block!important;
+  }
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open){
+    display: none!important;
+  }
+
+  nav.is-style-mega-menu{
+    justify-content: flex-end;
+
+    // Initially hide submenus
+
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container{
+      display: none;
+    }
+
+    // Open and Close icon
+
+    .wp-block-navigation__responsive-container-open, .wp-block-navigation__responsive-container-close {
+      padding: $spacing-large;
+    }
+
+    // Main mobile overlay styling
+
+    .wp-block-navigation__responsive-container .wp-block-navigation__responsive-container-content { // Mobile overlay wrapper
+      padding: $spacing-x-large;
+      height: 100svh;
+      overscroll-behavior: contain;
+      overflow-y: auto;
+      overflow-x: clip;
+      justify-content: space-evenly;
+      align-items: stretch;
+      max-width: 450px;
+      margin: auto;
+
+      .wp-block-spacer{ // remove flex spacers from mobile
+        @include always-visually-hidden
+      }
+
+      .wp-block-navigation__container { // main overlay content wrapper <ul> tag
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        gap: 0;
+        padding: 0!important;
+
+        &:first-of-type{
+          flex: 1;
+          display: flex;
+          justify-content: center;
+
+          > .wp-block-navigation-item{ // Primary links stying only
+            font-size: $font-size-xx-large!important;
+          }
+        }
+      }
+
+      // .submenu-content-wrapper{ // class added in advanced
+      //   display: flex;
+      //   flex-direction: column;
+      // }
+
+      .wp-block-navigation-item { // mobile default link styling <li> tag
+        align-items: center;
+        font-size: $font-size-x-large!important;
+        width: fill-available;
+        
+        &__content{ // link <a> tag
+          padding: $spacing-medium 0!important;
+          width: fill-available;
+        }
+
+        &.is-style-link-icon{
+          @include always-visually-hidden()
+        }
+
+        &.is-style-link-button{
+          margin-top: $spacing-medium;
+          a{
+            width: 100%;
+            text-align: center;
+            font-size: $font-size-large;
+          }
+        }
+
+        &.is-style-link-chevron{
+          order: 1;
+
+          a{
+            justify-content: space-between;
+          }
+        }
+      }
+
+      .wp-block-navigation-submenu{
+        width: 100%;
+      }
+
+      .wp-block-navigation-item.has-child:has([aria-expanded="true"]){ // When a sub menu is open style like this…
+        position: absolute; // if submenu parent has aria-expanded then, position it above everything else and align top
+        inset: 0;
+        z-index: +1;
+        background-color: $color-base!important;
+        height: fit-content;
+        padding: 0!important;
+
+        & [aria-expanded="true"] ~ .wp-block-navigation__submenu-container { // sub menu overlay and links
+          position: static;
+          display: flex;
+          flex-direction: column;
+          gap: $spacing-large;
+          width: -webkit-fill-available;
+          max-width: 450px;
+          margin: auto;
+          background: inherit!important;
+          }
+
+          .wp-block-navigation-submenu__toggle{ // sub menu title when open
+            color: $color-secondary;
+            display: inline-flex;
+            align-items: center;
+          }
+
+        // ul{ // sub menu columns
+        //   flex: 1 0 fit-content;
+        // }
+
+
+      }
+    }
+
+    /* Style and rotate mobile svg icon toggles */
+
+    .wp-block-navigation-submenu__toggle{
+
+      ~ .wp-block-navigation__submenu-icon { // rotate core svg icon
+        display: flex!important;
+        position: absolute;
+        inset: 0 0 0 auto;
+        scale: 1.2;
+        box-sizing: content-box;
+        padding: 0 .5rem;
+        height: 100%;
+
+        > svg {
+          transform: rotate(-90deg);
+        }
+      }
+      
+      &::before{ // create a fake back chevron icon
+        content: '';
+        mask-image: url('data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%2215%22%20viewBox%3D%220%200%2010%2015%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20id%3D%22arrow-head-right%22%20d%3D%22M0.82247%2013.4732C0.780755%2012.028%207.13017%209.76886%207.03866%207.55701C6.88674%203.88495%20-0.361915%203.08936%201.77824%200.8719C3.91533%201.71917%209.8648%205.09845%209.8648%207.55701C9.8648%208.9381%200.904804%2016.3431%200.82247%2013.4732Z%22%20fill%3D%22%23EE255A%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        background-color: currentColor;
+        display: inline-flex;
+        height: .8em;
+        width: 0;
+        overflow: hidden;
+        translate: -50% 0;
+        rotate: 180deg;
+        transition: translate .5s $ease-bounce;
+      }
+
+      &[aria-expanded=true]{
+        &::before{ // animate fake back chevron in when menu opens
+          width: .5em;
+          translate: 0 0;
+          margin-right: $spacing-small;
+        }
+
+        ~ .wp-block-navigation__submenu-icon{
+          @include always-visually-hidden
+        }
+      }
+    }
+  }
+}
+
+//
+//
+// Navigation animations
+//
+//
+
+@keyframes mega-menu-open {
+  from {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+}
+
+// Link animations on menu open
+
+.is-style-mega-menu{
+  [aria-expanded="true"] ~ {
+    .wp-block-navigation__submenu-container{
+      .wp-block-group, .wp-block-navigation-item {
+        animation: mega-menu-open 500ms;
+        animation-timing-function: $ease-bounce;
+        animation-fill-mode: both;
+
+        @for $i from 1 through 10 { // create a loop of animation delay for each child
+          &:nth-child(#{$i}n) {
+              animation-delay: #{$i * 0.05}s;
+          }
+        }
+      }
+    }
+  }
+}

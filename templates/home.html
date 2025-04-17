@@ -1,0 +1,77 @@
+<!-- wp:template-part {"slug":"header","theme":"mellobase","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignwide"><!-- wp:block {"ref":3420} /-->
+
+	<!-- wp:group {"tagName":"section","metadata":{"name":"Featured resources"},"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|xx-large","margin":{"top":"var:preset|spacing|section","bottom":"var:preset|spacing|section"}}},"layout":{"type":"default"}} -->
+	<section class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--section);margin-bottom:var(--wp--preset--spacing--section)"><!-- wp:query {"queryId":0,"query":{"perPage":100,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":false,"parents":[],"sticky":"only","format":[]},"metadata":{"name":"Query Swiper Variation"},"align":"wide","excludeCurrentPost":true} -->
+	<div class="wp-block-query alignwide"><!-- wp:mellobase/swiper {"className":"is-style-three-across"} -->
+	<div class="wp-block-mellobase-swiper swiper is-style-three-across"><!-- wp:group {"metadata":{"name":"Title"},"align":"wide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+	<div class="wp-block-group alignwide"><!-- wp:heading {"align":"wide","fontSize":"x-large"} -->
+	<h2 class="wp-block-heading alignwide has-x-large-font-size">Our most popular resources</h2>
+	<!-- /wp:heading -->
+	
+	<!-- wp:buttons {"metadata":{"name":"Prev / Next buttons"},"className":"swiper-navigation","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|small"}}}} -->
+	<div class="wp-block-buttons swiper-navigation"><!-- wp:button {"className":"swiper-button-prev"} -->
+	<div class="wp-block-button swiper-button-prev"><a class="wp-block-button__link wp-element-button">Prev</a></div>
+	<!-- /wp:button -->
+	
+	<!-- wp:button {"className":"swiper-button-next"} -->
+	<div class="wp-block-button swiper-button-next"><a class="wp-block-button__link wp-element-button">Next</a></div>
+	<!-- /wp:button --></div>
+	<!-- /wp:buttons --></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:post-template {"metadata":{"name":"Swiper Wrapper"},"className":"swiper-wrapper","style":{"spacing":{"blockGap":"0"}}} -->
+	<!-- wp:block {"ref":2730} /-->
+	<!-- /wp:post-template --></div>
+	<!-- /wp:mellobase/swiper -->
+	
+	<!-- wp:query-no-results -->
+	<!-- wp:paragraph {"placeholder":"Add text or blocks that will display when a query returns no results."} -->
+	<p></p>
+	<!-- /wp:paragraph -->
+	<!-- /wp:query-no-results --></div>
+	<!-- /wp:query --></section>
+	<!-- /wp:group -->
+	
+	<!-- wp:group {"tagName":"section","metadata":{"name":"Resource Query"},"align":"full","style":{"spacing":{"blockGap":"var:preset|spacing|xx-large","padding":{"top":"var:preset|spacing|section","bottom":"var:preset|spacing|section"}}},"backgroundColor":"tertiary-2","layout":{"type":"constrained"}} -->
+	<section class="wp-block-group alignfull has-tertiary-2-background-color has-background" style="padding-top:var(--wp--preset--spacing--section);padding-bottom:var(--wp--preset--spacing--section)"><!-- wp:group {"metadata":{"name":"Title"},"align":"wide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"bottom"}} -->
+	<div class="wp-block-group alignwide"><!-- wp:heading {"align":"wide","fontSize":"x-large"} -->
+	<h2 class="wp-block-heading alignwide has-x-large-font-size">Browse all resources</h2>
+	<!-- /wp:heading -->
+	
+	<!-- wp:group {"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group"><!-- wp:search-filter/choice {"queryId":"3","label":"Categories","showLabel":"no","showDescription":"no","dataType":"taxonomy","dataTaxonomy":"category","inputType":"button","multiple":"no","inputOptionsAddDefault":"yes","inputOptionsDefaultLabel":"All","hideEmpty":"no","showCount":"no","dataTotalNumberOfOptions":"30","taxonomyHierarchical":"yes","limitTaxonomyDepth":"no","taxonomyOrderBy":"default","taxonomyOrderDir":"inherit","taxonomyTermsConditions":"all","stylesId":"0","width":"","align":"","type":"choice","fieldId":"807","autoSubmit":"yes","autoSubmitDelay":"","hideFieldWhenEmpty":"no","defaultValueType":"none","dataUrlName":""} /--></div>
+	<!-- /wp:group --></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:query {"queryId":3,"query":{"perPage":12,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[],"format":[]},"align":"wide","searchFilterQueryId":3} -->
+	<div class="wp-block-query alignwide"><!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|xx-large"}},"layout":{"type":"grid","columnCount":3}} -->
+	<!-- wp:block {"ref":2730} /-->
+	<!-- /wp:post-template -->
+	
+	<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+	<!-- wp:query-pagination-previous /-->
+	
+	<!-- wp:query-pagination-numbers /-->
+	
+	<!-- wp:query-pagination-next /-->
+	<!-- /wp:query-pagination -->
+	
+	<!-- wp:query-no-results -->
+	<!-- wp:block {"ref":4810} /-->
+	<!-- /wp:query-no-results --></div>
+	<!-- /wp:query --></section>
+	<!-- /wp:group -->
+	
+	<!-- wp:block {"ref":3512} /-->
+	
+	<!-- wp:group {"metadata":{"name":"Brand solutions"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|section","bottom":"var:preset|spacing|section"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--section);padding-bottom:var(--wp--preset--spacing--section)"><!-- wp:block {"ref":1374} /--></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:block {"ref":1241,"content":{"Display Heading":{"content":"\u003cem\u003eMeet the experts behind the resources\u003c/em\u003e"},"Button":{"url":"/about/","linkTarget":"","rel":"","text":"Learn about Red Kite Design"}}} /--></main>
+	<!-- /wp:group -->
+	
+	<!-- wp:template-part {"slug":"footer","theme":"mellobase","tagName":"footer"} /-->

@@ -1,0 +1,7 @@
+//  Core separator block styling
+
+@use "../../utils" as *;
+
+.wp-block-separator{
+    border: solid .5px;
+}

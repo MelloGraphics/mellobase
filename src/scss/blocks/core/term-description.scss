@@ -1,0 +1,9 @@
+// Core Block Term Decsriptions
+
+@use "../../utils" as *;
+
+.wp-block-term-description{
+    text-wrap: balance;
+
+    @include heading-font-sizes()
+}

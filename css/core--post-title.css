@@ -1,0 +1,105 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/blocks/core/post-title.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Misc.
+ */
+.wp-block-post-title {
+  text-wrap-style: balance;
+}
+.wp-block-post-title.has-medium-font-size {
+  font-size: calc(var(--wp--preset--font-size--medium) + 10%) !important;
+  font-style: normal;
+  font-weight: 700;
+}
+.wp-block-post-title.has-large-font-size {
+  font-size: calc(var(--wp--preset--font-size--large) + 30%) !important;
+}
+.wp-block-post-title.has-x-large-font-size {
+  font-size: calc(var(--wp--preset--font-size--x-large) + 140%) !important;
+}
+.wp-block-post-title.has-xx-large-font-size {
+  font-size: calc(var(--wp--preset--font-size--xx-large) + 200%) !important;
+}
+.wp-block-post-title.has-x-large-font-size, .wp-block-post-title.has-xx-large-font-size {
+  font-style: italic;
+  font-weight: 800;
+}
+.wp-block-post-title a {
+  color: inherit;
+}
+
+.wp-block-post-title.is-style-arrow-after {
+  width: 100%;
+}
+.wp-block-post-title.is-style-arrow-after a {
+  color: var(--wp--preset--color--contrast);
+  justify-content: space-between !important;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+}
+.wp-block-post-title.is-style-arrow-after a::after {
+  content: "";
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2218%22%20height%3D%2217%22%20viewBox%3D%220%200%2018%2017%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20id%3D%22arrow-right-small%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M11.9372%204.47005C10.3856%203.40561%208.96373%202.43024%208.98313%201.67786C9.06703%20-1.59608%2017.6602%206.85137%2017.6602%208.42688C17.6602%2010.0024%2011.5974%2015.0865%209.41969%2016.053C8.26137%2014.7095%2010.1385%2013.5055%2012.1534%2012.2131C13.5796%2011.2983%2015.0748%2010.3393%2015.6115%209.25518C15.2768%209.23202%2014.8599%209.18443%2014.3463%209.1258C12.7675%208.94557%2010.275%208.66104%206.44477%208.66104C6.24278%208.66104%205.88925%208.70421%205.45512%208.75723C3.79664%208.95976%200.961872%209.30595%200.906044%207.93743C0.857861%206.75629%202.22789%206.888%204.32034%207.08916C5.28692%207.18209%206.40766%207.28983%207.61397%207.28983C10.3459%207.28983%2013.8795%207.28984%2015.6684%207.79231C15.1661%206.68499%2013.4869%205.5331%2011.9372%204.47005Z%22%20fill%3D%22%23EE255A%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+          mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2218%22%20height%3D%2217%22%20viewBox%3D%220%200%2018%2017%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20id%3D%22arrow-right-small%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M11.9372%204.47005C10.3856%203.40561%208.96373%202.43024%208.98313%201.67786C9.06703%20-1.59608%2017.6602%206.85137%2017.6602%208.42688C17.6602%2010.0024%2011.5974%2015.0865%209.41969%2016.053C8.26137%2014.7095%2010.1385%2013.5055%2012.1534%2012.2131C13.5796%2011.2983%2015.0748%2010.3393%2015.6115%209.25518C15.2768%209.23202%2014.8599%209.18443%2014.3463%209.1258C12.7675%208.94557%2010.275%208.66104%206.44477%208.66104C6.24278%208.66104%205.88925%208.70421%205.45512%208.75723C3.79664%208.95976%200.961872%209.30595%200.906044%207.93743C0.857861%206.75629%202.22789%206.888%204.32034%207.08916C5.28692%207.18209%206.40766%207.28983%207.61397%207.28983C10.3459%207.28983%2013.8795%207.28984%2015.6684%207.79231C15.1661%206.68499%2013.4869%205.5331%2011.9372%204.47005Z%22%20fill%3D%22%23EE255A%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  background-color: currentColor;
+  width: 1em;
+  height: 1em;
+  display: flex;
+}
+.wp-block-post-title.is-style-arrow-after a::after {
+  -webkit-mask-position: right center;
+          mask-position: right center;
+  min-width: 2em;
+}
+@media (min-width: 900px) {
+  .wp-block-post-title.is-style-arrow-after a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
+    transition: 0.25s var(--wp--custom--ease-bounce);
+  }
+  .wp-block-post-title.is-style-arrow-after a::after {
+    content: "";
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2232%22%20height%3D%2216%22%20viewBox%3D%220%200%2032%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20id%3D%22arrow-right%22%3E%3Cpath%20id%3D%22arrow-head%22%20d%3D%22M22.4533%2015.0001C22.4108%2013.3515%2029.2886%2010.6321%2029.2886%208.25109C29.2886%205.18956%2020.709%203.15456%2022.8899%200.624963C25.0676%201.5915%2031.1303%206.67559%2031.1303%208.25109C31.1303%209.8266%2022.5372%2018.274%2022.4533%2015.0001Z%22%20fill%3D%22%23EE255A%22%3E%3C%2Fpath%3E%3Cpath%20id%3D%22arrow-arm%22%20d%3D%22M0.00239171%208.74079C0.139231%207.01404%208.87037%208.01718%2010.7618%208.01718C27.0952%208.01718%2030.9063%206.64599%2030.9063%208.01718C30.9063%209.38836%2020.4492%209.38838%2013.033%209.38838C5.61685%209.38838%20-0.134447%2010.4675%200.00239171%208.74079Z%22%20fill%3D%22%23EE255A%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2232%22%20height%3D%2216%22%20viewBox%3D%220%200%2032%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20id%3D%22arrow-right%22%3E%3Cpath%20id%3D%22arrow-head%22%20d%3D%22M22.4533%2015.0001C22.4108%2013.3515%2029.2886%2010.6321%2029.2886%208.25109C29.2886%205.18956%2020.709%203.15456%2022.8899%200.624963C25.0676%201.5915%2031.1303%206.67559%2031.1303%208.25109C31.1303%209.8266%2022.5372%2018.274%2022.4533%2015.0001Z%22%20fill%3D%22%23EE255A%22%3E%3C%2Fpath%3E%3Cpath%20id%3D%22arrow-arm%22%20d%3D%22M0.00239171%208.74079C0.139231%207.01404%208.87037%208.01718%2010.7618%208.01718C27.0952%208.01718%2030.9063%206.64599%2030.9063%208.01718C30.9063%209.38836%2020.4492%209.38838%2013.033%209.38838C5.61685%209.38838%20-0.134447%2010.4675%200.00239171%208.74079Z%22%20fill%3D%22%23EE255A%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-position: left center;
+            mask-position: left center;
+    -webkit-mask-size: contain;
+            mask-size: contain;
+    background-color: currentColor;
+    width: 2em;
+    height: 1em;
+  }
+  .wp-block-post-title.is-style-arrow-after a::after {
+    -webkit-mask-position: right center;
+            mask-position: right center;
+    min-width: 2em;
+  }
+}
+
+/*# sourceMappingURL=core--post-title.css.map*/

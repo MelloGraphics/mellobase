@@ -1,0 +1,47 @@
+<!-- wp:template-part {"slug":"header","theme":"mellobase","tagName":"header"} /-->
+
+<!-- wp:block {"ref":3420,"content":{"Display Title":{"content":"Theme pattern \u0026amp; functionality tests"},"SEO Title":{"content":"Red Kite Tests"}}} /-->
+
+<!-- wp:group {"tagName":"main","align":"wide","layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignwide"><!-- wp:group {"metadata":{"name":"Filters"},"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"bottom"}} -->
+	<div class="wp-block-group alignwide"><!-- wp:search-filter/reusable-field {"fieldId":"115"} /-->
+	
+	<!-- wp:search-filter/control {"queryId":"2","label":"Sort by","showLabel":"yes","showDescription":"no","controlType":"sort","placeholder":"Select","sortOptions":[{"label":"Newest","orderBy":"date","order":"desc","metaKey":"","metaType":"string","includePostsWithoutMeta":false,"uid":3},{"label":"Oldest","orderBy":"date","order":"asc","metaKey":"","metaType":"string","includePostsWithoutMeta":false,"uid":4},{"label":"","orderBy":"date","order":"desc","metaKey":"","metaType":"string","includePostsWithoutMeta":false,"uid":5}],"stylesId":"0","width":"","align":"","type":"control","fieldId":"746","autoSubmit":"yes","autoSubmitDelay":"","labelToggleVisibility":"no","dataUrlName":""} /-->
+	
+	<!-- wp:search-filter/search {"queryId":"2","label":"Keywords","showLabel":"yes","showDescription":"no","inputType":"autocomplete","placeholder":"Enter keywords","inputOptionsOrderDir":"asc","stylesId":"0","width":"","align":"","type":"search","fieldId":"747","dataType":"post_attribute","dataPostAttribute":"default","autoSubmit":"yes","autoSubmitDelay":"","defaultValueType":"none","labelToggleVisibility":"no","dataUrlName":""} /-->
+	
+	<!-- wp:search-filter/control {"queryId":"2","label":"Reset","showDescription":"no","controlType":"reset","stylesId":"0","width":"","align":"","type":"control","fieldId":"748"} /-->
+	
+	<!-- wp:search-filter/control {"queryId":"2","label":"Submit","showDescription":"no","controlType":"submit","stylesId":"0","width":"","align":"","type":"control","fieldId":"749"} /--></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:query {"queryId":9,"query":{"perPage":12,"pages":0,"offset":0,"postType":"tests","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"parents":[],"format":[]},"align":"wide","searchFilterQueryId":2} -->
+	<div class="wp-block-query alignwide"><!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|xx-large"}},"layout":{"type":"grid","columnCount":3}} -->
+	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
+	<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--x-large);margin-bottom:var(--wp--preset--spacing--x-large)"><!-- wp:post-terms {"term":"test-category"} /-->
+	
+	<!-- wp:post-title {"fontSize":"large"} /-->
+	
+	<!-- wp:paragraph -->
+	<p>A distinctive brand identity for a vibrant and youthful recruitment agency.</p>
+	<!-- /wp:paragraph --></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:read-more {"content":"View test"} /-->
+	<!-- /wp:post-template -->
+	
+	<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+	<!-- wp:query-pagination-previous {"label":"Prev"} /-->
+	
+	<!-- wp:query-pagination-numbers /-->
+	
+	<!-- wp:query-pagination-next {"label":"Next"} /-->
+	<!-- /wp:query-pagination -->
+	
+	<!-- wp:query-no-results -->
+	<!-- wp:block {"ref":4810} /-->
+	<!-- /wp:query-no-results --></div>
+	<!-- /wp:query --></main>
+	<!-- /wp:group -->
+	
+	<!-- wp:template-part {"slug":"footer","theme":"mellobase","tagName":"footer"} /-->

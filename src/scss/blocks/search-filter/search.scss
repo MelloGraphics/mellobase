@@ -1,0 +1,10 @@
+// Search Filter - Input Radio
+
+@use "../../utils" as *;
+
+.wp-block-search-filter-search{
+    .search-filter-label{
+        font-size: $font-size-small;
+        font-weight: 700;
+    }
+}

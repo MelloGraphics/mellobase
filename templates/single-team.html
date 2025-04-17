@@ -1,0 +1,89 @@
+<!-- wp:template-part {"slug":"header","theme":"mellobase","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|section","bottom":"var:preset|spacing|section"},"blockGap":"var:preset|spacing|xx-large","padding":{"top":"var:preset|spacing|section"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--section);margin-bottom:var(--wp--preset--spacing--section);padding-top:var(--wp--preset--spacing--section)"><!-- wp:group {"metadata":{"name":"Title"},"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+	<div class="wp-block-group alignwide"><!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"acf/field","args":{"key":"position"}}}},"className":"is-style-after-line","style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"textColor":"secondary"} -->
+	<p class="is-style-after-line has-secondary-color has-text-color has-link-color">“Quote to be linked to acf_field client quote this needs updating lorem dolor yabba ding dong do dar we love Red Kite Design”</p>
+	<!-- /wp:paragraph -->
+	
+	<!-- wp:post-title {"level":1,"fontSize":"xx-large"} /--></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:columns {"align":"wide","isReversedDirectionOnMobile":true} -->
+	<div class="wp-block-columns alignwide mello-columns-reverse-on-phone"><!-- wp:column {"width":"66.66%","layout":{"type":"constrained","justifyContent":"left","contentSize":"700px"}} -->
+	<div class="wp-block-column" style="flex-basis:66.66%"><!-- wp:post-content {"layout":{"type":"default"}} /--></div>
+	<!-- /wp:column -->
+	
+	<!-- wp:column {"verticalAlignment":"stretch","width":"33.33%"} -->
+	<div class="wp-block-column is-vertically-aligned-stretch" style="flex-basis:33.33%"><!-- wp:group {"align":"wide","style":{"position":{"type":"sticky","top":"0px"}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide"><!-- wp:post-featured-image {"aspectRatio":"auto","align":"wide","className":"is-position-sticky","style":{"layout":{"selfStretch":"fixed","flexSize":"350px"}}} /--></div>
+	<!-- /wp:group --></div>
+	<!-- /wp:column --></div>
+	<!-- /wp:columns -->
+	
+	<!-- wp:group {"metadata":{"name":"Lower content"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|section","bottom":"var:preset|spacing|section"},"blockGap":"var:preset|spacing|section"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="padding-top:var(--wp--preset--spacing--section);padding-bottom:var(--wp--preset--spacing--section)"><!-- wp:group {"tagName":"section","metadata":{"name":"Resources"},"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"default"}} -->
+	<section class="wp-block-group alignwide"><!-- wp:query {"queryId":0,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":false,"parents":[],"sticky":""},"metadata":{"name":"Query Swiper Variation"},"align":"wide"} -->
+	<div class="wp-block-query alignwide"><!-- wp:mellobase/swiper {"className":"is-style-three-across"} -->
+	<div class="wp-block-mellobase-swiper swiper is-style-three-across"><!-- wp:group {"metadata":{"name":"Title"},"align":"wide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"bottom"}} -->
+	<div class="wp-block-group alignwide"><!-- wp:heading {"align":"wide","fontSize":"x-large"} -->
+	<h2 class="wp-block-heading alignwide has-x-large-font-size">Our favourite resources <img class="wp-image-3937" style="width: 50px;" src="https://red-kite-design.local/wp-content/uploads/squiggle-bulb.svg" alt=""></h2>
+	<!-- /wp:heading -->
+	
+	<!-- wp:buttons {"metadata":{"name":"Prev / Next buttons"},"className":"swiper-navigation","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|small"}}}} -->
+	<div class="wp-block-buttons swiper-navigation"><!-- wp:button {"className":"swiper-button-prev"} -->
+	<div class="wp-block-button swiper-button-prev"><a class="wp-block-button__link wp-element-button">Prev</a></div>
+	<!-- /wp:button -->
+	
+	<!-- wp:button {"className":"swiper-button-next"} -->
+	<div class="wp-block-button swiper-button-next"><a class="wp-block-button__link wp-element-button">Next</a></div>
+	<!-- /wp:button --></div>
+	<!-- /wp:buttons --></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:post-template {"metadata":{"name":"Swiper Wrapper"},"className":"swiper-wrapper","style":{"spacing":{"blockGap":"0"}}} -->
+	<!-- wp:block {"ref":2730} /-->
+	<!-- /wp:post-template --></div>
+	<!-- /wp:mellobase/swiper -->
+	
+	<!-- wp:query-no-results -->
+	<!-- wp:block {"ref":4810} /-->
+	<!-- /wp:query-no-results --></div>
+	<!-- /wp:query --></section>
+	<!-- /wp:group -->
+	
+	<!-- wp:group {"tagName":"section","metadata":{"name":"More team"},"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"default"}} -->
+	<section class="wp-block-group alignwide"><!-- wp:query {"queryId":0,"query":{"perPage":10,"pages":0,"offset":0,"postType":"team","order":"desc","orderBy":"date","inherit":false,"parents":[],"sticky":"","format":[]},"metadata":{"name":"Query Swiper Variation"},"align":"wide","excludeCurrentPost":true} -->
+	<div class="wp-block-query alignwide"><!-- wp:mellobase/swiper {"className":"is-style-three-across"} -->
+	<div class="wp-block-mellobase-swiper swiper is-style-three-across"><!-- wp:group {"metadata":{"name":"Title"},"align":"wide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"bottom"}} -->
+	<div class="wp-block-group alignwide"><!-- wp:heading {"align":"wide","fontSize":"x-large"} -->
+	<h2 class="wp-block-heading alignwide has-x-large-font-size">Meet the rest of the team <img class="wp-image-3929" style="width: 30px;" src="https://red-kite-design.local/wp-content/uploads/squiggle-four-right.svg" alt=""></h2>
+	<!-- /wp:heading -->
+	
+	<!-- wp:buttons {"metadata":{"name":"Prev / Next buttons"},"className":"swiper-navigation","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|small"}}}} -->
+	<div class="wp-block-buttons swiper-navigation"><!-- wp:button {"className":"swiper-button-prev"} -->
+	<div class="wp-block-button swiper-button-prev"><a class="wp-block-button__link wp-element-button">Prev</a></div>
+	<!-- /wp:button -->
+	
+	<!-- wp:button {"className":"swiper-button-next"} -->
+	<div class="wp-block-button swiper-button-next"><a class="wp-block-button__link wp-element-button">Next</a></div>
+	<!-- /wp:button --></div>
+	<!-- /wp:buttons --></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:post-template {"metadata":{"name":"Swiper Wrapper"},"className":"swiper-wrapper","style":{"spacing":{"blockGap":"0"}}} -->
+	<!-- wp:block {"ref":2724} /-->
+	<!-- /wp:post-template --></div>
+	<!-- /wp:mellobase/swiper -->
+	
+	<!-- wp:query-no-results -->
+	<!-- wp:block {"ref":4810} /-->
+	<!-- /wp:query-no-results --></div>
+	<!-- /wp:query --></section>
+	<!-- /wp:group --></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:block {"ref":1241} /--></main>
+	<!-- /wp:group -->
+	
+	<!-- wp:template-part {"slug":"footer","theme":"mellobase","tagName":"footer"} /-->

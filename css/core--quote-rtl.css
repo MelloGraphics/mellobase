@@ -1,0 +1,100 @@
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/blocks/core/quote.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Misc.
+ */
+.wp-block-quote {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--wp--preset--spacing--large);
+}
+.wp-block-quote * {
+  margin-block-start: 0 !important;
+}
+.wp-block-quote > p {
+  font-size: var(--wp--preset--font-size--large);
+  text-indent: -0.3em;
+}
+.wp-block-quote.has-text-align-center {
+  align-items: center;
+}
+.wp-block-quote cite {
+  position: relative;
+  display: flex !important;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--wp--preset--spacing--small);
+  font-size: var(--wp--preset--font-size--small);
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.3;
+}
+.wp-block-quote cite figure {
+  position: relative;
+}
+.wp-block-quote cite figure:after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2755%27 height=%2755%27 fill=%27none%27%3E%3Cpath fill=%27%2309002E%27 d=%27M9.358 8.586c2.824-3.021 7.289-4.993 11.768-6.322 19.81-5.87 36.188 6.806 33.098 22.75-1.086 5.598-5.205 10.89-7.025 16.1-1.583 4.534 1.36 6.836 3.197 10.904s-22.671 2.078-33.364-1.831C-.79 43.667-1.928 27.405 3.402 15.852m1.533.834C-.311 27.254.938 42.644 17.105 48.936c5.736 2.233 11.636 3.074 18.04 3.036 5.082-.03 13.344.219 13.344.219s-5.287-5.869-2.76-11.892c3.81-9.067 10.984-17.289 4.855-27.806C44.868 2.685 34.485.447 23.26 3.272c-4.83 1.215-10.157 2.69-12.592 6.37%27/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+.wp-block-quote cite .wp-block-quote__name {
+  font-size: var(--wp--preset--font-size--small);
+  font-weight: 700;
+}
+.wp-block-quote cite .wp-block-quote__position {
+  font-size: var(--wp--preset--font-size--small);
+  font-weight: 400;
+}
+.wp-block-quote cite img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
+  position: relative;
+  border-radius: 100%;
+}
+.wp-block-quote cite p:first-child {
+  font-weight: 700;
+}
+
+.wp-block-quote.is-pattern-card-testimonial-ticker {
+  flex-direction: row;
+  padding: var(--wp--preset--spacing--small) var(--wp--preset--spacing--large);
+  border-radius: var(--wp--custom--radius-medium);
+  padding: var(--wp--preset--spacing--small) var(--wp--preset--spacing--large);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--wp--preset--spacing--medium);
+  border-radius: var(--wp--custom--radius-medium);
+  background-color: var(--wp--preset--color--tertiary-2);
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.wp-block-quote.is-pattern-card-testimonial-ticker > p {
+  font-size: var(--wp--preset--font-size--x-large);
+  text-indent: unset;
+}

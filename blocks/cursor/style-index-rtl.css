@@ -1,0 +1,105 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/cursor/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Misc.
+ */
+.wp-block-mellobase-cursor.cursor-wrapper:not(body.editor-styles-wrapper .wp-block-mellobase-cursor, body.block-editor-page .wp-block-mellobase-cursor) {
+  position: fixed;
+  inset: 0;
+  z-index: 9999999;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 599px) {
+  .wp-block-mellobase-cursor.cursor-wrapper:not(body.editor-styles-wrapper .wp-block-mellobase-cursor, body.block-editor-page .wp-block-mellobase-cursor) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+}
+.wp-block-mellobase-cursor.cursor-wrapper:not(body.editor-styles-wrapper .wp-block-mellobase-cursor, body.block-editor-page .wp-block-mellobase-cursor) * {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.wp-block-mellobase-cursor.cursor-wrapper:not(body.editor-styles-wrapper .wp-block-mellobase-cursor, body.block-editor-page .wp-block-mellobase-cursor) .cursor-location {
+  width: 127px;
+  height: 127px;
+  color: var(--wp--preset--color--secondary);
+}
+.wp-block-mellobase-cursor.cursor-wrapper:not(body.editor-styles-wrapper .wp-block-mellobase-cursor, body.block-editor-page .wp-block-mellobase-cursor) .cursor-location .cursor-decoration {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: solid var(--wp--preset--color--primary) 3px;
+  scale: 0.5;
+  transition: transform 0.25s var(--wp--custom--ease-bounce), width 0.25s var(--wp--custom--ease-bounce), height 0.25s var(--wp--custom--ease-bounce), scale 0.25s var(--wp--custom--ease-bounce), background-color 0.25s var(--wp--custom--ease-bounce);
+}
+.wp-block-mellobase-cursor.cursor-wrapper:not(body.editor-styles-wrapper .wp-block-mellobase-cursor, body.block-editor-page .wp-block-mellobase-cursor) .cursor-location .cursor-decoration p {
+  width: 100%;
+  height: 100%;
+  animation: cursor-rotate 30s infinite linear;
+  visibility: hidden;
+}
+.wp-block-mellobase-cursor.cursor-wrapper:not(body.editor-styles-wrapper .wp-block-mellobase-cursor, body.block-editor-page .wp-block-mellobase-cursor) .cursor-location .cursor-decoration .word {
+  display: unset;
+}
+.wp-block-mellobase-cursor.cursor-wrapper:not(body.editor-styles-wrapper .wp-block-mellobase-cursor, body.block-editor-page .wp-block-mellobase-cursor) .cursor-location .cursor-decoration .char {
+  --i: calc(100% / (var(--char-total) + 1));
+  position: absolute !important;
+  offset-path: path("M120,60c0,33.14-26.86,60-60,60S0,93.14,0,60,26.86,0,60,0c18.49,0,35.02,8.36,46.03,21.51,8.72,10.42,13.97,23.84,13.97,38.49Z");
+  offset-distance: calc(var(--i) * var(--char-index));
+  /*  offset-anchor: top; FF only */
+  padding-top: var(--wp--preset--spacing--large);
+  font-weight: 400;
+  font-size: 90%;
+  text-transform: uppercase;
+}
+.wp-block-mellobase-cursor.cursor-wrapper:not(body.editor-styles-wrapper .wp-block-mellobase-cursor, body.block-editor-page .wp-block-mellobase-cursor) .cursor-location.cursor__hover .cursor-decoration {
+  scale: 0.8;
+  border-width: 0;
+}
+.wp-block-mellobase-cursor.cursor-wrapper:not(body.editor-styles-wrapper .wp-block-mellobase-cursor, body.block-editor-page .wp-block-mellobase-cursor) .cursor-location.cursor__hover .cursor-decoration p {
+  visibility: visible;
+}
+.wp-block-mellobase-cursor.cursor-wrapper:not(body.editor-styles-wrapper .wp-block-mellobase-cursor, body.block-editor-page .wp-block-mellobase-cursor) .cursor-location.cursor__active .cursor-decoration, .wp-block-mellobase-cursor.cursor-wrapper:not(body.editor-styles-wrapper .wp-block-mellobase-cursor, body.block-editor-page .wp-block-mellobase-cursor) .cursor-location.cursor__click .cursor-decoration {
+  scale: 0.2;
+  background-color: var(--wp--preset--color--primary);
+  border-width: 0;
+}
+
+@keyframes cursor-rotate {
+  to {
+    rotate: -360deg;
+  }
+}

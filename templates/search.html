@@ -1,0 +1,61 @@
+<!-- wp:template-part {"slug":"header","theme":"mellobase","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--70);margin-bottom:var(--wp--preset--spacing--70)"><!-- wp:group {"tagName":"section","metadata":{"name":"Hero - Blog"},"align":"full","className":"is-section-hero__blog","style":{"spacing":{"padding":{"top":"var:preset|spacing|section","bottom":"var:preset|spacing|xx-large"}}},"layout":{"type":"constrained"}} -->
+	<section class="wp-block-group alignfull is-section-hero__blog" style="padding-top:var(--wp--preset--spacing--section);padding-bottom:var(--wp--preset--spacing--xx-large)"><!-- wp:columns {"verticalAlignment":"center","metadata":{"name":"Content Wrapper"},"align":"wide","className":"is-section-hero__content-wrapper","isReversedDirectionOnMobile":true} -->
+	<div class="wp-block-columns alignwide are-vertically-aligned-center is-section-hero__content-wrapper mello-columns-reverse-on-phone"><!-- wp:column {"verticalAlignment":"center","width":"","className":"is-section-hero__content-left","layout":{"type":"constrained","contentSize":"750px","justifyContent":"left"}} -->
+	<div class="wp-block-column is-vertically-aligned-center is-section-hero__content-left"><!-- wp:group {"metadata":{"name":"Titles"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
+	<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
+	<div class="wp-block-group"><!-- wp:heading {"level":1,"metadata":{"name":"SEO Title"},"fontSize":"medium"} -->
+	<h1 class="wp-block-heading has-medium-font-size">Search our site</h1>
+	<!-- /wp:heading -->
+	
+	<!-- wp:block {"ref":1115} /--></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:query-title {"type":"search","align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}},"typography":{"fontStyle":"normal","fontWeight":"900"}},"fontSize":"xx-large"} /--></div>
+	<!-- /wp:group --></div>
+	<!-- /wp:column -->
+	
+	<!-- wp:column {"verticalAlignment":"center","width":"25%","className":"is-section-hero__content-right"} -->
+	<div class="wp-block-column is-vertically-aligned-center is-section-hero__content-right" style="flex-basis:25%"><!-- wp:image {"id":3090,"aspectRatio":"1","scale":"contain","sizeSlug":"large","linkDestination":"none","metadata":{"name":"Image"},"className":"style-svg"} -->
+	<figure class="wp-block-image size-large style-svg"><img src="https://red-kite-design.local/wp-content/uploads/red-kite-design-illustration-wing-span-paper.svg" alt="" class="wp-image-3090" style="aspect-ratio:1;object-fit:contain"/></figure>
+	<!-- /wp:image --></div>
+	<!-- /wp:column --></div>
+	<!-- /wp:columns --></section>
+	<!-- /wp:group -->
+	
+	<!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group alignwide"><!-- wp:search-filter/search {"queryId":"15","label":"Key words","showLabel":"yes","showDescription":"no","inputType":"text","placeholder":"","inputOptionsOrderDir":"asc","stylesId":"0","width":"","inputShowIcon":"yes","align":"","type":"search","fieldId":"700","dataType":"post_attribute","dataPostAttribute":"default","autoSubmit":"yes","autoSubmitDelay":"","defaultValueType":"none","labelToggleVisibility":"no","dataUrlName":""} /-->
+	
+	<!-- wp:search-filter/choice {"queryId":"15","label":"Content type","showLabel":"yes","showDescription":"no","dataType":"post_attribute","dataPostAttribute":"post_type","inputType":"button","dataPostTypes":[],"multiple":"no","inputOptionsAddDefault":"yes","inputOptionsDefaultLabel":"All items","hideEmpty":"yes","showCount":"no","dataTotalNumberOfOptions":"30","inputOptionsOrder":"label","inputOptionsOrderDir":"asc","stylesId":"0","width":"100","align":"wide","inputBorderColor":"#F4EFF9","type":"choice","fieldId":"699","autoSubmit":"yes","autoSubmitDelay":"","hideFieldWhenEmpty":"no","defaultValueType":"none","labelToggleVisibility":"no","dataUrlName":""} /--></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:query {"queryId":94,"query":{"pages":0,"offset":0,"postType":"page","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"perPage":12,"parents":[],"format":[]},"align":"wide","layout":{"type":"default"},"searchFilterQueryId":15} -->
+	<div class="wp-block-query alignwide"><!-- wp:post-template {"align":"wide","layout":{"type":"default"}} -->
+	<!-- wp:post-featured-image {"aspectRatio":"auto","width":"","scale":"contain","blockVisibility":{"visibilityPresets":{"operator":"all","presets":[2870]}}} /-->
+	
+	<!-- wp:group {"tagName":"article","style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"default"}} -->
+	<article class="wp-block-group"><!-- wp:mellobase/post-type {"className":"is-style-after-line","style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"textColor":"secondary"} /-->
+	
+	<!-- wp:post-title {"isLink":true,"className":"is-style-arrow-after","style":{"typography":{"fontStyle":"normal","fontWeight":"900"},"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0","left":"0","right":"0"}}}} /--></article>
+	<!-- /wp:group -->
+	<!-- /wp:post-template -->
+	
+	<!-- wp:template-part {"slug":"post-meta","theme":"mellobase","area":"uncategorized"} /-->
+	
+	<!-- wp:query-no-results -->
+	<!-- wp:block {"ref":4810} /-->
+	<!-- /wp:query-no-results --></div>
+	<!-- /wp:query -->
+	
+	<!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|section","bottom":"var:preset|spacing|section"}}},"layout":{"type":"default"}} -->
+	<div class="wp-block-group alignwide" style="margin-top:var(--wp--preset--spacing--section);margin-bottom:var(--wp--preset--spacing--section)"><!-- wp:separator {"backgroundColor":"tertiary"} -->
+	<hr class="wp-block-separator has-text-color has-tertiary-color has-alpha-channel-opacity has-tertiary-background-color has-background"/>
+	<!-- /wp:separator --></div>
+	<!-- /wp:group -->
+	
+	<!-- wp:block {"ref":1241} /--></main>
+	<!-- /wp:group -->
+	
+	<!-- wp:template-part {"slug":"footer","theme":"mellobase","tagName":"footer"} /-->

@@ -1,0 +1,79 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@use "../../scss/utils/" as *;
+
+.wp-block-mellobase-quick-actions {
+	position: fixed;
+	inset: auto 0 $spacing-small 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: $spacing-large;
+	justify-content: space-between;
+	z-index: 20;
+	width: fit-content;
+	margin: auto;
+
+	padding: $spacing-small $spacing-medium;
+
+	background-color: $color-contrast;
+	color: $color-base;
+
+	border-radius: $radius-medium;
+
+	&__actions{
+		gap: calc($spacing-small / 2);
+	}
+	&__close{
+		gap: $spacing-small;
+		transition: rotate .25s ease-in-out;
+		rotate: 0;
+		height: 1em;
+		width: 1em;
+	}
+
+	&.hidden{
+		gap: $spacing-medium;
+		padding: 0 $spacing-small;
+
+		.wp-block-mellobase-quick-actions__actions{
+			width: 0;
+			@include visually-hidden;
+		}
+		.wp-block-mellobase-quick-actions__close{
+			rotate: 45deg;
+		}
+	}
+
+	overflow: hidden;
+	transition: width .5s $ease-bounce;
+
+	animation: slide-up .6s $ease-bounce,
+				expand .5s .5s both $ease-bounce;
+
+	> *{
+		animation: fade .5s $ease-bounce .75s both;
+		min-width: max-content;
+	}
+}
+
+@keyframes slide-up {
+	from{
+		translate: 0 150%;
+	}
+}
+@keyframes expand {
+	from{
+		width: 50px;
+	}
+}
+@keyframes fade{
+	from{
+		opacity: 0;
+	}
+}

@@ -1,0 +1,33 @@
+// Section - Resources Intro
+
+@use "../utils" as *;
+
+.is-section-resources-intro{
+	overflow: clip;
+	
+    .wp-block-query{
+		.wp-block-post{
+			&:nth-child(1){
+				.wp-block-post-featured-image{
+					background-color: $color-primary;
+				}
+				path.fill-color-tertiary{
+					fill: $color-base;
+				}
+			}
+			&:nth-child(2){
+				.wp-block-post-featured-image{
+					background-color: $color-base;
+				}
+			}
+			&:nth-child(3){
+				.wp-block-post-featured-image{
+					background-color: $color-secondary;
+				}
+				path.fill-color-tertiary{
+					fill: $color-base;
+				}
+			}
+		}
+	}
+}

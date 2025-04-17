@@ -1,0 +1,10 @@
+@use "../../utils" as *;
+
+.wp-block-columns.is-style-offset {
+    
+    @include for-tablet-portrait-up{
+        .wp-block-column:nth-child(2n){
+            translate: 0 25%;
+        }
+    }
+}

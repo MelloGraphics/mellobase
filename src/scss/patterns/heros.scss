@@ -1,0 +1,140 @@
+// Section - Resources Intro
+
+@use "../utils" as *;
+
+.is-section-hero {
+	&__medium,
+	&__large,
+	&__large-centered,
+	&__case-study,
+	&__blog,
+	&__blog-single,
+	&__categories,
+	&__narrow,
+	&__solutions,
+	&__about {
+		padding-top: $spacing-section;
+		padding-bottom: $spacing-xx-large;
+		margin-top: $spacing-section;
+
+		@include for-tablet-portrait-up {
+			.is-section-hero__content-wrapper {
+				padding-top: $spacing-xx-large;
+			}
+		}
+	}
+
+	&__glossary-single {
+		display: flex;
+		align-items: center;
+	}
+
+	&__content-right:has(> .wp-block-image, > .wp-block-post-featured-image) {
+		@include for-tablet-portrait-down {
+			display: flex;
+			justify-content: flex-end;
+
+			.wp-block-image {
+				width: 30%;
+			}
+		}
+	}
+
+	// approach style hero
+
+	&__approach {
+		.is-section-hero__content-wrapper {
+			min-height: 90svh;
+			display: flex;
+		}
+
+		@include for-tablet-portrait-down {
+			.is-section-hero__content-wrapper {
+				padding-top: $spacing-xx-large;
+			}
+
+			* {
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+		}
+
+		.approach-phase__content-imagery {
+			position: relative;
+			display: grid;
+			grid-template: "container" 1fr;
+			grid-area: imagery;
+			place-items: center;
+			place-content: center;
+			overflow: visible;
+
+			@include for-tablet-portrait-up {
+				min-height: 100%;
+			}
+		}
+		.is-section-hero__dotted-line {
+			grid-area: container;
+			position: absolute;
+			pointer-events: none;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			clip-path: inset(0 0 0 0);
+
+			animation: approach-line-in 2s ease-out;
+
+			@keyframes approach-line-in {
+				from {
+					clip-path: inset(0 0 100% 0);
+				}
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain !important;
+			}
+
+			@include for-tablet-portrait-down {
+				height: 110vw;
+				translate: -10% 0;
+				rotate: -90deg;
+			}
+		}
+		.is-section-hero__illustration {
+			grid-column: container;
+
+			img {
+				width: 30vmin;
+			}
+		}
+	}
+
+	// hero solutions
+
+	&__solutions {
+		.is-section-hero__content-right {
+			border-radius: $radius-medium;
+			overflow: clip;
+
+			.wp-block-cover{
+				min-height: 100%;
+
+				@include for-tablet-portrait-down{
+					aspect-ratio: 16/9;
+				}
+			}
+		}
+	}
+
+	//with award badge (case study)
+
+	&__case-study{
+		.work-award-badge{
+			position: fixed;
+			inset: auto 1% 1% auto;
+			z-index: 10;
+		}
+	}
+}

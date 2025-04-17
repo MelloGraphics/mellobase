@@ -1,0 +1,10 @@
+//  Core site logo block styling
+
+@use "../../utils" as *;
+
+.wp-block-site-title{
+    border: solid currentColor 2px;
+    a{
+        padding: $spacing-small;
+    }
+}

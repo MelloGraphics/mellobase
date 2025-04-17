@@ -1,0 +1,15 @@
+// Template - Blog Single
+
+@use "../utils" as *;
+
+body.single-post .entry-content{
+	.wp-block-separator{
+		color: $color-tertiary;
+		margin-top: $spacing-xx-large;
+		margin-bottom: $spacing-xx-large;
+	}
+
+	> .wp-block-heading{
+		margin-top: $spacing-x-large;
+	}
+}

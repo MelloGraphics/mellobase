@@ -1,0 +1,29 @@
+// Part styles - Footer
+
+@use "../utils" as *;
+
+footer{
+	margin-top: 0;
+
+	nav{
+		flex: 1;
+	}
+
+	.wp-block-navigation-item__content{
+		padding: calc($spacing-small / 2) 0;
+	}
+
+	a{
+		text-decoration: none;
+		font-weight: 400;
+
+		&:hover{
+			color: $color-primary!important;
+		}
+	}
+
+	summary{
+		font-weight: 700;
+		color: $color-primary;
+	}
+}

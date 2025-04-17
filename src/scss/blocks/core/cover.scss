@@ -1,0 +1,8 @@
+@use "../../utils" as *;
+
+.wp-block-cover{
+    &.is-style-rounded-medium{
+        border-radius: $radius-medium;
+        overflow: clip;
+    }
+}

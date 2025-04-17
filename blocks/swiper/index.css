@@ -1,0 +1,85 @@
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/swiper/editor.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Misc.
+ */
+.wp-block-mellobase-swiper .swiper-wrapper {
+  overflow-x: scroll;
+  gap: var(--wp--preset--spacing--x-large);
+}
+.wp-block-mellobase-swiper.is-style-fade .swiper-wrapper, .wp-block-mellobase-swiper.is-style-one-across .swiper-wrapper {
+  overflow-x: scroll;
+}
+.wp-block-mellobase-swiper.is-style-fade .swiper-wrapper > .wp-block-group, .wp-block-mellobase-swiper.is-style-one-across .swiper-wrapper > .wp-block-group {
+  min-width: 100%;
+}
+.wp-block-mellobase-swiper.is-style-two-across .swiper-wrapper > * {
+  min-width: calc(50% - var(--wp--preset--spacing--large));
+}
+.wp-block-mellobase-swiper.is-style-three-across .swiper-wrapper > * {
+  min-width: calc(33.33% - var(--wp--preset--spacing--large));
+}
+.wp-block-mellobase-swiper.is-style-ticker-right .swiper-wrapper > *, .wp-block-mellobase-swiper.is-style-ticker-left .swiper-wrapper > * {
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.wp-block-mellobase-swiper .swiper-pagination::before {
+  content: "Delete this group block if pagination is not needed";
+  background-color: #f1f1f1;
+  color: black;
+  min-width: 100%;
+  display: block;
+  padding: var(--wp--preset--spacing--small);
+  text-align: center;
+}
+.wp-block-mellobase-swiper .swiper-pagination .block-list-appender:not(:focus):not(:active), .wp-block-mellobase-swiper .swiper-pagination .components-placeholder:not(:focus):not(:active) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+.wp-block-mellobase-swiper .swiper-scrollbar::before {
+  content: "Delete this group block if a scrollbar is not needed";
+  background-color: #f1f1f1;
+  color: black;
+  min-width: 100%;
+  display: block;
+  padding: var(--wp--preset--spacing--small);
+  text-align: center;
+}
+.wp-block-mellobase-swiper .swiper-scrollbar .block-list-appender:not(:focus):not(:active), .wp-block-mellobase-swiper .swiper-scrollbar .components-placeholder:not(:focus):not(:active) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=index.css.map*/

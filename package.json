@@ -1,0 +1,44 @@
+{
+	"name": "mellobase",
+	"version": "0.0.2",
+	"description": "A starter theme for modern WordPress developers.",
+	"author": "MelloBase Contributors",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress",
+		"starter",
+		"theme"
+	],
+	"homepage": "https://github.com/bacoords/mellobase#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bacoords/mellobase.git"
+	},
+	"bugs": {
+		"url": "https://github.com/bacoords/mellobase/issues"
+	},
+	"main": "index.js",
+	"dependencies": {
+		"latest": "^0.2.0",
+		"lenis": "^1.1.21",
+		"locomotive-scroll": "^4.1.4",
+		"motion": "^11.16.1",
+		"splitting": "^1.0.6",
+		"uuid": "^11.0.5"
+	},
+	"devDependencies": {
+		"@wordpress/prettier-config": "^3.12.0",
+		"@wordpress/scripts": "^27.6.0",
+		"glob": "^8.1.0",
+		"npm": "^11.2.0",
+		"remove-files-webpack-plugin": "^1.5.0",
+		"swiper": "^11.1.15"
+	},
+	"scripts": {
+		"build": "wp-scripts build --config ./bin/webpack.config.js --webpack-src-dir=src/blocks",
+		"create-block": "cd ./src/blocks && npx @wordpress/create-block --namespace=mellobase --no-plugin",
+		"create-block:dynamic": "cd ./src/blocks && npx @wordpress/create-block --namespace=mellobase --no-plugin --variant=dynamic",
+		"start": "wp-scripts start --config ./bin/webpack.config.js --webpack-src-dir=src/blocks",
+		"export": "npm run build && zip -r mellobase-export.zip theme.json style.css screenshot.png functions.php acf-json/*.json acf-json blocks css js inc parts patterns templates fonts -x '*.DS_Store' '*.map' 'src/*' 'bin/*' '.git/*' '.github/*' 'node_modules/*' '*.lock' '*.xml' '*.md' '.editorconfig' '.prettierrc'"
+	}
+}

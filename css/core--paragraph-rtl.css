@@ -1,0 +1,54 @@
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/blocks/core/paragraph.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Misc.
+ */
+.custom-ease-bounce {
+  animation: animation-test var(--wp--custom--ease-bounce) infinite alternate-reverse 1s;
+}
+
+.custom-ease-circ {
+  animation: animation-test var(--wp--custom--ease-circ) infinite alternate-reverse 1s;
+}
+
+@keyframes animation-test {
+  to {
+    translate: 0 -100px;
+  }
+}
+p a[target=_blank],
+.wp-block-heading a[target=_blank] {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.1em;
+}
+p a[target=_blank]::after,
+.wp-block-heading a[target=_blank]::after {
+  content: "";
+  -webkit-mask-image: url("data:image/svg+xml,<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url%28%23clip0_5232_33128%29\"><path d=\"M5.714 11.341C7.07496 12.7751 8.17118 9.83174 10.2734 7.73606C11.5553 6.45828 13.1574 4.86118 13.9611 3.55778C14.349 4.707 13.766 6.06998 14.4691 6.74153C16.2054 8.4003 15.3996 2.38138 14.5813 1.56559C13.7629 0.749789 10.0873 0.456604 8.64983 0.888804C8.97067 2.79999 11.0913 1.67063 12.695 2.27372C11.9851 3.2578 10.8355 4.95943 8.51772 7.26989C7.9814 7.80452 4.35251 9.90699 5.71347 11.341H5.714Z\" fill=\"%23EE255A\"/><path d=\"M15.1072 10.5181C14.9835 10.1679 14.5452 10.0263 14.2527 10.2568C13.5313 10.8254 14.8435 11.1797 12.8183 13.3046C11.2178 14.9843 5.2806 12.9435 2.76889 13.163C3.21608 10.8243 0.974363 5.42834 2.84596 3.46489C4.72646 1.49203 6.29136 2.92765 6.39621 1.67338C6.50107 0.419111 2.55866 0.70916 1.31461 2.01464C0.0747407 3.31595 0.470554 11.696 1.51015 14.2417C1.85721 16.2386 13.2262 15.9323 14.3492 14.7538C15.5219 13.5231 15.9403 12.8745 15.1067 10.5175L15.1072 10.5181Z\" fill=\"%23EE255A\"/></g><defs><clipPath id=\"clip0_5232_33128\"><rect width=\"15\" height=\"15\" fill=\"white\" transform=\"translate%280.543457 0.69043%29\"/></clipPath></defs></svg>");
+          mask-image: url("data:image/svg+xml,<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url%28%23clip0_5232_33128%29\"><path d=\"M5.714 11.341C7.07496 12.7751 8.17118 9.83174 10.2734 7.73606C11.5553 6.45828 13.1574 4.86118 13.9611 3.55778C14.349 4.707 13.766 6.06998 14.4691 6.74153C16.2054 8.4003 15.3996 2.38138 14.5813 1.56559C13.7629 0.749789 10.0873 0.456604 8.64983 0.888804C8.97067 2.79999 11.0913 1.67063 12.695 2.27372C11.9851 3.2578 10.8355 4.95943 8.51772 7.26989C7.9814 7.80452 4.35251 9.90699 5.71347 11.341H5.714Z\" fill=\"%23EE255A\"/><path d=\"M15.1072 10.5181C14.9835 10.1679 14.5452 10.0263 14.2527 10.2568C13.5313 10.8254 14.8435 11.1797 12.8183 13.3046C11.2178 14.9843 5.2806 12.9435 2.76889 13.163C3.21608 10.8243 0.974363 5.42834 2.84596 3.46489C4.72646 1.49203 6.29136 2.92765 6.39621 1.67338C6.50107 0.419111 2.55866 0.70916 1.31461 2.01464C0.0747407 3.31595 0.470554 11.696 1.51015 14.2417C1.85721 16.2386 13.2262 15.9323 14.3492 14.7538C15.5219 13.5231 15.9403 12.8745 15.1067 10.5175L15.1072 10.5181Z\" fill=\"%23EE255A\"/></g><defs><clipPath id=\"clip0_5232_33128\"><rect width=\"15\" height=\"15\" fill=\"white\" transform=\"translate%280.543457 0.69043%29\"/></clipPath></defs></svg>");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  background-color: currentColor;
+  width: 1em;
+  height: 1em;
+  display: flex;
+}

@@ -1,0 +1,96 @@
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/quick-actions/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Misc.
+ */
+.wp-block-mellobase-quick-actions {
+  position: fixed;
+  inset: auto 0 var(--wp--preset--spacing--small) 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: var(--wp--preset--spacing--large);
+  justify-content: space-between;
+  z-index: 20;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: var(--wp--preset--spacing--small) var(--wp--preset--spacing--medium);
+  background-color: var(--wp--preset--color--contrast);
+  color: var(--wp--preset--color--base);
+  border-radius: var(--wp--custom--radius-medium);
+  overflow: hidden;
+  transition: width 0.5s var(--wp--custom--ease-bounce);
+  animation: slide-up 0.6s var(--wp--custom--ease-bounce), expand 0.5s 0.5s both var(--wp--custom--ease-bounce);
+}
+.wp-block-mellobase-quick-actions__actions {
+  gap: calc(var(--wp--preset--spacing--small) / 2);
+}
+.wp-block-mellobase-quick-actions__close {
+  gap: var(--wp--preset--spacing--small);
+  transition: rotate 0.25s ease-in-out;
+  rotate: 0;
+  height: 1em;
+  width: 1em;
+}
+.wp-block-mellobase-quick-actions.hidden {
+  gap: var(--wp--preset--spacing--medium);
+  padding: 0 var(--wp--preset--spacing--small);
+}
+.wp-block-mellobase-quick-actions.hidden .wp-block-mellobase-quick-actions__actions {
+  width: 0;
+}
+.wp-block-mellobase-quick-actions.hidden .wp-block-mellobase-quick-actions__actions:not(:focus):not(:active) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+.wp-block-mellobase-quick-actions.hidden .wp-block-mellobase-quick-actions__close {
+  rotate: 45deg;
+}
+.wp-block-mellobase-quick-actions > * {
+  animation: fade 0.5s var(--wp--custom--ease-bounce) 0.75s both;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+@keyframes slide-up {
+  from {
+    translate: 0 150%;
+  }
+}
+@keyframes expand {
+  from {
+    width: 50px;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}

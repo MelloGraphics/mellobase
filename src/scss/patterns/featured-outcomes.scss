@@ -1,0 +1,88 @@
+// Section - Outcomes
+
+@use "../utils" as *;
+
+.is-section-outcomes{
+    contain: paint;
+
+    .scroll-wrapper:not(.block-editor-block-list__block){
+        height: 700vh; // Controls the length of the scroll
+    }
+    .pinned-wrapper{
+        height: 100svh;
+		padding-top: $spacing-xx-large;
+		padding-bottom: $spacing-xx-large;
+		width: 100%;
+        position: sticky;
+        top: 0;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .wp-block-query{
+		display: flex;
+		flex: 1 1 0;
+		align-items: center;
+		max-height: 100%;
+	
+		ul{
+			box-sizing: border-box;
+			display: flex;
+			flex: 1 1 0;
+			align-items: stretch;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			gap: $spacing-section;
+			top: 0;
+			max-height: 100%;
+		}
+
+		li, .wp-block-post{
+			min-width: 100%;
+			margin-block-start: 0;
+			transition: .25s ease-out;
+			display: flex;
+
+			// @include for-tablet-landscape-up{
+			// 	min-width: 40%;
+			// }
+			
+			p.has-primary-color{
+				-webkit-text-stroke: .05em $color-tertiary-2;
+			}
+
+			.wp-block-columns{
+				transition: opacity 1s ease-out;
+			}
+		}
+
+		&:has(:hover){
+			.wp-block-columns{
+				opacity: .1;
+			}
+		}
+
+		li:hover{
+			.wp-block-columns{
+				opacity: 1;
+			}
+		}
+    }
+    .scroll-progress {
+        width: 100%;
+        position: sticky;
+		padding: 0;
+		margin: $spacing-large 0;
+		background-color: $color-tertiary-2;
+		border-radius: $radius-medium;
+		overflow: hidden;
+
+        hr{
+            border: none;
+            height: .7em;
+            background: $color-tertiary;
+            transform-origin: left center;
+            // transform: scaleX(0);
+        }
+    }
+}

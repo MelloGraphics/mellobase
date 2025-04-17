@@ -1,0 +1,73 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/blocks/core/post-terms.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Misc.
+ */
+.wp-block-post-terms a {
+  color: var(--wp--preset--color--secondary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.wp-block-post-terms.is-style-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--wp--preset--spacing--small);
+  padding-inline-start: unset;
+}
+.wp-block-post-terms.is-style-tags a {
+  text-decoration: none;
+  color: var(--wp--preset--color--contrast);
+  background-color: var(--wp--preset--color--tertiary);
+  border-radius: var(--wp--custom--radius-small);
+  font-size: var(--wp--preset--font-size--small);
+  padding: calc(var(--wp--preset--spacing--small) * 0.75) var(--wp--preset--spacing--small);
+  list-style: none;
+}
+.wp-block-post-terms.is-style-tags .wp-block-post-terms__separator:not(:focus):not(:active) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.wp-block-post-terms.is-style-after-line {
+  display: flex;
+  align-items: center;
+}
+.wp-block-post-terms.is-style-after-line::after {
+  content: "";
+  -webkit-mask-image: url("data:image/svg+xml,<svg width=\"60\" height=\"4\" viewBox=\"0 0 60 4\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.00464317 2.22845C0.270295 -0.0105155 17.2205 1.29019 20.8923 1.29019C52.6013 1.29019 60 -0.487744 60 1.29019C60 3.06812 39.699 3.06815 25.3016 3.06815C10.9043 3.06815 -0.261009 4.46742 0.00464317 2.22845Z\" fill=\"%23B593D4\"/></svg>");
+          mask-image: url("data:image/svg+xml,<svg width=\"60\" height=\"4\" viewBox=\"0 0 60 4\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.00464317 2.22845C0.270295 -0.0105155 17.2205 1.29019 20.8923 1.29019C52.6013 1.29019 60 -0.487744 60 1.29019C60 3.06812 39.699 3.06815 25.3016 3.06815C10.9043 3.06815 -0.261009 4.46742 0.00464317 2.22845Z\" fill=\"%23B593D4\"/></svg>");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  margin-left: calc(var(--wp--preset--spacing--small) / 2);
+  background-color: currentColor;
+  max-width: 10%;
+  min-width: 60px;
+  height: 10px;
+}
+
+/*# sourceMappingURL=core--post-terms.css.map*/

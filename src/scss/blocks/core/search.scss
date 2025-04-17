@@ -1,0 +1,21 @@
+//  Core seach block styling
+
+@use "../../utils" as *;
+
+.wp-block-search{
+	&__input{
+		background-color: transparent;
+		color: $color-contrast;
+		border-radius: $radius-small;
+	}
+
+	::placeholder{
+		color: $color-contrast;
+	}
+}
+
+:root :where(.wp-block-search .wp-block-search__label, .wp-block-search .wp-block-search__input, .wp-block-search .wp-block-search__button){
+	font-size: $font-size-large;
+}
+
+

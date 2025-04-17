@@ -1,0 +1,16 @@
+// Section - Approach scroll
+
+@use "../utils" as *;
+
+.is-section-get-started{
+	position: relative;
+
+	&__illustration{
+		position: absolute!important;
+		inset: -10% 15% auto auto;
+	}
+
+	.wp-block-site-logo{
+		margin-left: calc($spacing-small * -1);
+	}
+}

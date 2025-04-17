@@ -1,0 +1,40 @@
+// Patterns - What is a brand
+
+@use "../utils" as *;
+
+.is-section-brand-explained{
+	&__your-brand{
+		border-radius: $radius-large;
+	}
+
+	&__brand-identity{
+		border-radius: $radius-medium;
+	}
+
+	&__visual-identity, &__verbal-identity{
+		border-radius: $radius-small;
+	}
+
+	&__icon{
+		margin-block-start: -10%!important;
+		background-color: $color-contrast;
+		padding: $spacing-large;
+		border-radius: 100%;
+		aspect-ratio: 1/1;
+	}
+
+	h5{
+		margin-block-start: 0;
+	}
+
+	ul.wp-block-list.is-style-tags li{
+		border: solid currentColor;
+		background-color: unset;
+		text-align: center;
+		flex: 1 1 40%;
+    	display: flex;
+		align-items: center;
+		justify-content: center;
+		align-content: center;
+	}
+}

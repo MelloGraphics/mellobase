@@ -1,0 +1,7 @@
+@use "../../utils" as *;
+
+.wp-block-column.is-style-mobile-row {
+    .is-vertical{
+        flex: 1 0 11em;
+    }
+}

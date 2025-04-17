@@ -1,0 +1,92 @@
+@use "../../utils" as *;
+
+.wp-block-button__link svg {
+	vertical-align: middle;
+	fill: currentcolor;
+}
+
+// Add diaganol for external links
+
+.wp-block-button {
+	.wp-block-button__link[target="_blank"] {
+		display: inline-flex;
+		align-items: center;
+		flex-wrap: nowrap;
+		gap: 0.5em;
+
+	@include external-icon-after();
+	}
+
+	@include button-hover();
+}
+
+//
+// Registered style - Primary
+//
+
+.wp-block-button.is-style-primary {
+	transition:
+		filter $ease-circ 0.25s,
+		scale $ease-bounce 0.5s;
+
+	.wp-block-button__link {
+		display: inline-flex;
+		gap: 0.5rem;
+
+		@include primary-button-arrow-style();
+	}
+
+	@include primary-button-arrow-hover();
+}
+
+//
+// Registered style - Secondary
+//
+
+.wp-block-button.is-style-secondary {
+	.wp-block-button__link {
+		padding: $spacing-small 0;
+		border-radius: unset;
+		background-color: $transparent;
+		color: currentColor;
+
+		@include arrow-right-small-after();
+
+		&:hover::after{
+			@include arrow-bounce
+		}
+	}
+
+	.wp-block-button__link[target="_blank"] {
+		display: inline-flex;
+		align-items: center;
+		flex-wrap: nowrap;
+		gap: 0.5em;
+
+	@include external-icon-after();
+	}
+}
+
+//
+// Registered style - Tertiary
+//
+
+.wp-block-button.is-style-tertiary {
+	.wp-block-button__link {
+		padding: $spacing-small 0;
+		border-radius: unset;
+		background-color: $transparent;
+		color: currentColor;
+		position: relative;
+
+		@include line-under-always();
+	}
+}
+
+//
+// button is open in modal
+//
+
+.wp-block-button .wp-block-button__link.is-button-open-in-modal{
+	@include video-before();
+}

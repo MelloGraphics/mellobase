@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mellobase/quick-actions",
+  "version": "0.1.0",
+  "title": "Quick Actions",
+  "category": "widgets",
+  "icon": "justify",
+  "description": "Add quick actions to a page or template",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "quick-actions",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

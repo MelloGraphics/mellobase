@@ -1,0 +1,38 @@
+// Patterns - Hero Features
+@use "../utils" as *;
+
+.is-pattern-google-reviews{
+	a{
+		display: flex;
+		gap: .25rem;
+		text-decoration: unset;
+		font-weight: 400;
+		color: inherit;
+	}
+	path.star{
+		position: relative;
+		transform-box: fill-box;
+		transform-origin: center;
+		animation: spin $ease-circ 30s infinite;
+
+		@for $i from 1 through 10 { // create a loop of animation delay for each child
+			&:nth-child(#{$i}n) {
+				animation-delay: #{$i * 0.05}s;
+			}
+		}
+	}
+	&:hover{
+		path.star{
+			animation: spin $ease-circ 30s;
+		}
+	}
+}
+
+@keyframes spin {
+	0%{
+		rotate: 0;
+	}
+	10%, 100%{
+		rotate: 360deg;
+	}
+}

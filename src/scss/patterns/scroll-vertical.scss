@@ -1,0 +1,27 @@
+// Patterns - Scroll Vertical
+
+@use "../utils" as *;
+
+.is-pattern-scroll-vertical{
+	position: relative;
+
+	&__arrow-line{
+		flex: 1;
+		height: 100%;
+
+		img{
+			min-height: 100%;
+			max-width: 3px;
+			object-fit: cover;
+		}
+	}
+	&__arrow-head{
+		position: absolute;
+		inset: auto 0 0 0;
+		width: 100%;
+
+		img{
+			margin: auto;
+		}
+	}
+}

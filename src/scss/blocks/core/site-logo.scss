@@ -1,0 +1,91 @@
+//  Core site logo block styling
+
+@use "../../utils" as *;
+
+.wp-block-site-logo{ //use enable svg plugin to add class that outputs svg data rather than img tag
+    .replaced-svg{
+        overflow: visible;
+    }
+    
+    *{
+        transition: all $speed $ease-bounce;
+        transform-box: fill-box;
+    }
+
+    &:hover, &:focus-within, &:active{
+        // #Logomark{
+        //     transform-origin: right center;
+        //     translate: 0 .5em;
+        //     rotate: -5deg;
+        //     transition: 1.5s;
+        //     animation: red-kite-float 3s infinite alternate-reverse ease-in-out 1.5s, 
+        //                 red-kite-rotate 3s infinite alternate-reverse cubic-bezier(0.785, 0.135, 0.150, 0.860) 2s;
+
+        //     #wings{
+        //         transform-origin: bottom center;
+        //         animation: red-kite-flaps 3s infinite alternate-reverse ease-in-out;
+        //     }
+        // }
+        #Logotype path{
+            translate: .25em 0;
+            @for $i from 1 through 10 { // create a loop of animation delay for each child
+                &:nth-child(#{$i}n) {
+                    transition-delay: #{$i * 0.05}s;
+                }
+            }
+        }
+    }
+}
+
+header.scrolled{
+    // #Logomark{
+    //     // transform-origin: center;
+    //     // animation: red-kite-dive 3s ease-in-out;
+    // }
+    #Logotype path{
+        opacity: 0;
+        translate: -.5em 0;
+    }
+
+    .wp-block-site-logo:hover{
+        #Logotype path{
+            opacity: 1;
+            translate: 0;
+
+            @for $i from 1 through 10 { // create a loop of animation delay for each child
+                &:nth-child(#{$i}n) {
+                    transition-delay: #{$i * 0.05}s;
+                }
+            }
+        }
+    }
+}
+
+.wp-block-site-logo.is-style-reversed{
+    filter: brightness(0) invert(1);
+}
+
+// @keyframes red-kite-float{
+//     0%{
+//         translate: 0 -.5em;
+//     }
+//     100%{
+//         translate: 0 .5em;
+//     }
+// }
+// @keyframes red-kite-rotate{
+//     0%{
+//         rotate: 5deg;
+//     }
+//     100%{
+//         rotate: -5deg;
+//     }
+// }
+// @keyframes red-kite-flaps{
+//     0%, 30%, 60%{
+//         scale: 1 1;
+//     }
+//     20%, 40%{
+//         scale: 1 .5;
+//     }
+// }

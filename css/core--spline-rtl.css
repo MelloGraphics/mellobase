@@ -1,0 +1,39 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/blocks/core/spline.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Misc.
+ */
+#canvas3d {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: auto !important;
+  margin: auto;
+}
+
+.wp-block-group:has(> #canvas3d) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wp-block-cover__inner-container:has(#canvas3d) > .wp-block-group:not(:has(#canvas3d)) {
+  pointer-events: none;
+}
+.wp-block-cover__inner-container:has(#canvas3d) > .wp-block-group:not(:has(#canvas3d)) .wp-block-buttons {
+  pointer-events: all;
+}

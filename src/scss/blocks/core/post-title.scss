@@ -1,0 +1,42 @@
+// Core Post Title
+
+@use "../../utils" as *;
+
+.wp-block-post-title{
+    text-wrap-style: balance;
+
+    @include heading-font-sizes();
+    &.has-x-large-font-size, &.has-xx-large-font-size{
+        font-style: italic;
+        font-weight: 800;
+    }
+
+    a{
+        color: inherit;
+    }
+}
+
+// is style arrow after
+
+.wp-block-post-title.is-style-arrow-after{
+    width: 100%;
+    
+    a{
+        color: $color-contrast;
+        justify-content: space-between!important;
+        width: 100%;
+
+        @include arrow-right-small-after();
+        &::after{
+            mask-position: right center;
+            min-width: 2em;
+        }
+        @include for-tablet-landscape-up{
+            @include arrow-right-medium-after();
+            &::after{
+                mask-position: right center;
+                min-width: 2em;
+            }
+        }
+    }
+}

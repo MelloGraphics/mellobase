@@ -1,0 +1,261 @@
+// Core details block syling
+
+@use "../../utils" as *;
+
+// Default core details styling
+
+.wp-block-details {
+	border-bottom: $color-tertiary 1px solid;
+	counter-increment: details 1;
+	overflow: unset;
+
+	summary {
+		padding: $spacing-small 0;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: start;
+		gap: $spacing-small;
+		position: relative;
+		top: 0;
+		z-index: +1;
+
+		> * {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			font-size: inherit;
+			font-weight: inherit;
+
+			> span {
+				color: $color-primary;
+				font-size: $font-size-small;
+			}
+		}
+
+		@include cross-after();
+		&::after {
+			color: $color-primary;
+			position: absolute;
+			inset: auto $spacing-small auto auto;
+			transition: rotate 0.25s ease-out;
+		}
+	}
+
+	&.has-faq-schema summary {
+		font-size: $font-size-large;
+	}
+
+	::marker,
+	::-webkit-details-marker {
+		display: none;
+		visibility: hidden;
+	}
+
+	> *:not(summary) {
+		margin-block-start: $spacing-small;
+		margin-block-end: $spacing-large;
+	}
+
+	&[open] {
+		> *:not(summary) {
+			z-index: 1;
+			animation: details-open-fade 0.5s ease-out;
+			transition-behavior: allow-discrete;
+
+			// @for $i from 2 through 15{
+			// 	&:nth-child(#{$i}) {
+			// 		animation-delay: 100ms * $i;
+			// 	}
+			// }
+		}
+
+		summary:after {
+			rotate: 45deg;
+		}
+	}
+}
+
+//
+// Has FAQ schema
+//
+
+.wp-block-details.mello-has-faq-schema {
+	summary {
+		font-size: $font-size-large;
+	}
+
+	&[open] {
+		padding-bottom: $spacing-large;
+	}
+}
+
+//
+// has background colour
+//
+
+.wp-block-details.has-background {
+	border-radius: $radius-small;
+	padding: $spacing-small;
+	border: unset;
+
+	summary{
+		padding: unset;
+
+		&::after{
+			inset: auto 0 auto auto;
+		}
+	}
+}
+
+// //
+// // Registered style - Tabbed
+// //
+
+// .is-pattern-tabbed-top{
+// 	@include for-tablet-landscape-up{
+// 		position: relative;
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		gap: $spacing-large;
+
+// 		.wp-block-details.is-style-tabbed{
+// 			display: contents;
+
+// 			summary{
+// 				font-size: $font-size-small;
+// 				flex: 1 0;
+// 				position: unset;
+// 			}
+
+// 			&[open]{
+// 				summary{
+// 				border-bottom: solid $color-contrast 2px;
+// 				}
+// 			}
+
+// 			> *:not(summary){
+// 				flex: 1 0 100%;
+// 				margin: 0;
+// 				padding: 0;
+
+// 				object-fit: cover;
+// 				order: +1;
+// 			}
+// 		}
+// 	}
+// }
+
+// 
+// Registered style - icon-check
+//
+
+.wp-block-details.is-style-icon-check summary {
+	@include check-before();
+
+	&:before{
+		background-color: $color-secondary;
+	}
+}
+
+// 
+// Registered style - icon-star
+//
+
+.wp-block-details.is-style-icon-star summary {
+	@include star-before();
+
+	&:before{
+		background-color: $color-primary;
+	}
+}
+
+//
+// Pattern style - Tabbed / Pattern Tabbed Side
+//
+
+.is-pattern-tabbed {
+	&__right,
+	&__left {
+		position: relative;
+
+		.wp-block-details.is-style-tabbed {
+			border-bottom: unset;
+			padding: 0;
+			position: unset;
+
+			summary {
+				font-size: $font-size-large;
+				flex: 1 0;
+				position: relative;
+				padding: $spacing-small $spacing-medium;
+				border-radius: $radius-small;
+				font-style: italic;
+			}
+
+			> *:not(summary) {
+				margin: 0;
+				padding: 0;
+				object-fit: cover;
+				margin-block-end: unset !important;
+			}
+
+			.is-style-tabbed__content-under {
+				padding: $spacing-medium;
+				border-radius: 0 0 $radius-small $radius-small;
+			}
+
+			&:nth-child(even) {
+				summary,
+				.is-style-tabbed__content-under {
+					background-color: $color-tertiary-2;
+				}
+			}
+
+			&[open] {
+				summary {
+					font-weight: bold;
+					color: $color-secondary;
+					border-radius: $radius-small $radius-small 0 0;
+				}
+			}
+
+			@include for-tablet-landscape-up {
+				summary,
+				.is-style-tabbed__content-under {
+					max-width: 45%;
+				}
+
+				.is-style-tabbed__content-aside {
+					position: absolute;
+					z-index: 10;
+					inset: 0 0 0 auto;
+					width: 50%;
+					overflow: clip;
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	&__right {
+		.wp-block-details.is-style-tabbed {
+			@include for-tablet-landscape-up {
+				summary,
+				.is-style-tabbed__content-under {
+					margin-left: 55%;
+					margin-right: 0;
+				}
+				.is-style-tabbed__content-aside {
+					inset: 0 auto 0 0;
+				}
+			}
+		}
+	}
+}
+
+@keyframes details-open-fade {
+	from {
+		opacity: 0;
+	}
+}
