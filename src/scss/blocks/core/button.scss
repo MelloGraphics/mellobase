@@ -57,7 +57,7 @@
 
 		&:hover{
 			color: $color-contrast;
-			transition: all .25s $custom-transition;
+			transition: all .25s $ease-circ;
 
 			img{
 				filter: brightness(100);
@@ -67,7 +67,7 @@
 				content: '';
 				width: 100%;
 				background-color: $color-primary;
-				transition: width .25s $custom-transition;
+				transition: width .25s $ease-circ;
 			}
 		}
 	}

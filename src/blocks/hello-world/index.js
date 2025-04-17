@@ -26,7 +26,7 @@ import save from "./save";
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType("block-theme/hello-world", {
+registerBlockType("mellobase/hello-world", {
 	...metadata,
 	edit,
 	save,

@@ -11,29 +11,45 @@
 			"custom": true,
 			"palette": [
 				{
-					"slug": "base",
-					"color": "#f1f1f1",
-					"name": "White"
-				},
-				{
-					"slug": "contrast",
-					"color": "#051214",
-					"name": "Black"
-				},
-				{
 					"slug": "primary",
 					"color": "#F15A24",
 					"name": "Orange"
 				},
 				{
-					"slug": "secondary",
-					"color": "#101E3B",
-					"name": "Navy"
+					"slug": "primary-contrast",
+					"color": "#F15A24",
+					"name": "Primary Conrast"
 				},
 				{
-					"slug": "tertiary",
+					"slug": "contrast",
+					"color": "#141414",
+					"name": "Contrast"
+				},
+				{
+					"slug": "secondary",
+					"color": "#101E3B",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary-1",
 					"color": "#1D1D1D",
-					"name": "Grey"
+					"name": "Tertiary 1"
+				},
+				{
+					"slug": "tertiary-2",
+					"color": "#1D1D1D",
+					"name": "Tertiary 2"
+				},
+				{
+					"slug": "tertiary-3",
+					"color": "#1D1D1D",
+					"name": "Tertiary 3"
+				},
+
+				{
+					"slug": "base",
+					"color": "#f1f1f1",
+					"name": "Base"
 				},
 				{
 					"slug": "transparent",
@@ -62,6 +78,11 @@
 			"units": [ "px", "em", "rem", "svh", "svw", "%" ],
 			"defaultSpacingSizes": false,
 			"spacingSizes": [
+				{
+					"size": "0.3rem",
+					"slug": "x-small",
+					"name": "XS"
+				},
 				{
 					"size": "0.67rem",
 					"slug": "small",
@@ -105,37 +126,37 @@
 							"fontFamily": "Montserrat",
 							"fontStyle": "normal",
 							"fontWeight": "700",
-							"src": "file:./fonts/Montserrat-Bold.ttf"
+							"src": "file:./fonts/montserrat/Montserrat-Bold.ttf"
 						},
 						{
 							"fontFamily": "Montserrat",
 							"fontStyle": "italic",
 							"fontWeight": "700",
-							"src": "file:./fonts/Montserrat-BoldItalic.ttf"
+							"src": "file:./fonts/montserrat/Montserrat-BoldItalic.ttf"
 						},
 						{
 							"fontFamily": "Montserrat",
 							"fontStyle": "normal",
 							"fontWeight": "500",
-							"src": "file:./fonts/Montserrat-Medium.ttf"
+							"src": "file:./fonts/montserrat/Montserrat-Medium.ttf"
 						},
 						{
 							"fontFamily": "Montserrat",
 							"fontStyle": "italic",
 							"fontWeight": "500",
-							"src": "file:./fonts/Montserrat-MediumItalic.ttf"
+							"src": "file:./fonts/montserrat/Montserrat-MediumItalic.ttf"
 						},
 						{
 							"fontFamily": "Montserrat",
 							"fontStyle": "normal",
 							"fontWeight": "250",
-							"src": "file:./fonts/Montserrat-Thin.ttf"
+							"src": "file:./fonts/montserrat/Montserrat-Thin.ttf"
 						},
 						{
 							"fontFamily": "Montserrat",
 							"fontStyle": "italic",
 							"fontWeight": "250",
-							"src": "file:./fonts/Montserrat-ThinItalic.ttf"
+							"src": "file:./fonts/montserrat/Montserrat-ThinItalic.ttf"
 						}
 					],
 					"fontFamily": "Montserrat",
@@ -148,7 +169,7 @@
 							"fontFamily": "Fontawesome",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": "file:./fonts/fontawesome/sharp/fa-sharp-regular-400.ttf"
+							"src": "file:./fonts/montserrat/fontawesome/sharp/fa-sharp-regular-400.ttf"
 						}
 					],
 					"fontFamily": "Fontawesome",
@@ -205,9 +226,11 @@
 			]
 		},
 		"custom": {
-			"transition": "cubic-bezier(0, 0, 0, 1.01)",
-			"transition-quick": "cubic-bezier(0, 0, 0, 1.01)",
-			"mask": "linear-gradient(0deg, rgba(255,255,255,0) 5%, rgba(255,255,255,1) 100%)"
+			"ease-bounce": "linear(0, 0.49 7.4%, 0.864 15.3%, 1.005 19.4%, 1.12 23.7%, 1.206 28.1%, 1.267 32.8%, 1.296 36.4%, 1.311 40.2%, 1.313 44.2%, 1.301 48.6%, 1.252 56.9%, 1.105 74.4%, 1.048 82.5%, 1.011 91.1%, 1)",
+			"ease-circ": "cubic-bezier(0.075, 0.820, 0.165, 1.000)",
+			"speed-fast": ".25s",
+			"speed-medium": ".5s",
+			"speed-slow": "1s"
 		},
 		"useRootPaddingAwareAlignments": true
 	},

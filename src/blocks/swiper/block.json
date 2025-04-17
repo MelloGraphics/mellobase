@@ -1,0 +1,83 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "mellobase/swiper",
+	"version": "0.1.0",
+	"title": "Swiper",
+	"category": "design",
+	"icon": "slides",
+	"description": "A block that wraps inner blocks and applies swiper functionality.",
+	"example": {},
+	"styles": [
+		{
+			"name": "one-across",
+			"label": "1 Across"
+		},
+		{
+			"name": "two-across",
+			"label": "2 Across"
+		},
+		{
+			"name": "three-across",
+			"label": "3 Across",
+			"isDefault": true
+		},
+		{
+			"name": "fade",
+			"label": "Fade"
+		},
+		{
+			"name": "ticker-left",
+			"label": "Ticker Left"
+		},
+		{
+			"name": "ticker-right",
+			"label": "Ticker Right"
+		}
+	],
+	"supports": {
+		"align": ["wide", "full"],
+		"html": false,
+		"spacing": {
+			"margin": [ "top", "bottom" ],
+			"padding": true,
+			"blockGap": true,
+			"__experimentalDefaultControls": {
+				"padding": true,
+				"blockGap": true
+			}
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
+		},
+		"position": {
+			"sticky": true
+		},
+		"layout": {
+			"allowSizingOnChildren": true
+		}
+	},
+	"attributes": {
+        "swiperSettings": {
+            "type": "string",
+            "default": "{}"
+        }
+    },
+	"textdomain": "swiper",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

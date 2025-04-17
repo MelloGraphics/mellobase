@@ -21,7 +21,7 @@
 
     &:hover{
       &:before{
-        transition: translate .25s $custom-transition;
+        transition: translate .25s $ease-circ;
         translate: -.5rem 0;
       }
     }
@@ -170,7 +170,7 @@
                 position: absolute;
                 inset: 0;
                 margin: auto;
-                animation: clip-swipe-out .25s $custom-transition-quick both;
+                animation: clip-swipe-out .25s $ease-circ both;
                 mix-blend-mode: difference;
                 width: 100%;
                 height: auto;
@@ -181,7 +181,7 @@
                 translate: .15em 0;
 
                 img{
-                  animation: clip-swipe-in .25s $custom-transition-quick both;
+                  animation: clip-swipe-in .25s $ease-circ both;
                 }
               }
             }
@@ -208,15 +208,15 @@
                 object-fit: cover;
                 z-index: -1;
                 scale: 1.1;
-                transition: scale 5s $custom-transition;
-                animation: clip-swipe-out .25s $custom-transition-quick both;
+                transition: scale 5s $ease-circ;
+                animation: clip-swipe-out .25s $ease-circ both;
               }
 
               &:hover, &:focus-within{
                 > img{
                   scale: 1;
                   filter: blur(0);
-                  animation: clip-swipe-in .25s $custom-transition-quick both;
+                  animation: clip-swipe-in .25s $ease-circ both;
                 }
 
                 @keyframes clip-swipe-in{
@@ -280,7 +280,7 @@
 .is-style-mello-menu{
   .wp-block-navigation-item:not(.is-nav-footer-wrapper .wp-block-navigation-item) {
     animation: menu-open 500ms;
-    animation-timing-function: $custom-transition;
+    animation-timing-function: $ease-circ;
     animation-fill-mode: both;
 
     @for $i from 1 through 10 { // create a loop of animation delay for each child

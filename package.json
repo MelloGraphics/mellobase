@@ -23,6 +23,8 @@
 		"lenis": "^1.1.21",
 		"locomotive-scroll": "^4.1.4",
 		"motion": "^11.16.1",
+		"sass": "^1.86.3",
+		"sass-loader": "^13.3.3",
 		"splitting": "^1.0.6",
 		"uuid": "^11.0.5"
 	},

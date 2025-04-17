@@ -1,0 +1,70 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@use "../../scss/utils/" as *;
+
+.wp-block-mellobase-swiper{
+    .swiper-wrapper{
+        overflow-x: scroll;
+        gap: $spacing-x-large;
+
+
+    }
+    
+    &.is-style-fade, &.is-style-one-across{
+        .swiper-wrapper{
+            overflow-x: scroll;
+            
+            > .wp-block-group{
+                min-width: 100%;
+            }
+        }
+    }
+    &.is-style-two-across{
+        .swiper-wrapper > * {
+            min-width: calc(50% - $spacing-large);
+        }
+    }
+    &.is-style-three-across{
+        .swiper-wrapper > * {
+            min-width: calc(33.33% - $spacing-large);
+        }
+    }
+    &.is-style-ticker-right, &.is-style-ticker-left{
+        .swiper-wrapper > * {
+            min-width: max-content;
+        }
+    }
+
+    .swiper-pagination{
+        &::before{
+            content: 'Delete this group block if pagination is not needed';
+            background-color: #f1f1f1;
+            color: black;
+            min-width: 100%;
+            display: block;
+            padding: $spacing-small;
+            text-align: center;
+        }
+        .block-list-appender, .components-placeholder{
+            @include visually-hidden()
+        }
+    }
+    .swiper-scrollbar{
+        &::before{
+            content: 'Delete this group block if a scrollbar is not needed';
+            background-color: #f1f1f1;
+            color: black;
+            min-width: 100%;
+            display: block;
+            padding: $spacing-small;
+            text-align: center;
+        }
+        .block-list-appender, .components-placeholder{
+            @include visually-hidden()
+        }
+    }
+}

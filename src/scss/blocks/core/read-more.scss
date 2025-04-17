@@ -22,13 +22,13 @@
     &:hover{
         color: $color-base;
         padding-left: $spacing-medium;
-        transition: all .25s $custom-transition;
+        transition: all .25s $ease-circ;
 
         &::after{
             content: '';
             width: 100%;
             background-color: $color-primary;
-            transition: width .25s $custom-transition;
+            transition: width .25s $ease-circ;
         }
     }
 }

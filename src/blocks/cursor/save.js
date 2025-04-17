@@ -17,8 +17,13 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function save() {
 	return (
-		<div { ...useBlockProps.save() }>
-			{ 'Click ● Click ● Click ●' }
+		<div { ...useBlockProps.save({ className: 'cursor-wrapper' }) }>
+			{ 	<div className='cursor-location'>
+					<div className='cursor-decoration'>
+						<p className='cursor-click'>Click ● Click ● Click ●</p>
+					</div>
+				</div>
+			}
 		</div>
 	);
 }

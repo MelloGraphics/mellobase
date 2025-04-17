@@ -21,7 +21,7 @@
             border: solid currentColor;
             height: 2em;
             min-width: 2em;
-            transition: all .25s $custom-transition;
+            transition: all .25s $ease-circ;
 
             &::after{
                 content: '';
@@ -44,13 +44,13 @@
 
         .wp-block-read-more:hover, h3:hover ~ .wp-block-read-more{
             color: $color-base;
-            transition: all .25s $custom-transition;
+            transition: all .25s $ease-circ;
 
             &::after{
                 content: '';
                 width: 100%;
                 background-color: $color-primary;
-                transition: width .25s $custom-transition;
+                transition: width .25s $ease-circ;
             }
         }
 
@@ -58,7 +58,7 @@
 
     img{
         scale: 1.2;
-        transition: scale $custom-transition .5s;
+        transition: scale $ease-circ .5s;
     }
     &:has(.wp-block-read-more:hover, a img:hover){
         img{

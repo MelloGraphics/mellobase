@@ -82,11 +82,11 @@ footer, .is-pattern-footer{
 // 	border: solid $color-primary 3px;
 // 	scale: .3;
 // 	animation: cursor-rotate 30s infinite linear;
-// 	transition: transform 0.25s $custom-transition,
-// 				width 0.25s $custom-transition,
-// 				height 0.25s $custom-transition,
-// 				scale 0.25s $custom-transition,
-// 				background-color 0.25s $custom-transition,
+// 	transition: transform 0.25s $ease-circ,
+// 				width 0.25s $ease-circ,
+// 				height 0.25s $ease-circ,
+// 				scale 0.25s $ease-circ,
+// 				background-color 0.25s $ease-circ,
 // 				inset .2s ease-out;
 
 // 	@include for-phone-only{

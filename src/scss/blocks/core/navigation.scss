@@ -406,7 +406,7 @@ nav.is-style-mega-menu{
     .wp-block-navigation__submenu-container{
       .wp-block-group, .wp-block-column {
         animation: mega-menu-open 500ms;
-        animation-timing-function: $custom-transition;
+        animation-timing-function: $ease-circ;
         animation-fill-mode: both;
 
         @for $i from 1 through 10 { // create a loop of animation delay for each child
