@@ -26,7 +26,7 @@ footer, .is-pattern-footer{
 		display: flex;
 		flex: 1 1 250px;
 		max-width: 500px;
-		@include breakpoint(md) {
+		@include for-tablet-portrait-up {
 			margin: auto;
 		}
 	}
@@ -36,7 +36,7 @@ footer, .is-pattern-footer{
 		flex: 1 0 1;
 		flex-wrap: wrap;
 
-		@include breakpoint(md) {
+		@include for-tablet-portrait-up {
 			flex-basis: 100%;
 			flex-wrap: wrap;
 		}
@@ -44,7 +44,7 @@ footer, .is-pattern-footer{
 		nav{
 			min-width: 120px;
 
-			@include breakpoint(md) {
+			@include for-tablet-portrait-up {
 				flex: 1 0 100%;
 
 				p{

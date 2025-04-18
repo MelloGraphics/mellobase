@@ -76,7 +76,7 @@
             justify-content: center;
             max-width: 400px;
 
-            @include breakpoint('md') {
+            @include for-tablet-portrait-up {
               display: grid;
               grid-template-columns: 1fr .6fr;
               grid-template-rows: 1fr .05fr;
@@ -94,11 +94,11 @@
               height: 100%;
               max-height: 50svh;
               width: 100%;
-              @include breakpoint(lg) {
+              @include for-tablet-landscape-up {
                 justify-content: center;
                 flex: 0 1 0;
               }
-              @include breakpoint(md){
+              @include for-tablet-portrait-up{
                 align-content: center;
                 align-items: center;
               }
@@ -107,7 +107,7 @@
               height: 100%;
               max-height: 50svh;
               width: 100%;
-              @include breakpoint(md){
+              @include for-tablet-portrait-up{
                 // max-height: 30svh;
                 flex-wrap: nowrap;
                 text-align: center;
@@ -123,7 +123,7 @@
               position: relative;
               font-size: .9rem;
 
-              @include breakpoint(md){
+              @include for-tablet-portrait-up{
                 justify-content: center;
 
                 .is-layout-flex{

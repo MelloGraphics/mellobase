@@ -13,7 +13,7 @@ nav.is-style-mega-menu{
 
   .wp-block-navigation__responsive-container{ // overlay wrapper styling
     
-    @include breakpoint(lg) {
+    @include for-tablet-landscape-up {
       position: unset;
     }
 
@@ -44,7 +44,7 @@ nav.is-style-mega-menu{
                   // border: solid green 2px;
                 }
 
-                @include breakpoint('md') { 
+                @include for-tablet-portrait-up { 
                   flex-direction: row;
                   width: 100vw;
                   position: fixed;
@@ -56,7 +56,7 @@ nav.is-style-mega-menu{
 
                 ul.wp-block-group:not(.submenu-content-wrapper){ // For mega menu built with groups
 
-                  @include breakpoint(lg) {
+                  @include for-tablet-landscape-up {
                     flex-direction: column;
                     align-items: flex-start;
                   }
@@ -193,7 +193,7 @@ nav.is-style-mega-menu{
 body.admin-bar{
   .is-style-mega-menu{
     .wp-block-navigation__submenu-container { // Sub nav wrapper
-      @include breakpoint(lg) {
+      @include for-tablet-landscape-up {
         top: 130px!important; // height of header with admin bar
       }
     }
@@ -209,7 +209,7 @@ header{
   &.hidden{
     .is-style-mega-menu{
       .wp-block-navigation__submenu-container { // Sub nav wrapper
-        @include breakpoint(lg) {
+        @include for-tablet-landscape-up {
           display: none;
           visibility: hidden;
         }
