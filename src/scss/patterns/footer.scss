@@ -2,6 +2,10 @@
 
 @use "../utils" as *;
 
+.site-footer{ 
+	margin-block-start: 0;
+}
+
 footer, .is-pattern-footer{
 	margin-top: 0;
 

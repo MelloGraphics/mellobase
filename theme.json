@@ -169,7 +169,7 @@
 							"fontFamily": "Fontawesome",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": "file:./fonts/montserrat/fontawesome/sharp/fa-sharp-regular-400.ttf"
+							"src": "file:./fonts/fontawesome/sharp/fa-sharp-regular-400.ttf"
 						}
 					],
 					"fontFamily": "Fontawesome",
@@ -235,7 +235,6 @@
 		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
-		"css": ".site-footer{ margin-block-start: 0;}",
 		"blocks": {
 			"core/heading": {
 				"color": {
@@ -516,7 +515,7 @@
 				},
 				"color": {
 					"background": "var(--wp--preset--color--primary)",
-					"text": "var(--wp--preset--color--base)"
+					"text": "var(--wp--preset--color--primary-contrast)"
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)"
