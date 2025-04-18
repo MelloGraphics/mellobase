@@ -45,11 +45,6 @@ require_once get_template_directory() . '/inc/register-block-patterns.php';
 // require_once get_template_directory() . '/inc/native-custom-fields.php';
 
 /**
- * Render SVG with .style-svg class added in advaced
- */
-require_once get_template_directory() . '/inc/style-svg.php';
-
-/**
  * Register Block binding sources
  */
 // require_once get_template_directory() . '/inc/binding-sources.php';
