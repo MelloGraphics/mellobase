@@ -12,12 +12,12 @@
 			"palette": [
 				{
 					"slug": "primary",
-					"color": "#F15A24",
-					"name": "Orange"
+					"color": "#1c5dd7",
+					"name": "Primary"
 				},
 				{
 					"slug": "primary-contrast",
-					"color": "#F15A24",
+					"color": "#ffffff",
 					"name": "Primary Conrast"
 				},
 				{
@@ -27,17 +27,17 @@
 				},
 				{
 					"slug": "secondary",
-					"color": "#101E3B",
+					"color": "#0e12442",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary-1",
-					"color": "#1D1D1D",
+					"color": "#a0abc0",
 					"name": "Tertiary 1"
 				},
 				{
 					"slug": "tertiary-2",
-					"color": "#1D1D1D",
+					"color": "#cbd2e0",
 					"name": "Tertiary 2"
 				},
 				{
@@ -565,6 +565,16 @@
 			"name": "blank",
 			"title": "Blank page",
 			"postTypes": [ "page" ]
+		},
+		{
+			"name": "archive-tests",
+			"title": "Archive: Tests",
+			"postTypes": [ "work" ]
+		},
+		{
+			"name": "single-tests",
+			"title": "Single Item: Test",
+			"postTypes": [ "tests" ]
 		}
 	]
 }

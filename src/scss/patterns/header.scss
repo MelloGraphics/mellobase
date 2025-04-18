@@ -5,33 +5,12 @@
 // .wp-site-blocks > header:not(:has(.is-menu-open))
 
 .wp-site-blocks > header {
-	position: fixed;
-	z-index: 999;
+	// position: fixed;
+	// z-index: 999;
 	width: 100%;
 	top: 0;
 	transition: translate .5s;
-	pointer-events: none;
-
-	// .wp-block-site-logo{
-	// 	pointer-events: all;
-	// 	z-index: +1;
-	// }
-	// .wp-block-site-title{
-	// 	pointer-events: all;
-	// 	// box-sizing: border-box;
-	// 	display: flex;
-	// 	justify-items: center;
-	// 	align-items: center;
-	// 	height: 40px;
-	// 	overflow: hidden;
-	// 	transform-origin: left;
-	// 	transition: all .15s $ease-circ;
-	// 	a{
-	// 		width: auto;
-	// 		translate: 0 0;
-	// 		transition: all .25s $ease-circ;
-	// 	}
-	// }
+	// pointer-events: none;
 
 	nav{
 		pointer-events: all;

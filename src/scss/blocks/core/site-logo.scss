@@ -1,26 +1,3 @@
 //  Core site logo block styling
 
 @use "../../utils" as *;
-
-.wp-block-site-logo{ //use enable svg plugin to add class that outputs svg data rather than img tag
-    svg{
-        overflow: visible;
-        path{
-            transition: translate .5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-        }
-    }
-}
-
-.wp-block-group:has(> .wp-block-site-logo){
-    &:hover{
-        path{
-            transition: translate .5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-            &:nth-child(1n){
-                translate: 0 -30%;
-            }
-            &:nth-child(2n){
-                translate: 0 30%;
-            }
-        }
-    }
-}
