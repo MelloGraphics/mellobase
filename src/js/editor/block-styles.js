@@ -1,5 +1,3 @@
-console.log('this is file src/editor/block-styles.js');
-
 import { registerBlockStyle } from '@wordpress/blocks';
 import domReady from '@wordpress/dom-ready';
 
@@ -14,26 +12,14 @@ const registerBlockStyles = {
         {
             name: "primary",
             label: "Primary",
-        }
-    ],
-    "core/details": [
-        {
-            name: "hover-reveal",
-            label: "Hover Reveal",
         },
         {
-            name: "tabbed",
-            label: "Tabbed",
-        }
-    ],
-    "core/cover": [
-        {
-            name: "blurred",
-            label: "Blurred",
+            name: "secondary",
+            label: "Secondary",
         },
         {
-            name: "faded",
-            label: "Faded",
+            name: "tertiary",
+            label: "Tertiary",
         }
     ],
     "core/paragraph": [
@@ -58,32 +44,6 @@ const registerBlockStyles = {
             label: "Box",
         },
     ],
-    "core/query": [
-        {
-            name: "carousel",
-            label: "Carousel",
-        },
-        {
-            name: "scrollable",
-            label: "Scrollable",
-        }
-    ],
-    "core/gallery": [
-        {
-            name: "booklet",
-            label: "Booklet",
-        }
-    ],
-    "wpgb/grid": [
-        {
-            name: "large-grid",
-            label: "Large Grid",
-        },
-        {
-            name: "stepped-grid",
-            label: "Stepped Grid",
-        }
-    ]
 };
 
 domReady(() => {

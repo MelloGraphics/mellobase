@@ -45,7 +45,7 @@ $font-colour: $color-base;
  * Theme.json Set Spacing Variables
  */
 $spacing-none: 0;
-$spacing-small: var(--wp--preset--spacing--x-small);
+$spacing-x-small: var(--wp--preset--spacing--x-small);
 $spacing-small: var(--wp--preset--spacing--small);
 $spacing-medium: var(--wp--preset--spacing--medium);
 $spacing-large: var(--wp--preset--spacing--large);
@@ -68,7 +68,7 @@ $speed: $speed-medium; // default animation speed
 
 // other custom
 
-$custom-fade: var(--wp--custom--mask);
+// $custom-fade: var(--wp--custom--mask);
 
 
 // Transitions
