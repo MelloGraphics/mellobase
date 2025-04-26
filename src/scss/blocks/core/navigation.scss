@@ -57,7 +57,7 @@ nav.is-style-mega-menu{
                 ul.wp-block-group:not(.submenu-content-wrapper){ // For mega menu built with groups
 
                   @include for-tablet-landscape-up {
-                    flex-direction: column;
+                    // flex-direction: column;
                     align-items: flex-start;
                   }
 
