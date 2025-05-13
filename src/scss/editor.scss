@@ -15,6 +15,14 @@
 }
 
 //
+// issue with editor backgound not filling content height
+//
+
+body :where(.editor-styles-wrapper), html :where(.editor-styles-wrapper){
+  height: auto;
+}
+
+//
 // Fix ACF styling to match wordpress
 //
 

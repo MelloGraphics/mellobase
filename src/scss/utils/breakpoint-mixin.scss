@@ -4,11 +4,16 @@
 @use "settings" as *;
 
 
+/// MelloBase Updated mixins for ease. Need to test if these match Wordpress breakpoints ok.
+
 @mixin for-phone-only {
 	@media (max-width: 599px) { @content; }
 }
+@mixin for-tablet-portrait-down {
+	@media (max-width: 781px) { @content; } // was 600px, changed to match Wordpress Columns Breakpoint
+}
 @mixin for-tablet-portrait-up {
-	@media (min-width: 600px) { @content; }
+	@media (min-width: 781px) { @content; } // was 600px, changed to match Wordpress Columns Breakpoint
 }
 @mixin for-tablet-landscape-up {
 	@media (min-width: 900px) { @content; }

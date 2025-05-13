@@ -5,4 +5,9 @@
 
 html{
     interpolate-size: allow-keywords;
+    scroll-behavior: smooth;
+}
+
+.wp-site-blocks{
+    overflow-x: clip;
 }
