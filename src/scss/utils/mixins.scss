@@ -1,3 +1,5 @@
+@use 'settings' as *;
+
 /// Size an element
 @mixin size($width, $height: $width) {
 	width: $width;
@@ -147,5 +149,29 @@
 @mixin visually-hidden() {
 	&:not(:focus):not(:active) {
 		@include always-visually-hidden();
+	}
+}
+
+/// Heading font sizes
+
+@mixin heading-font-sizes() {
+	&.has-small-font-size {
+		font-size: $font-size-medium !important;
+	}
+
+	&.has-medium-font-size {
+		font-size: $font-size-large !important;
+	}
+
+	&.has-large-font-size {
+		font-size: $font-size-x-large !important;
+	}
+
+	&.has-x-large-font-size {
+		font-size: $font-size-xx-large !important;
+	}
+
+	&.has-xx-large-font-size {
+		font-size: clamp(1.875rem, 1.875rem + ((1vw - 0.2rem) * 5.093), 5.313rem) !important;
 	}
 }

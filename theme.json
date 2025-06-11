@@ -79,37 +79,37 @@
 			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{
-					"size": "0.3rem",
+					"size": "clamp(0.125rem,  0.651vw, 0.3125rem)",
 					"slug": "x-small",
 					"name": "XS"
 				},
 				{
-					"size": "0.67rem",
+					"size": "clamp(0.3125rem, 1.302vw, 0.9375rem)",
 					"slug": "small",
 					"name": "S"
 				},
 				{
-					"size": "clamp(.5rem, 1rem, 1.5rem)",
+					"size": "clamp(1.25rem,   3.255vw, 1.875rem)",
 					"slug": "medium",
 					"name": "M"
 				},
 				{
-					"size": "1.5rem",
+					"size": "clamp(3.125rem,  7.81vw, 4.375rem)",
 					"slug": "large",
 					"name": "L"
 				},
 				{
-					"size": "2.25rem",
+					"size": "clamp(3.75rem,  10.41vw, 5.625rem)",
 					"slug": "x-large",
 					"name": "XL"
 				},
 				{
-					"size": "clamp(3.25rem, 10vw, 5rem)",
+					"size": "clamp(4.0625rem, 11.72vw, 9.375rem)",
 					"slug": "xx-large",
 					"name": "XXL"
 				},
 				{
-					"size": "clamp(4.38rem, 30vmax, 10.06rem)",
+					"size": "clamp(4.375rem, 13.02vw, 11.25rem)",
 					"slug": "section",
 					"name": "Section"
 				}
@@ -180,11 +180,11 @@
 			"fontSizes": [
 				{
 					"slug": "small",
-					"size": ".8rem",
+					"size": ".75rem",
 					"name": "Small",
 					"fluid": {
 						"min": ".7rem",
-						"max": ".9rem"
+						"max": ".8rem"
 					}
 				},
 				{
@@ -193,34 +193,34 @@
 					"name": "Medium",
 					"fluid": {
 						"min": ".9rem",
-						"max": "1.2rem"
+						"max": "1rem"
 					}
 				},
 				{
 					"slug": "large",
-					"size": "1.5rem",
+					"size": "1.25rem",
 					"name": "Large",
 					"fluid": {
-						"min": "1.1rem",
-						"max": "1.7rem"
+						"min": "1rem",
+						"max": "1.25rem"
 					}
 				},
 				{
 					"slug": "x-large",
-					"size": "2rem",
+					"size": "1.5rem",
 					"name": "XL",
 					"fluid": {
-						"min": "1.2rem",
-						"max": "2.3rem"
+						"min": "1.4rem",
+						"max": "1.6rem"
 					}
 				},
 				{
 					"slug": "xx-large",
-					"size": "3.75rem",
+					"size": "2.125rem",
 					"name": "XXL",
 					"fluid": {
-						"min": "2.2rem",
-						"max": "5rem"
+						"min": "1.875rem",
+						"max": "2.5rem"
 					}
 				}
 			]

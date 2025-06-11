@@ -71,7 +71,7 @@
 		> *:not(summary){
 			z-index: 1;
 			animation: details-open-fade .5s ease-out;
-			transition-behavior: allow-discreate;
+			transition-behavior: allow-discrete;
 
 			// @for $i from 2 through 15{
 			// 	&:nth-child(#{$i}) {

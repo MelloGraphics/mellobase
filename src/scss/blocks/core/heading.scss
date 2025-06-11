@@ -2,6 +2,14 @@
 
 @use "../../utils" as *;
 
-// h2.wp-block-heading{
-//     opacity: 0;
-// }
+.wp-block-heading{
+    text-wrap: balance;
+    @include heading-font-sizes()
+}
+
+.wp-block-heading{
+    &.has-small-font-size{
+        color: $color-secondary;
+        text-transform: uppercase;
+    }
+}

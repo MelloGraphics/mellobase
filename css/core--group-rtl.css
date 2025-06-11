@@ -1,1 +1,28 @@
-.wp-block-group{padding-bottom:0;padding-top:0}.wp-block-group.has-child-selected,.wp-block-group.is-selected{padding-bottom:1.25em}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/blocks/core/group.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json widths
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Wordpress misc Variables
+ */
+.wp-block-group {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.wp-block-group.is-selected, .wp-block-group.has-child-selected {
+  padding-bottom: 1.25em;
+}
