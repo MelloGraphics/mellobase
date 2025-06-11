@@ -8,8 +8,9 @@ import domReady from '@wordpress/dom-ready';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-styles/
  */
 const unregisterBlockStyles = {
-	"core/button": "outline",
-    "core/image": "rounded"
+    "core/button": ["outline", "fill"],
+    "core/separator": ["dots" , "wide"],
+    "core/image": ["rounded"]
 };
 
 domReady(() => {
