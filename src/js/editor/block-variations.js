@@ -1,7 +1,5 @@
-console.log('this is file src/editor/block-variations.js');
-
-import { registerBlockVariation } from '@wordpress/blocks';
-import domReady from '@wordpress/dom-ready';
+import { registerBlockVariation } from "@wordpress/blocks";
+import domReady from "@wordpress/dom-ready";
 
 /**
  * Register block variations
@@ -9,36 +7,7 @@ import domReady from '@wordpress/dom-ready';
  * @type {Object} Add the names of blocks and variations to register here
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-variations/
  */
-// const registerBlockVariations = {
-// 	"core/details": {
-// 		name: "details-advanced",
-// 		title: "Details Advanced",
-// 		description: "Details Advanced",
-// 		attributes:{
-// 			summary: "advanced summary",
-// 			source: "raw",
-// 		},
-// 		innerBlocks: [
-// 			["core/group", 
-// 				{ 
-// 					width: "fullWidth",
-// 					metadata: {
-// 						name: "Summary Title"
-// 					}
-// 				}],
-// 			["core/group", 
-// 				{ 
-// 					width: "fullWidth",
-// 					metadata: {
-// 						name: "Summary Content"
-// 					}
-// 				}],
-// 		],
-// 		// scope: ["block"],
-// 	},
-
-// };
-
+const registerBlockVariations = {
 	// "core/columns": {
 	// 	name: "three-columns-wide-left",
 	// 	title: "50 / 25 / 25",
@@ -51,9 +20,23 @@ import domReady from '@wordpress/dom-ready';
 	// 	scope: ["block"],
 	// },
 
+	"core/group": {
+		name: "section",
+		title: "Section",
+		description: "A full-width group block using a <section> tag.",
+		attributes: {
+			align: "full",
+			tagName: "section",
+		},
+		scope: ["inserter"], // Important: this allows it to appear as its own block
+		isDefault: false,    // Ensure it's not overriding the default
+		icon: "layout",
+	},
+
+};
 
 domReady(() => {
-    Object.entries(registerBlockVariations).forEach(([block, variation]) => {
-        registerBlockVariation(block, variation);
-    });
+	Object.entries(registerBlockVariations).forEach(([block, variation]) => {
+		registerBlockVariation(block, variation);
+	});
 });
