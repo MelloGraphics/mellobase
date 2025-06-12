@@ -4,6 +4,10 @@
 
 // Text hightlight styling
 
+mark{
+    background-color: inherit;
+}
+
 ::selection {
     background: $color-primary;
     color: $color-base;
