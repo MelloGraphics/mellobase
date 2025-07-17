@@ -538,7 +538,7 @@
 			"lineHeight": "1.5"
 		},
 		"spacing":{
-			"blockGap": "var(--wp--preset--spacing--large)",
+			"blockGap": "var(--wp--preset--spacing--medium)",
 			"padding": {
 				"top": "0",
 				"right": "var(--wp--preset--spacing--large)",

@@ -1,420 +1,62 @@
-// Navigation core styling
-
 @use "../../utils" as *;
 
-nav.is-style-mega-menu{
-  z-index: 999;
-  position: unset;
-  padding: $spacing-medium;
+$navigation-breakpoint: 1140px; // Where the menu changes to hamburger
 
-  .is-editing>.wp-block-navigation__submenu-container>.block-list-appender{
-    display: none;
-  } // hides the plus block icon in the editor to fix styling. This stops the user from changing the menu structure.
 
-  .wp-block-navigation__responsive-container{ // overlay wrapper styling
-    
-    @include for-tablet-landscape-up {
+// registered style mega menu
+
+header:has(.wp-block-navigation.is-style-mega-menu) .header_top-wrapper {
+  position: relative;
+}
+
+// Desktop menu styling
+
+.wp-block-navigation.is-style-mega-menu:not(:has(.is-menu-open)) {
+  position: static;
+
+  .wp-block-navigation__responsive-container:not(.is-menu-open) {
+    position: unset;
+
+    .wp-block-navigation__responsive-dialog, .wp-block-navigation-submenu {
       position: unset;
     }
 
-    .wp-block-navigation__responsive-close{
-
-      .wp-block-navigation__responsive-dialog{
-
-        // .wp-block-navigation__responsive-container-close{
-        // }
-
-        .wp-block-navigation__responsive-container-content{
-
-          .wp-block-navigation__container{
-            padding: $spacing-medium;
-
-            .wp-block-navigation-item{ // Top level Navigation links
-
-              .wp-block-navigation__submenu-container { // Sub nav wrapper
-                box-sizing: border-box;
-                justify-content: center;
-                border: unset;
-                padding: 0;
-                // border: pink solid 2px;
-
-                .submenu-content-wrapper{ // class added to the ul.wp-block-group
-                  width: 100%;
-                  max-width: $width-content;
-                  // border: solid green 2px;
-                }
-
-                @include for-tablet-portrait-up { 
-                  flex-direction: row;
-                  width: 100vw;
-                  position: fixed;
-                  left: 0;
-                  right: 0;
-                  top: 100px; // position of submenu without admin bar = height of header
-                  padding: $spacing-x-large;
-                }
-
-                ul.wp-block-group:not(.submenu-content-wrapper){ // For mega menu built with groups
-
-                  @include for-tablet-landscape-up {
-                    // flex-direction: column;
-                    align-items: flex-start;
-                  }
-
-                }
-
-                // .wp-block-columns{ // For mega menu built with columns for columns
-                //   width: fill-available;
-                //   max-width: $width-wide;
-                //   margin: 0;
-
-                //   .wp-block-column{
-                //     display: flex;
-                //     flex-direction: column;
-
-                //     &:first-child{
-                //       flex: 2;
-                //       justify-content: space-between;
-                //       gap: $spacing-x-large;
-
-                //       p{ // sub menu intro text
-                //         font-size: $font-size-large;
-                //         font-style: italic;
-                //         max-width: 300px;
-                //       }
-                //     }
-                //   }
-                // }
-
-                p{ // Columns titles
-                  font-size: calc($font-size-small - 20%);
-                  font-weight: 100;
-                  margin-bottom: $spacing-small;
-                }
-
-                .wp-block-navigation-item{ // Sub navigation links wrapper
-                  margin: unset;
-                  font-weight: 500;
-
-                  &__content{ // Sub navigation links clickable wp-block-navigation-item__content
-                    padding: unset;
-                  }
-
-                  &__label:has(img), &__label:has(svg){
-                      display: flex;
-                      align-items: center;
-                      gap: $spacing-medium;
-
-                    img, svg{ // has an inline image selected
-                      height: 2em;
-                      width: unset !important;
-                      aspect-ratio: 1;
-                      -o-object-fit: contain;
-                      object-fit: contain;
-                      background: $color-primary;
-                      border-radius: 150%;
-                      padding: 0.6rem;
-                      overflow: visible;
-                    }
-
-                    path{
-                      fill: currentColor;
-                    }
-                  }
-
-                  &:hover{
-                    .wp-block-navigation-item__label{
-                    text-decoration: underline;
-                    }
-                  }
-
-                  .wp-block-navigation-item__description{
-                    display: block;
-                    font-size: calc($font-size-small - 30%);
-                    font-weight: 100;
-                  }
-
-                  &.is-style-link-box{
-                    flex: 1;
-                    border: solid currentColor 1px;
-
-                    .wp-block-navigation-item__content{
-                      display: flex;
-                      flex-direction: column;
-                      justify-content: flex-end;
-                      height: 100%;
-                      width: 100%;
-                      padding: $spacing-medium;
-                    }
-
-                    img{
-                      position: absolute;
-                      width: 100%;
-                      height: 100%;
-                      object-fit: cover;
-                      z-index: -1;
-                    }
-
-                    // &::after{ // uncomment to add an image overlay
-                    //   content: '';
-                    //   position: absolute;
-                    //   z-index: -1;
-                    //   inset: 0;
-                    //   background-color: $color-base;
-                    // }
-
-                    &:hover{
-                      outline: solid currentColor 3px;
-                      outline-offset: -3px;
-                    }
-
-                  
-                  }
-
-                  &.is-style-link-cta{
-                    .wp-block-navigation-item__content{
-                      padding: $spacing-small $spacing-medium;
-                      border-radius: .3rem;
-                      background-color: $color-primary;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-// has admin bar open
-
-body.admin-bar{
-  .is-style-mega-menu{
-    .wp-block-navigation__submenu-container { // Sub nav wrapper
-      @include for-tablet-landscape-up {
-        top: 130px!important; // height of header with admin bar
-      }
-    }
-    .wp-block-navigation__responsive-container.is-menu-open{
-      top: $admin-bar;
-    }
-  }
-}
-
-// When the menu is scrolled hide the subnavigation (styles come from navigation.js)
-
-header{
-  &.hidden{
-    .is-style-mega-menu{
-      .wp-block-navigation__submenu-container { // Sub nav wrapper
-        @include for-tablet-landscape-up {
-          display: none;
-          visibility: hidden;
-        }
-      }
-    }
-  }
-}
-
-
-@media (min-width: 850px) { // change breakpoint TODO: Make this a variable
-  .wp-block-navigation__responsive-container-open:not(.always-shown){
-    display: none!important;
-  }
-  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open){
-    display: block!important;
-  }
-}
-
-//
-//
-// Mobile specific styling
-//
-//
-//
-
-@media screen and (max-width: 850px) {
-
-  .wp-block-navigation__responsive-container-open:not(.always-shown){
-    display: block!important;
-  }
-  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open){
-    display: none!important;
-  }
-
-nav.is-style-mega-menu{
-  flex-grow: 0;
-
-  // Initially hide submenus
-
-  .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container{
-    display: none;
-  }
-
-  // Open and Close icon
-
-  .wp-block-navigation__responsive-container-open, .wp-block-navigation__responsive-container-close {
-    padding: $spacing-large;
-  }
-
-  // Main mobile overlay styling
-
-  .wp-block-navigation__responsive-container .wp-block-navigation__responsive-container-content { // Mobile overlay wrapper
-    padding: $spacing-x-large $spacing-x-large;
-    min-height: 100svh;
-    overscroll-behavior: contain;
-    overflow: auto;
-    justify-content: flex-start;
-    align-items: stretch;
-    max-width: 450px;
-    margin: auto;
-
-    .wp-block-spacer{ // remove flex spacers from mobile
-      display: none;
-    }
-
-    .wp-block-navigation__container { // main overlay content wrapper <ul> tag
-      position: relative;
-      margin: 0 auto;
-      border-top: 1px solid $color-contrast;
-      width: 100%;
-      gap: 0;
-      padding: 0!important;
-    }
-
-    .submenu-content-wrapper{ // class added in advanced
-      display: flex;
-      flex-direction: column;
-      // border: solid pink 3px;
-    }
-
-    .wp-block-navigation-item { // mobile default link styling <li> tag
-      align-items: start;
-
-      &__content{ // link <a> tag
-        padding: $spacing-medium 0;
-      }
-    }
-
-    .wp-block-navigation-submenu{
-      width: 100%;
-    }
-
-    .wp-block-navigation-item.has-child{ // mobile submenu link styling only
-      .wp-block-navigation-submenu__toggle{
-        width: 100%;
-      }
-
-      &:has([aria-expanded="true"]){ // if submenu parent has aria-expanded then, position it above everything else and align top
-        position: absolute;
-        inset: 0;
-        z-index: +1;
-        background-color: $color-base!important;
-        height: fit-content;
-        padding-bottom: $spacing-large;
-
-        .wp-block-navigation-submenu__toggle{
-          font-size: $font-size-medium;
-          transition: font-size .2s ease-out;
-        }
-      }
-
-      & [aria-expanded="true"] ~ .wp-block-navigation__submenu-container {
-        position: static;
-        display: flex;
-        flex-direction: column;
-        gap: $spacing-large;
-        width: -webkit-fill-available;
-        max-width: 450px;
-        margin: auto;
-        background: inherit!important;
-        }
-    }
-
-    .wp-block-columns .wp-block-column:first-child p{
-      font-size: 1rem!important;
-    }
-  }
-
-  /* Style and rotate mobile svg icon toggles */
-
-  .wp-block-navigation-submenu__toggle{
-
-    ~ .wp-block-navigation__submenu-icon { // rotate core svg icon
-      display: flex!important;
+    .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
       position: absolute;
-      inset: 0 0 0 auto;
-      scale: 1.2;
-      box-sizing: content-box;
-      padding: 0 .5rem;
-      height: 100%;
+      min-width: 100svw;
+      min-height: min-content;
+      padding: $spacing-medium;
 
-      > svg {
-        transform: rotate(-90deg);
-      }
-    }
-    
-    &::before{ // create a fake back chevron icon
-      content: '';
-      font-family: $font-icon;
-      display: inline-flex;
-      width: 0;
-      overflow: hidden;
-      scale: .7;
-      translate: -50% 0;
-      font-weight: bold;
-      color: inherit;
-      transition: transform .5s ease-out;
-    }
-
-    &[aria-expanded=true]{
-    
-      &::before{ // animate fake back chevron in when menu opens
-        width: fit-content;
-        translate: 0 0;
-        margin-right: $spacing-small;
-        transition: translate .2s ease-out, width .2s ease-out;
-      }
-
-      ~ .wp-block-navigation__submenu-icon{
-        visibility: hidden;
+      .submenu__content-wrapper {
+        display: flex;
+        width: 100%;
+        max-width: $width-content;
+        margin: auto;
       }
     }
   }
-}
-}
 
-//
-//
-// Navigation animations
-//
-//
-
-@keyframes mega-menu-open {
-  from {
-    transform: translateY(-2rem);
-    opacity: 0;
-  }
 }
 
-// Link animations on menu open
+// Burger menu styling (Targets the menu when it has the .is-menu-open class added for hamburger menu)
 
-.is-style-mega-menu{
-  [aria-expanded="true"] ~ {
-    .wp-block-navigation__submenu-container{
-      .wp-block-group, .wp-block-column {
-        animation: mega-menu-open 500ms;
-        animation-timing-function: $ease-circ;
-        animation-fill-mode: both;
+.wp-block-navigation.is-style-mega-menu:has(.is-menu-open) {
+  .wp-block-navigation__responsive-container.is-menu-open {
+    .wp-block-navigation-item {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-self: flex-start;
+      align-items: start;
+      width: 100%;
+    }
 
-        @for $i from 1 through 10 { // create a loop of animation delay for each child
-          &:nth-child(#{$i}n) {
-              animation-delay: #{$i * 0.05}s;
-          }
-        }
-      }
+    .wp-block-navigation__responsive-container-content {
+      align-items: center;
+      width: 100%;
+      height: 100svh;
+      padding: $spacing-large;
+      align-items: stretch;
     }
   }
+
 }

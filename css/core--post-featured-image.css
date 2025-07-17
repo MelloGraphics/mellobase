@@ -1,1 +1,26 @@
-.wp-block-post-featured-image{overflow:hidden}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/blocks/core/post-featured-image.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json widths
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Wordpress misc Variables
+ */
+.wp-block-post-featured-image {
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=core--post-featured-image.css.map*/

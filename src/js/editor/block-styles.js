@@ -30,17 +30,23 @@ const registerBlockStyles = {
     ],
     "core/navigation": [
         {
-            name: "mello-menu",
-            label: "Mello Menu",
+            name: "mega-menu",
+            label: "Mega Menu",
+        }
+    ],
+    "core/navigation-submenu": [
+        {
+            name: "two-column",
+            label: "Two Column",
+        },
+        {
+            name: "four-column",
+            label: "Four Column",
         }
     ],
     "core/navigation-link": [
         {
-            name: "link-primary",
-            label: "Primary",
-        },
-        {
-            name: "link-box",
+            name: "box",
             label: "Box",
         },
     ],

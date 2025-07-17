@@ -1,1 +1,36 @@
-.is-style-carousel .slick-slider{contain:paint}.is-style-carousel .slick-track{display:flex;gap:var(--wp--preset--spacing--x-large)}.is-style-carousel .slick-slide{cursor:grab}.is-style-carousel .slick-disabled{opacity:.5}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/blocks/core/query.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json widths
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Wordpress misc Variables
+ */
+.is-style-carousel .slick-slider {
+  contain: paint;
+}
+.is-style-carousel .slick-track {
+  display: flex;
+  gap: var(--wp--preset--spacing--x-large);
+}
+.is-style-carousel .slick-slide {
+  cursor: grab;
+}
+.is-style-carousel .slick-disabled {
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=core--query.css.map*/

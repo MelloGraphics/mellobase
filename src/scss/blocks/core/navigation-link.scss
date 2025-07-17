@@ -1,0 +1,56 @@
+@use "../../utils" as *;
+
+.wp-block-navigation-item a:not(.wp-element-button){
+	padding: 0;
+}
+
+// registerd styles
+
+.wp-block-navigation-item.is-style-box {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 200px;
+	border: solid $color-contrast 2px;
+	height: clamp(200px, 15svh, 300px);
+
+
+	img,
+	svg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+	}
+}
+
+// Link animations on menu open
+
+@keyframes mega-menu-open {
+	from {
+		opacity: 0;
+	}
+}
+
+.is-style-mega-menu {
+	[aria-expanded="true"]~ {
+		.wp-block-navigation__submenu-container {
+
+			.wp-block-group,
+			.wp-block-navigation-item {
+				animation: mega-menu-open 750ms;
+				animation-timing-function: $ease-circ;
+				animation-fill-mode: both;
+
+				@for $i from 1 through 10 {
+
+					// create a loop of animation delay for each child
+					&:nth-child(#{$i}n) {
+						animation-delay: #{$i * 0.1}s;
+					}
+				}
+			}
+		}
+	}
+}

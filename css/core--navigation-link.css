@@ -1,0 +1,96 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/blocks/core/navigation-link.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json widths
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Wordpress misc Variables
+ */
+.wp-block-navigation-item a:not(.wp-element-button) {
+  padding: 0;
+}
+
+.wp-block-navigation-item.is-style-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 200px;
+  border: solid var(--wp--preset--color--contrast) 2px;
+  height: clamp(200px, 15svh, 300px);
+}
+.wp-block-navigation-item.is-style-box img,
+.wp-block-navigation-item.is-style-box svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+@keyframes mega-menu-open {
+  from {
+    opacity: 0;
+  }
+}
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-group,
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-navigation-item {
+  animation: mega-menu-open 750ms;
+  animation-timing-function: var(--wp--custom--ease-circ);
+  animation-fill-mode: both;
+}
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-group:nth-child(1n),
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-navigation-item:nth-child(1n) {
+  animation-delay: 0.1s;
+}
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-group:nth-child(2n),
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-navigation-item:nth-child(2n) {
+  animation-delay: 0.2s;
+}
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-group:nth-child(3n),
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-navigation-item:nth-child(3n) {
+  animation-delay: 0.3s;
+}
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-group:nth-child(4n),
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-navigation-item:nth-child(4n) {
+  animation-delay: 0.4s;
+}
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-group:nth-child(5n),
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-navigation-item:nth-child(5n) {
+  animation-delay: 0.5s;
+}
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-group:nth-child(6n),
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-navigation-item:nth-child(6n) {
+  animation-delay: 0.6s;
+}
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-group:nth-child(7n),
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-navigation-item:nth-child(7n) {
+  animation-delay: 0.7s;
+}
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-group:nth-child(8n),
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-navigation-item:nth-child(8n) {
+  animation-delay: 0.8s;
+}
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-group:nth-child(9n),
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-navigation-item:nth-child(9n) {
+  animation-delay: 0.9s;
+}
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-group:nth-child(10n),
+.is-style-mega-menu [aria-expanded=true] ~ .wp-block-navigation__submenu-container .wp-block-navigation-item:nth-child(10n) {
+  animation-delay: 1s;
+}
+
+/*# sourceMappingURL=core--navigation-link.css.map*/

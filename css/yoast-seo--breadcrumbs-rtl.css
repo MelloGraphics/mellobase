@@ -1,1 +1,31 @@
-.yoast-breadcrumbs span>span:first-child{font-family:var(--wp--preset--font-family--icon)}.yoast-breadcrumbs a,.yoast-breadcrumbs span{color:var(--wp--preset--color--tertiary-1);font-size:var(--wp--preset--font-size--small);font-weight:500;text-decoration:none;text-transform:uppercase}
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/blocks/yoast-seo/breadcrumbs.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json widths
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Wordpress misc Variables
+ */
+.yoast-breadcrumbs span > span:first-child {
+  font-family: var(--wp--preset--font-family--icon);
+}
+.yoast-breadcrumbs span, .yoast-breadcrumbs a {
+  font-size: var(--wp--preset--font-size--small);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--wp--preset--color--tertiary-1);
+  text-decoration: none;
+}
