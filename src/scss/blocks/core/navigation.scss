@@ -21,7 +21,7 @@ $navigation-breakpoint: 1140px; // Where the menu changes to hamburger
 
 // registered style mega menu
 
-header:has(.wp-block-navigation.is-style-mega-menu) .header_top-wrapper {
+header:has(.wp-block-navigation.is-style-mega-menu) .header__top-wrapper {
   position: relative;
 }
 
@@ -39,7 +39,7 @@ header:has(.wp-block-navigation.is-style-mega-menu) .header_top-wrapper {
 
     .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
       position: absolute;
-      min-width: 100svw;
+      min-width: 100svw!important;
       min-height: min-content;
       padding: $spacing-medium;
 
@@ -55,6 +55,12 @@ header:has(.wp-block-navigation.is-style-mega-menu) .header_top-wrapper {
 }
 
 // Burger menu styling (Targets the menu when it has the .is-menu-open class added for hamburger menu)
+
+.wp-block-navigation
+  .wp-block-navigation__responsive-container-open, .wp-block-navigation__responsive-container-close{
+  margin-left: auto;
+  padding: $spacing-medium;
+}
 
 .wp-block-navigation.is-style-mega-menu:has(.is-menu-open) {
   .wp-block-navigation__responsive-container.is-menu-open {

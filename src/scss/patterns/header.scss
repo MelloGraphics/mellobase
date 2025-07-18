@@ -4,7 +4,7 @@
 
 // .wp-site-blocks > header:not(:has(.is-menu-open))
 
-.wp-site-blocks > header {
+header, *:has(>.header__top-wrapper) {
 	// position: fixed;
 	// z-index: 999;
 	width: 100%;

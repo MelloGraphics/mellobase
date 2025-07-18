@@ -134,15 +134,15 @@ html {
   overflow-x: clip;
 }
 
-.wp-site-blocks > header {
+header, *:has(> .header__top-wrapper) {
   width: 100%;
   top: 0;
   transition: translate 0.5s;
 }
-.wp-site-blocks > header nav {
+header nav, *:has(> .header__top-wrapper) nav {
   pointer-events: all;
 }
-.wp-site-blocks > header::after {
+header::after, *:has(> .header__top-wrapper)::after {
   transition-property: display opacity;
   transition-duration: 1s;
   transition-delay: 0.1s;
@@ -160,14 +160,14 @@ html {
   -webkit-backdrop-filter: blur(1em);
           backdrop-filter: blur(1em);
 }
-.wp-site-blocks > header:has([aria-expanded=true])::after {
+header:has([aria-expanded=true])::after, *:has(> .header__top-wrapper):has([aria-expanded=true])::after {
   display: block;
   opacity: 1;
 }
-.wp-site-blocks > header.hidden {
+header.hidden, *:has(> .header__top-wrapper).hidden {
   translate: 0 -100%;
 }
-.wp-site-blocks > header.hidden::after {
+header.hidden::after, *:has(> .header__top-wrapper).hidden::after {
   display: none;
   transition-delay: 0;
   opacity: 0;
