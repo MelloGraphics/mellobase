@@ -43,149 +43,149 @@
   z-index: 1;
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(2n) {
-  transform: rotate(94deg) translateX(4vmax) translateY(-31vmax);
+  transform: rotate(-86deg) translateX(-39vmax) translateY(-45vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(3n) {
-  transform: rotate(36deg) translateX(33vmax) translateY(22vmax);
+  transform: rotate(60deg) translateX(47vmax) translateY(-31vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(4n) {
-  transform: rotate(164deg) translateX(-10vmax) translateY(-19vmax);
+  transform: rotate(-78deg) translateX(48vmax) translateY(30vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(5n) {
-  transform: rotate(50deg) translateX(-11vmax) translateY(-44vmax);
+  transform: rotate(-120deg) translateX(28vmax) translateY(15vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(6n) {
-  transform: rotate(76deg) translateX(-1vmax) translateY(-3vmax);
+  transform: rotate(59deg) translateX(-6vmax) translateY(-13vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(7n) {
-  transform: rotate(-50deg) translateX(-18vmax) translateY(37vmax);
+  transform: rotate(77deg) translateX(-4vmax) translateY(15vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(8n) {
-  transform: rotate(29deg) translateX(-33vmax) translateY(34vmax);
+  transform: rotate(150deg) translateX(7vmax) translateY(-19vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(9n) {
-  transform: rotate(21deg) translateX(-3vmax) translateY(31vmax);
+  transform: rotate(65deg) translateX(20vmax) translateY(24vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(10n) {
-  transform: rotate(-12deg) translateX(-32vmax) translateY(39vmax);
+  transform: rotate(-43deg) translateX(-14vmax) translateY(50vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(11n) {
-  transform: rotate(171deg) translateX(-6vmax) translateY(-39vmax);
+  transform: rotate(100deg) translateX(-44vmax) translateY(32vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(12n) {
-  transform: rotate(66deg) translateX(33vmax) translateY(46vmax);
+  transform: rotate(9deg) translateX(-27vmax) translateY(-47vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(13n) {
-  transform: rotate(-80deg) translateX(-24vmax) translateY(1vmax);
+  transform: rotate(2deg) translateX(-20vmax) translateY(9vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(14n) {
-  transform: rotate(103deg) translateX(22vmax) translateY(-13vmax);
+  transform: rotate(-141deg) translateX(-24vmax) translateY(51vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(15n) {
-  transform: rotate(88deg) translateX(-8vmax) translateY(-18vmax);
+  transform: rotate(128deg) translateX(-47vmax) translateY(48vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(16n) {
-  transform: rotate(-174deg) translateX(-36vmax) translateY(28vmax);
+  transform: rotate(-61deg) translateX(-18vmax) translateY(-23vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(17n) {
-  transform: rotate(57deg) translateX(-12vmax) translateY(41vmax);
+  transform: rotate(-151deg) translateX(-20vmax) translateY(27vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(18n) {
-  transform: rotate(-95deg) translateX(-14vmax) translateY(43vmax);
+  transform: rotate(-96deg) translateX(-32vmax) translateY(-26vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(19n) {
-  transform: rotate(50deg) translateX(7vmax) translateY(30vmax);
+  transform: rotate(176deg) translateX(-16vmax) translateY(18vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(20n) {
-  transform: rotate(-118deg) translateX(44vmax) translateY(16vmax);
+  transform: rotate(139deg) translateX(-2vmax) translateY(-47vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(21n) {
-  transform: rotate(110deg) translateX(-32vmax) translateY(-47vmax);
+  transform: rotate(-168deg) translateX(17vmax) translateY(-2vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(22n) {
-  transform: rotate(80deg) translateX(-48vmax) translateY(-46vmax);
+  transform: rotate(-29deg) translateX(36vmax) translateY(5vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(23n) {
-  transform: rotate(-51deg) translateX(-13vmax) translateY(-26vmax);
+  transform: rotate(-95deg) translateX(-13vmax) translateY(14vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(24n) {
-  transform: rotate(-169deg) translateX(-25vmax) translateY(-38vmax);
+  transform: rotate(-163deg) translateX(-9vmax) translateY(1vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(25n) {
-  transform: rotate(-6deg) translateX(11vmax) translateY(-47vmax);
+  transform: rotate(-69deg) translateX(30vmax) translateY(33vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(26n) {
-  transform: rotate(-77deg) translateX(-27vmax) translateY(-15vmax);
+  transform: rotate(45deg) translateX(-15vmax) translateY(-7vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(27n) {
-  transform: rotate(61deg) translateX(-29vmax) translateY(43vmax);
+  transform: rotate(23deg) translateX(42vmax) translateY(-46vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(28n) {
-  transform: rotate(-163deg) translateX(-12vmax) translateY(-44vmax);
+  transform: rotate(-35deg) translateX(-24vmax) translateY(-15vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(29n) {
-  transform: rotate(88deg) translateX(-15vmax) translateY(25vmax);
+  transform: rotate(18deg) translateX(17vmax) translateY(18vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(30n) {
-  transform: rotate(-7deg) translateX(20vmax) translateY(34vmax);
+  transform: rotate(24deg) translateX(41vmax) translateY(45vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(31n) {
-  transform: rotate(61deg) translateX(-30vmax) translateY(26vmax);
+  transform: rotate(-146deg) translateX(19vmax) translateY(22vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(32n) {
-  transform: rotate(-119deg) translateX(-42vmax) translateY(-14vmax);
+  transform: rotate(12deg) translateX(-31vmax) translateY(-46vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(33n) {
-  transform: rotate(-100deg) translateX(35vmax) translateY(-13vmax);
+  transform: rotate(113deg) translateX(-46vmax) translateY(43vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(34n) {
-  transform: rotate(95deg) translateX(-51vmax) translateY(-27vmax);
+  transform: rotate(120deg) translateX(28vmax) translateY(31vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(35n) {
-  transform: rotate(-43deg) translateX(39vmax) translateY(19vmax);
+  transform: rotate(173deg) translateX(-26vmax) translateY(-21vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(36n) {
-  transform: rotate(-30deg) translateX(-32vmax) translateY(42vmax);
+  transform: rotate(-114deg) translateX(34vmax) translateY(15vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(37n) {
-  transform: rotate(124deg) translateX(-3vmax) translateY(-23vmax);
+  transform: rotate(177deg) translateX(-30vmax) translateY(-1vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(38n) {
-  transform: rotate(-55deg) translateX(-8vmax) translateY(8vmax);
+  transform: rotate(-20deg) translateX(-43vmax) translateY(-39vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(39n) {
-  transform: rotate(176deg) translateX(26vmax) translateY(-1vmax);
+  transform: rotate(-97deg) translateX(-13vmax) translateY(-48vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(40n) {
-  transform: rotate(-73deg) translateX(32vmax) translateY(11vmax);
+  transform: rotate(115deg) translateX(38vmax) translateY(13vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(41n) {
-  transform: rotate(-142deg) translateX(1vmax) translateY(50vmax);
+  transform: rotate(-2deg) translateX(0vmax) translateY(-30vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(42n) {
-  transform: rotate(16deg) translateX(41vmax) translateY(-33vmax);
+  transform: rotate(-154deg) translateX(-50vmax) translateY(-9vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(43n) {
-  transform: rotate(-118deg) translateX(27vmax) translateY(-15vmax);
+  transform: rotate(132deg) translateX(-8vmax) translateY(-42vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(44n) {
-  transform: rotate(-180deg) translateX(28vmax) translateY(-12vmax);
+  transform: rotate(-100deg) translateX(13vmax) translateY(-1vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(45n) {
-  transform: rotate(144deg) translateX(-2vmax) translateY(4vmax);
+  transform: rotate(8deg) translateX(41vmax) translateY(15vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(46n) {
-  transform: rotate(-45deg) translateX(-4vmax) translateY(-29vmax);
+  transform: rotate(24deg) translateX(-32vmax) translateY(33vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(47n) {
-  transform: rotate(-119deg) translateX(-25vmax) translateY(27vmax);
+  transform: rotate(44deg) translateX(40vmax) translateY(-14vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(48n) {
-  transform: rotate(56deg) translateX(16vmax) translateY(14vmax);
+  transform: rotate(-173deg) translateX(34vmax) translateY(9vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(49n) {
-  transform: rotate(-176deg) translateX(-38vmax) translateY(-46vmax);
+  transform: rotate(-73deg) translateX(-30vmax) translateY(-2vmax);
 }
 .wp-block-gallery.is-style-booklet .wp-block-image:nth-child(50n) {
-  transform: rotate(157deg) translateX(27vmax) translateY(44vmax);
+  transform: rotate(-171deg) translateX(42vmax) translateY(-24vmax);
 }
