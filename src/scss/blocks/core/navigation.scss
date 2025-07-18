@@ -2,6 +2,22 @@
 
 $navigation-breakpoint: 1140px; // Where the menu changes to hamburger
 
+@media (min-width: $navigation-breakpoint) {
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: none;
+  }
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open){
+    display: inherit;
+  }
+}
+@media (max-width: $navigation-breakpoint) {
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: inherit;
+  }
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open){
+    display: none;
+  }
+}
 
 // registered style mega menu
 
@@ -17,7 +33,7 @@ header:has(.wp-block-navigation.is-style-mega-menu) .header_top-wrapper {
   .wp-block-navigation__responsive-container:not(.is-menu-open) {
     position: unset;
 
-    .wp-block-navigation__responsive-dialog, .wp-block-navigation-submenu {
+    .wp-block-navigation__responsive-dialog, .wp-block-navigation-submenu, .block-editor-block-list__layout {
       position: unset;
     }
 
