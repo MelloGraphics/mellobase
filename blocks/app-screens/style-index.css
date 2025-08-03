@@ -1,0 +1,116 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/app-screens/style.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+/**
+ * Theme.json widths
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Wordpress misc Variables
+ */
+.wp-block-mellobase-app-screens {
+  height: 100svh;
+  align-items: center;
+  align-content: center;
+  pointer-events: none;
+  position: sticky;
+  top: 50%;
+}
+@media (min-width: 781px) {
+  .wp-block-mellobase-app-screens {
+    top: 0;
+  }
+}
+.wp-block-mellobase-app-screens__screens-wrapper {
+  position: relative;
+  aspect-ratio: 9/19;
+  max-height: 80svh;
+  margin: auto;
+  background-color: pi var(--wp--preset--color--base);
+  border-radius: 5em;
+}
+.wp-block-mellobase-app-screens__screens-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/app-screen-iphone-frame.f824cf51.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  scale: 1.04;
+}
+.wp-block-mellobase-app-screens__screen {
+  width: 94%;
+  height: 100%;
+  margin: auto;
+  inset: 0;
+  border-radius: 7%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  transition: opacity 0.6s var(--wp--custom--ease-circ), transform 0.6s var(--wp--custom--ease-circ), visibility 0s linear 0.6s;
+  transition-behavior: allow-discrete;
+}
+.wp-block-mellobase-app-screens__screen.is-inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+.wp-block-mellobase-app-screens__screen.is-active {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.features__scroll-columns {
+  position: relative;
+}
+.features__scroll-columns .features__bubbles-column {
+  margin-bottom: 100svh;
+}
+.features__scroll-columns .features__app-column {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  inset: 0 0 0 auto;
+  pointer-events: none;
+}
+@media (min-width: 781px) {
+  .features__scroll-columns .features__bubbles-column {
+    margin: 20svh 0;
+  }
+  .features__scroll-columns .features__app-column {
+    position: absolute;
+    width: 40%;
+    z-index: 1;
+    inset: 0 0 0 auto;
+  }
+  .features__scroll-columns .feature-scroll__trigger {
+    margin-block-start: 0 !important;
+    min-height: 60svh;
+    margin: 10svh 0;
+    align-content: center;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

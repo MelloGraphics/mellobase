@@ -18,7 +18,7 @@
 		align-items: center;
 		justify-content: start;
 		gap: $spacing-small;
-		font-size: $font-size-x-large;
+		// font-size: $font-size-x-large;
 		background-color: $color-base;
 		position: sticky;
 		top: 0;
@@ -64,7 +64,7 @@
 	}
 
 	> *:not(summary){
-		margin-block-end: $spacing-x-large!important;
+		margin-block-end: $spacing-small!important;
 	}
 
 	&[open]{
@@ -154,7 +154,7 @@
 				margin: 0;
 				padding: 0;
 				object-fit: cover;
-				margin-block-end: unset!important;
+				// margin-block-end: unset!important;
 			}
 			.is-pattern-tabbed-side-content-left{
 				width: 40%;

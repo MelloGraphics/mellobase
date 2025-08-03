@@ -267,14 +267,6 @@
 			"core/details": {
 				"color": {
 					"text": "var(--wp--preset--color--contrast)"
-				},
-				"spacing": {
-					"padding": {
-						"top": "var(--wp--preset--spacing--medium)",
-						"right": "var(--wp--preset--spacing--0)",
-						"bottom": "var(--wp--preset--spacing--medium)",
-						"left": "var(--wp--preset--spacing--0)"
-					}
 				}
 			},
 			"core/cover": {

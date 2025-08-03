@@ -1,8 +1,12 @@
 // Part - Header styles
 
-@use "../utils" as *;
+@use "../../utils" as *;
 
 // .wp-site-blocks > header:not(:has(.is-menu-open))
+
+.pattern--header{
+	rotate: 10deg;
+}
 
 header, *:has(>.header__top-wrapper) {
 	// position: fixed;

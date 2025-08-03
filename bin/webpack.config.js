@@ -4,6 +4,23 @@ const path = require("path");
 const { getEntries } = require("./get-entries");
 // styleOutputFolder should be relative to the root of the theme with no leading or trailing slashes
 const styleOutputFolder = "css";
+// Generate pattern entries, prefixing each basename with "pattern-"
+const rawPatternEntries = getEntries({
+	root: "src/scss/patterns",
+	include: "**/*.scss",
+	outputFolder: styleOutputFolder,
+});
+const patternEntries = Object.fromEntries(
+	Object.entries(rawPatternEntries).map(([key, filePath]) => {
+		// Split the entry key path into segments
+		const segments = key.split("/");
+		// Take the last segment (filename without extension)
+		const name = segments.pop();
+		// Prefix it
+		segments.push(`pattern--${name}`);
+		return [segments.join("/"), filePath];
+	})
+);
 /**
  * Custom Webpack Configuration
  *
@@ -27,6 +44,8 @@ var config = {
 			outputFolder: styleOutputFolder,
 			blockDir: true,
 		}),
+		// Use prefixed pattern entries
+		...patternEntries,
 	},
 	output: {
 		...defaultConfig.output,

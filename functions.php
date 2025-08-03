@@ -25,6 +25,11 @@ require_once get_template_directory() . '/inc/enqueue.php';
 require_once get_template_directory() . '/inc/enqueue-blocks.php';
 
 /**
+ * Enqueue pattern related scripts, styles, and functionality.
+ */
+require_once get_template_directory() . '/inc/enqueue-patterns.php';
+
+/**
  * Sync acf fields, cpts to theme
  */
 require_once get_template_directory() . '/inc/sync-acf.php';

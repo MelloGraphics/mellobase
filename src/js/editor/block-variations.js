@@ -8,18 +8,6 @@ import domReady from "@wordpress/dom-ready";
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-variations/
  */
 const registerBlockVariations = {
-	// "core/columns": {
-	// 	name: "three-columns-wide-left",
-	// 	title: "50 / 25 / 25",
-	// 	description: "Three columns; wide left column",
-	// 	innerBlocks: [
-	// 		["core/column", { width: "50%" }],
-	// 		["core/column", { width: "25%" }],
-	// 		["core/column", { width: "25%" }],
-	// 	],
-	// 	scope: ["block"],
-	// },
-
 	"core/group": {
 		name: "section",
 		title: "Section",
@@ -34,6 +22,7 @@ const registerBlockVariations = {
 	},
 
 };
+
 
 domReady(() => {
 	Object.entries(registerBlockVariations).forEach(([block, variation]) => {
