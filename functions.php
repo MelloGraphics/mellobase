@@ -22,12 +22,17 @@ require_once get_template_directory() . '/inc/enqueue.php';
 /**
  * Enqueue blocks related scripts, styles, and functionality.
  */
-require_once get_template_directory() . '/inc/enqueue-blocks.php';
+require_once get_template_directory() . '/inc/enqueue-block-styles.php';
 
 /**
  * Enqueue pattern related scripts, styles, and functionality.
  */
-require_once get_template_directory() . '/inc/enqueue-patterns.php';
+require_once get_template_directory() . '/inc/enqueue-pattern-styles.php';
+
+/**
+ * Enqueue pattern related scripts, styles, and functionality.
+ */
+require_once get_template_directory() . '/inc/enqueue-template-styles.php';
 
 /**
  * Sync acf fields, cpts to theme

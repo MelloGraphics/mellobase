@@ -15,8 +15,12 @@
 ├── js/                     # Compiled JS assets
 ├── parts/, patterns/       # Block-based parts and patterns
 ├── templates/              # Block-based HTML templates
-├── theme.json              # Theme configuration for styles, settings, spacing, etc.
-├── src/                    # Source files for SCSS, JS, and blocks
+├── src/                    # Source files for editing
+│   ├── scss/
+│   │   ├── patterns/       # Pattern SCSS (one file per pattern; outputs css/pattern--[name].css)
+│   │   └── templates/      # Template SCSS (one file per template; outputs css/template--[name].css)
+│   ├── js/                 # Frontend and editor JS source
+│   └── blocks/             # Block source files
 ├── bin/                    # Custom build scripts and webpack config
 ├── functions.php           # Main theme functions
 ├── style.css               # WP theme stylesheet header
@@ -29,7 +33,13 @@
 <p>The theme uses <code>@wordpress/scripts</code> and custom Webpack configuration to handle:</p>
 
 <ul>
-  <li>SCSS compilation (including block-specific styles)</li>
+  <li>SCSS compilation, including:
+    <ul>
+      <li>Block-specific styles</li>
+      <li>Pattern-based styles (src/scss/patterns → css/pattern--[name].css)</li>
+      <li>Template-based styles (src/templates → css/template--[name].css)</li>
+    </ul>
+  </li>
   <li>JavaScript bundling (for frontend and editor)</li>
   <li>Automatic ACF JSON sync</li>
   <li>Custom <code>zip</code> export for deployment-ready packages</li>
@@ -50,6 +60,8 @@ npm run export    # Build + zip production files into mellobase-export.zip
 
 <ul>
   <li><strong>Block-specific styles</strong>: Only loads styles when the block exists on the page.</li>
+  <li><strong>Pattern-based styles</strong>: Add the class <code>pattern--[pattern-name]</code> to your wrapper element in the editor. Only the matching CSS (from <code>src/scss/patterns/[pattern-name].scss</code>) is loaded.</li>
+  <li><strong>Template-based styles</strong>: Create <code>src/templates/[template-name].scss</code> files (compiled to <code>css/template--[template-name].css</code>). These are enqueued conditionally based on the active template.</li>
   <li><strong>Editor parity</strong>: Ensures consistent styles between frontend and editor.</li>
   <li><strong>ACF JSON Sync</strong>: Syncs ACF fields to/from <code>acf-json/</code> via <code>sync-acf.php</code>.</li>
   <li><strong>Custom Blocks</strong>: Easily scaffold custom blocks using <code>npm run create-block</code>.</li>

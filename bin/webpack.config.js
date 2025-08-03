@@ -21,6 +21,23 @@ const patternEntries = Object.fromEntries(
 		return [segments.join("/"), filePath];
 	})
 );
+// Generate template entries, prefixing each basename with "template--"
+const rawTemplateEntries = getEntries({
+	root: "src/scss/templates",
+	include: "**/*.scss",
+	outputFolder: styleOutputFolder,
+});
+const templateEntries = Object.fromEntries(
+	Object.entries(rawTemplateEntries).map(([key, filePath]) => {
+		// Split the entry key path into segments
+		const segments = key.split("/");
+		// Take the last segment (filename without extension)
+		const name = segments.pop();
+		// Prefix it
+		segments.push(`template--${name}`);
+		return [segments.join("/"), filePath];
+	})
+);
 /**
  * Custom Webpack Configuration
  *
@@ -46,6 +63,8 @@ var config = {
 		}),
 		// Use prefixed pattern entries
 		...patternEntries,
+		// Use prefixed template entries
+		...templateEntries,
 	},
 	output: {
 		...defaultConfig.output,

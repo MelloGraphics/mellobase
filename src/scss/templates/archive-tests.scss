@@ -1,0 +1,7 @@
+// Example of a SCSS file for the archive tests template enqeued to the template only
+
+@use "../utils" as *;
+
+body.post-type-archive-tests{
+    background-color: pink;
+}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Enqueue scripts, styles, and functionality for blocks.
+ * Enqueue scripts, styles, and functionality for patterns.
  *
  * @package MelloBase
  */

@@ -1,0 +1,10 @@
+@use "../utils" as *;
+
+.pattern--section{
+    &--about-introduction{
+        border: green solid 5px;
+    }
+    &--services-introduction{
+        border: blue solid 5px;
+    }
+}
