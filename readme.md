@@ -10,7 +10,7 @@
 ├── acf-json/               # ACF field groups synced as local JSON
 ├── blocks/                 # Compiled custom blocks
 ├── css/                    # Compiled frontend and editor styles
-├── fonts/                  # Font files (including Font Awesome subsets)
+├── assets/                 # Theme imagery and font files (including Font Awesome subsets)
 ├── inc/                    # PHP includes for setup, enqueues, ACF sync, etc.
 ├── js/                     # Compiled JS assets
 ├── parts/, patterns/       # Block-based parts and patterns
