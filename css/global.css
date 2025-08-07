@@ -1,1 +1,137 @@
-*,:after,:before{box-sizing:border-box}body,html{height:100%}body{-webkit-font-smoothing:antialiased}canvas,img,picture,svg,video{display:block;height:auto;max-width:100%}button,input,select,textarea{font:inherit}h1,h2,h3,h4,h5,h6,p{overflow-wrap:break-word}mark{background-color:inherit}::-moz-selection{background:var(--wp--preset--color--primary);color:var(--wp--preset--color--base)}::selection{background:var(--wp--preset--color--primary);color:var(--wp--preset--color--base)}ol,ul{padding:0 0 0 var(--wp--preset--spacing--small)}.always-visually-hidden,.visually-hidden:not(:focus):not(:active):not(:focus):not(:active){border:0;clip:rect(0 0 0 0);height:auto;margin:0;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px}input[type=submit]{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--wp--preset--color--primary);border-color:var(--wp--preset--color--background);border-radius:0;border-style:solid;border-width:2px;color:var(--wp--preset--color--background);padding:var(--wp--preset--spacing--20) var(--wp--preset--spacing--50);text-decoration:none}html{interpolate-size:allow-keywords;scroll-behavior:smooth}.wp-site-blocks{overflow-x:clip}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/global.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json widths
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Wordpress misc Variables
+ */
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+mark {
+  background-color: inherit;
+}
+
+::-moz-selection {
+  background: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--base);
+}
+
+::selection {
+  background: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--base);
+}
+
+ul,
+ol {
+  padding: 0 0 0 var(--wp--preset--spacing--small);
+}
+
+.visually-hidden:not(:focus):not(:active):not(:focus):not(:active) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.always-visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+input[type=submit] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: var(--wp--preset--color--primary);
+  border-radius: 0px;
+  border-color: var(--wp--preset--color--background);
+  border-style: solid;
+  border-width: 2px;
+  color: var(--wp--preset--color--background);
+  padding-top: var(--wp--preset--spacing--20);
+  padding-right: var(--wp--preset--spacing--50);
+  padding-bottom: var(--wp--preset--spacing--20);
+  padding-left: var(--wp--preset--spacing--50);
+  text-decoration: none;
+}
+
+html {
+  interpolate-size: allow-keywords;
+  scroll-behavior: smooth;
+}
+
+.wp-site-blocks {
+  overflow-x: clip;
+}
+
+/*# sourceMappingURL=global.css.map*/

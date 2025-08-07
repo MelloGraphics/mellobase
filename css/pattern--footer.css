@@ -1,1 +1,77 @@
-.site-footer{margin-block-start:0}.is-pattern-footer,footer{margin-top:0}.is-pattern-footer>.wp-block-group>.wp-block-group,footer>.wp-block-group>.wp-block-group{flex-wrap:wrap;gap:var(--wp--preset--spacing--x-large)}.is-pattern-footer a,footer a{text-decoration:none}.is-pattern-footer a:hover,footer a:hover{color:var(--wp--preset--color--primary)!important}.is-pattern-footer .wp-block-image,footer .wp-block-image{display:flex;flex:1 1 250px;max-width:500px}@media(min-width:781px){.is-pattern-footer .wp-block-image,footer .wp-block-image{margin:auto}}.is-pattern-footer .is-pattern-footer-links,footer .is-pattern-footer-links{flex:1 0 1;flex-wrap:wrap;gap:var(--wp--preset--spacing--xx-large)}@media(min-width:781px){.is-pattern-footer .is-pattern-footer-links,footer .is-pattern-footer-links{flex-basis:100%;flex-wrap:wrap}}.is-pattern-footer .is-pattern-footer-links nav,footer .is-pattern-footer-links nav{min-width:120px}@media(min-width:781px){.is-pattern-footer .is-pattern-footer-links nav,footer .is-pattern-footer-links nav{flex:1 0 100%}.is-pattern-footer .is-pattern-footer-links nav p,footer .is-pattern-footer-links nav p{text-align:center}.is-pattern-footer .is-pattern-footer-links nav .wp-block-navigation__container,footer .is-pattern-footer-links nav .wp-block-navigation__container{align-items:center}}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/patterns/template-parts/footer.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json widths
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Wordpress misc Variables
+ */
+.site-footer {
+  margin-block-start: 0;
+}
+
+footer, .is-pattern-footer {
+  margin-top: 0;
+}
+footer > .wp-block-group > .wp-block-group, .is-pattern-footer > .wp-block-group > .wp-block-group {
+  flex-wrap: wrap;
+  gap: var(--wp--preset--spacing--x-large);
+}
+footer a, .is-pattern-footer a {
+  text-decoration: none;
+}
+footer a:hover, .is-pattern-footer a:hover {
+  color: var(--wp--preset--color--primary) !important;
+}
+footer .wp-block-image, .is-pattern-footer .wp-block-image {
+  display: flex;
+  flex: 1 1 250px;
+  max-width: 500px;
+}
+@media (min-width: 781px) {
+  footer .wp-block-image, .is-pattern-footer .wp-block-image {
+    margin: auto;
+  }
+}
+footer .is-pattern-footer-links, .is-pattern-footer .is-pattern-footer-links {
+  gap: var(--wp--preset--spacing--xx-large);
+  flex: 1 0 1;
+  flex-wrap: wrap;
+}
+@media (min-width: 781px) {
+  footer .is-pattern-footer-links, .is-pattern-footer .is-pattern-footer-links {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+  }
+}
+footer .is-pattern-footer-links nav, .is-pattern-footer .is-pattern-footer-links nav {
+  min-width: 120px;
+}
+@media (min-width: 781px) {
+  footer .is-pattern-footer-links nav, .is-pattern-footer .is-pattern-footer-links nav {
+    flex: 1 0 100%;
+  }
+  footer .is-pattern-footer-links nav p, .is-pattern-footer .is-pattern-footer-links nav p {
+    text-align: center;
+  }
+  footer .is-pattern-footer-links nav .wp-block-navigation__container, .is-pattern-footer .is-pattern-footer-links nav .wp-block-navigation__container {
+    align-items: center;
+  }
+}
+
+/* Footer mobile style */
+
+/*# sourceMappingURL=pattern--footer.css.map*/

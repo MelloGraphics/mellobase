@@ -45,7 +45,6 @@
 					"color": "#1D1D1D",
 					"name": "Tertiary 3"
 				},
-
 				{
 					"slug": "base",
 					"color": "#f1f1f1",
@@ -75,7 +74,14 @@
 			"wideSize": "1400px"
 		},
 		"spacing": {
-			"units": [ "px", "em", "rem", "svh", "svw", "%" ],
+			"units": [
+				"px",
+				"em",
+				"rem",
+				"svh",
+				"svw",
+				"%"
+			],
 			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{
@@ -304,8 +310,7 @@
 			"core/navigation": {
 				"elements": {
 					"link": {
-						"typography": {
-						},
+						"typography": {},
 						":hover": {
 							"typography": {
 								"textDecoration": "none"
@@ -415,7 +420,7 @@
 					"fontSize": "var(--wp--preset--font-size--medium)"
 				},
 				"elements": {
-					"link":{
+					"link": {
 						"typography": {
 							"textDecoration": "none"
 						}
@@ -428,7 +433,7 @@
 					"fontStyle": "italic"
 				},
 				"elements": {
-					"link":{
+					"link": {
 						"typography": {
 							"textDecoration": "none"
 						}
@@ -451,7 +456,7 @@
 					"text": "var(--wp--preset--color--contrast)"
 				},
 				"elements": {
-					"link":{
+					"link": {
 						"color": {
 							"text": "var(--wp--preset--color--contrast)"
 						}
@@ -469,7 +474,7 @@
 				}
 			},
 			"yoast/faq-block": {
-				"css" : "& .schema-faq-section { background: var(--wp--preset--color--contrast); color: var(--wp--preset--color--contrast); padding: 8px 4px 8px 32px; margin: 4px 0;} & .schema-faq-answer{line-height: inherit; margin: 0;}"
+				"css": "& .schema-faq-section { background: var(--wp--preset--color--contrast); color: var(--wp--preset--color--contrast); padding: 8px 4px 8px 32px; margin: 4px 0;} & .schema-faq-answer{line-height: inherit; margin: 0;}"
 			}
 		},
 		"color": {
@@ -520,8 +525,7 @@
 						"left": "var(--wp--preset--spacing--medium)"
 					}
 				},
-				":hover": {
-				}
+				":hover": {}
 			}
 		},
 		"typography": {
@@ -529,7 +533,7 @@
 			"fontFamily": "var(--wp--preset--font-family--primary)",
 			"lineHeight": "1.5"
 		},
-		"spacing":{
+		"spacing": {
 			"blockGap": "var(--wp--preset--spacing--medium)",
 			"padding": {
 				"top": "0",
@@ -539,33 +543,43 @@
 			}
 		}
 	},
+	"patterns": [
+			"submenu-columns",
+			"submenu-grid"
+	],
 	"templateParts": [
 		{
-		  "name": "header",
-		  "title": "Header",
-		  "area": "header"
+			"name": "header",
+			"title": "Header",
+			"area": "header"
 		},
 		{
-		  "name": "footer",
-		  "title": "Footer",
-		  "area": "footer"
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
 		}
 	],
 	"customTemplates": [
 		{
 			"name": "blank",
 			"title": "Blank page",
-			"postTypes": [ "page" ]
+			"postTypes": [
+				"page"
+			]
 		},
 		{
 			"name": "archive-tests",
 			"title": "Archive: Tests",
-			"postTypes": [ "work" ]
+			"postTypes": [
+				"work"
+			]
 		},
 		{
 			"name": "single-tests",
 			"title": "Single Item: Test",
-			"postTypes": [ "tests" ]
+			"postTypes": [
+				"tests"
+			]
 		}
 	]
 }
