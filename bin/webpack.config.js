@@ -79,6 +79,17 @@ var config = {
 			 * the extra `.js`, `.php`, and `.js.map` files in the output folders
 			 */
 
+			before: {
+				log: false,
+				test: [
+					{
+						folder: styleOutputFolder,
+						method: (absoluteItemPath) => {
+							return new RegExp(/\.css(\.map)*$/, "m").test(absoluteItemPath);
+						},
+					},
+				],
+			},
 			after: {
 				log: false,
 				test: [
