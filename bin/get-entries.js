@@ -23,8 +23,10 @@ function getEntries(options) {
 		outputFolder = "css",
 		blockDir = false,
 	} = options;
-	// get all root scss files in the src/scss folder
-	const entries = glob.sync(root + "/" + include);
+	// get all root scss files in the src/scss folder, ignoring certain folders
+	const entries = glob.sync(root + "/" + include, {
+		ignore: ["**/exclude-from-build/**"]
+	});
 
 	// create an object with the relative output path as the key and the file path as the value
 	const entriesWithKeys = entries.reduce((acc, entry) => {
