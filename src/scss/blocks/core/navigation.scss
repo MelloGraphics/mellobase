@@ -1,31 +1,34 @@
 @use "../../utils" as *;
 
-$navigation-breakpoint: 1140px; // Where the menu changes to hamburger
+$navigation-breakpoint: 750px; // Where the menu changes to hamburger
 
 @media (min-width: $navigation-breakpoint) {
   .wp-block-navigation__responsive-container-open:not(.always-shown) {
     display: none;
   }
-  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open){
+
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
     display: inherit;
   }
 }
+
 @media (max-width: $navigation-breakpoint) {
   .wp-block-navigation__responsive-container-open:not(.always-shown) {
     display: inherit;
   }
-  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open){
+
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
     display: none;
   }
 }
 
 // registered style mega menu
 
-header:has(.wp-block-navigation.is-style-mega-menu) .header__top-wrapper {
+header:has(.wp-block-navigation.is-style-mega-menu) .header__main-wrapper {
   position: relative;
 }
 
-// Desktop menu styling
+// Desktop menu styling for mega menu
 
 .wp-block-navigation.is-style-mega-menu:not(:has(.is-menu-open)) {
   position: static;
@@ -33,37 +36,44 @@ header:has(.wp-block-navigation.is-style-mega-menu) .header__top-wrapper {
   .wp-block-navigation__responsive-container:not(.is-menu-open) {
     position: unset;
 
-    .wp-block-navigation__responsive-dialog, .wp-block-navigation-submenu, .block-editor-block-list__layout {
+    .wp-block-navigation__responsive-dialog,
+    .wp-block-navigation-submenu,
+    .block-editor-block-list__layout {
       position: unset;
     }
 
     .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
       position: absolute;
-      min-width: 100svw!important;
+      min-width: 100svw !important;
       min-height: min-content;
-      padding: $spacing-medium;
-
-      .submenu__content-wrapper {
-        display: flex;
-        width: 100%;
-        max-width: $width-content;
-        margin: auto;
-      }
+      padding: $spacing-large;
     }
+  }
+
+  .wp-block-buttons {
+    padding-right: $spacing-small;
   }
 
 }
 
 // Burger menu styling (Targets the menu when it has the .is-menu-open class added for hamburger menu)
 
-.wp-block-navigation
-  .wp-block-navigation__responsive-container-open, .wp-block-navigation__responsive-container-close{
+.wp-block-navigation .wp-block-navigation__responsive-container-open,
+.wp-block-navigation__responsive-container-close {
   margin-left: auto;
   padding: $spacing-medium;
+
+  svg {
+    min-width: 3em;
+    min-height: 3em;
+  }
 }
 
 .wp-block-navigation.is-style-mega-menu:has(.is-menu-open) {
   .wp-block-navigation__responsive-container.is-menu-open {
+    max-width: 100svw;
+    overflow-x: clip;
+    
     .wp-block-navigation-item {
       flex-direction: row;
       flex-wrap: nowrap;
@@ -76,9 +86,34 @@ header:has(.wp-block-navigation.is-style-mega-menu) .header__top-wrapper {
       align-items: center;
       width: 100%;
       height: 100svh;
-      padding: $spacing-large;
+      padding: $spacing-medium;
       align-items: stretch;
+
+      >*, .submenu__columns {
+        min-width: 100%;
+        margin: auto;
+
+        @include for-tablet-portrait-down {
+
+          ul,
+          li {
+            width: 100%;
+          }
+
+          .submenu__column {
+            width: 100%;
+
+            ul {
+              gap: $spacing-small!important;
+            }
+          }
+        }
+
+      }
+
+      .wp-block-button {
+        width: 100%;
+      }
     }
   }
-
 }

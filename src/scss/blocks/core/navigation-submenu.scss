@@ -1,87 +1,39 @@
 @use "../../utils" as *;
 
-// navigation with sub menu
-
-
-// // default submenu
-// .wp-block-navigation {
-// 	.wp-block-navigation-submenu {
-// 		.wp-block-navigation-item__content {
-// 			&.wp-block-navigation-submenu__toggle {
-// 				// submenu toggle
-// 			}
-
-// 			.wp-block-navigation-item__label {
-// 				// submenu label
-// 			}
-
-// 		}
-
-// 		.wp-block-navigation__submenu-icon {
-// 			// submenu icon
-// 		}
-
-// 		&.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
-// 			//sub menu wrapper
-// 		}
-// 	}
-// }
-
-
-// Styling for desktop menu
-
-// Two columns
+// navigation item with sub menu
 
 .wp-block-navigation {
-	.wp-block-navigation-submenu.is-style-two-column {
-		.submenu__content-wrapper { // class added in editor
-			display: flex;
-			flex-wrap: wrap;
-			width: 100%;
-			max-width: $width-content;
-			margin: auto;
-			gap: $spacing-medium;
+	.wp-block-navigation-submenu {
 
-			>ul.wp-block-group {
+		ul.wp-block-list {
+			padding-inline-start: 0;
+		}
+
+		.wp-block-navigation__submenu-icon {
+			color: $color-secondary;
+			width: .75em;
+			height: .75em;
+		}
+
+		.submenu__columns {
+			gap: $spacing-small;
+			min-width: 100%;
+			margin: auto;
+			max-width: $width-content;
+
+			@include for-tablet-portrait-down {
 				display: flex;
 				flex-direction: column;
-				flex: 1 0 100%;
-				gap: $spacing-small;
-
-				>* {
-					margin-block-start: unset;
-				}
-
-				@include for-tablet-portrait-up {
-
-					&:first-child {
-						flex: 0 0 250px;
-					}
-
-					&:last-child {
-						flex: 1 1 500px;
-						display: flex;
-						flex-direction: row;
-						justify-content: space-between;
-						align-items: stretch;
-						gap: $spacing-small;
-						flex-wrap: wrap;
-					}
-				}
+				gap: $spacing-medium;
 			}
-
-
 		}
-	}
-}
 
-// Four columns
-
-.wp-block-navigation {
-	.wp-block-navigation-submenu.is-style-four-column {
-		.submenu__content-wrapper { // class added in editor
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
+		.submenu__column {
+			@include for-tablet-portrait-down {
+				display: flex;
+				flex-direction: column;
+				gap: $spacing-medium;
+			}
 		}
 	}
 }
@@ -96,30 +48,47 @@
 			flex-wrap: nowrap;
 		}
 
+		.submenu__columns {
+			gap: $spacing-large;
+		}
+
+		.submenu__column {
+			padding-bottom: $spacing-medium;
+		}
+
 		.wp-block-navigation-item__content.wp-block-navigation-submenu__toggle {
 			flex: 1 0 100%;
+			transition: margin .5s $ease-circ;
 		}
 
 		.wp-block-navigation__submenu-icon {
-			display: inline-block !important;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: -100%;
+			rotate: -90deg;
+			min-width: 1em;
+			min-height: 1em;
+			scale: 1.5;
 		}
 
-
-		// When submenu is open
+		// When buger menu is open initially hide all sub menus
 		.wp-block-navigation-submenu>.wp-block-navigation__submenu-container {
 			display: none;
 			visibility: hidden;
 			padding: 0;
 		}
 
+		// When a submenu is toggled open, show contents
 		.wp-block-navigation-submenu:has([aria-expanded="true"]) {
 			display: grid;
 			visibility: visible;
-			gap: $spacing-medium;
+			gap: $spacing-large;
 
 			>.wp-block-navigation-item__content.wp-block-navigation-submenu__toggle {
 				grid-column: 1;
 				grid-row: 1;
+				margin-left: 1em;
 			}
 
 			>.wp-block-navigation__submenu-container {
@@ -129,6 +98,7 @@
 			}
 
 			>.wp-block-navigation__submenu-icon {
+				margin: 0;
 				grid-column: 1;
 				grid-row: 1;
 				rotate: 90deg;
@@ -137,11 +107,18 @@
 
 		// Hide other menus
 		.wp-block-navigation__container:has([aria-expanded="true"]) {
-			> .wp-block-navigation-item:not(:has([aria-expanded="true"])) {
+
+			>.wp-block-navigation-item:not(:has([aria-expanded="true"])) {
 				display: none;
 				visibility: hidden;
 			}
+
+			@include for-tablet-portrait-down {
+				~*:not(.wp-block-spacer) {
+					display: none;
+					visibility: hidden;
+				}
+			}
 		}
 	}
-
 }
