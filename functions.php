@@ -30,6 +30,11 @@ require_once get_template_directory() . '/inc/enqueue-block-styles.php';
 require_once get_template_directory() . '/inc/enqueue-pattern-styles.php';
 
 /**
+ * Enqueue section related scripts, styles, and functionality.
+ */
+require_once get_template_directory() . '/inc/enqueue-section-styles.php';
+
+/**
  * Enqueue pattern related scripts, styles, and functionality.
  */
 require_once get_template_directory() . '/inc/enqueue-template-styles.php';

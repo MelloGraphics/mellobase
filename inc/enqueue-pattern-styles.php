@@ -15,30 +15,70 @@ function enqueue_pattern_styles() {
         return;
     }
 
-    global $post;
-    $content = '';
-    if ( is_singular() && isset( $post->post_content ) ) {
-        // Get the rendered content HTML to include server-side and dynamic block output
-        $content = apply_filters( 'the_content', $post->post_content );
+    // Get available pattern styles
+    $pattern_files = glob( get_stylesheet_directory() . '/css/pattern--*.css' );
+    
+    // Safety check for glob failure
+    if ( false === $pattern_files ) {
+        return;
     }
 
     $theme_version = wp_get_theme()->get( 'Version' );
-    // Locate only pattern CSS files in the shared css/ folder
-    $pattern_url       = get_stylesheet_directory_uri() . '/css/';
-    $pattern_files     = glob( get_stylesheet_directory() . '/css/pattern--*.css' );
+    $pattern_url = get_stylesheet_directory_uri() . '/css/';
+
+    // Get content to scan - use the same comprehensive approach as sections
+    $all_content = get_all_page_content();
+    
+    if ( empty( $all_content ) ) {
+        return;
+    }
 
     foreach ( $pattern_files as $file_path ) {
-        $filename   = basename( $file_path );                   // e.g. pattern-hero.css
-        $class_name = str_replace( '.css', '', $filename );     // e.g. pattern-hero
+        $filename = basename( $file_path );
+        $class_name = str_replace( '.css', '', $filename );
 
-        if ( false !== strpos( $content, $class_name ) ) {
+        if ( false !== strpos( $all_content, $class_name ) ) {
+            $file_time = filemtime( $file_path ) ?: $theme_version;
             wp_enqueue_style(
                 $class_name,
                 $pattern_url . $filename,
                 array(),
-                $theme_version . '.' . filemtime( $file_path )
+                $theme_version . '.' . $file_time
             );
         }
     }
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_pattern_styles' );
+
+/**
+ * Also try enqueueing on template_redirect to catch archive pages.
+ */
+add_action( 'template_redirect', __NAMESPACE__ . '\enqueue_pattern_styles_fallback' );
+
+/**
+ * Fallback enqueue function for archive pages.
+ */
+function enqueue_pattern_styles_fallback() {
+    // Only run this if we're on an archive and styles haven't been enqueued yet
+    if ( ! is_archive() && ! is_home() ) {
+        return;
+    }
+    
+    // Simple check - if no pattern styles are enqueued, try again
+    global $wp_styles;
+    $pattern_styles_found = false;
+    
+    if ( isset( $wp_styles->registered ) ) {
+        foreach ( $wp_styles->registered as $handle => $style ) {
+            if ( strpos( $handle, 'pattern--' ) === 0 ) {
+                $pattern_styles_found = true;
+                break;
+            }
+        }
+    }
+    
+    // If no pattern styles found, try enqueuing again
+    if ( ! $pattern_styles_found ) {
+        enqueue_pattern_styles();
+    }
+}
