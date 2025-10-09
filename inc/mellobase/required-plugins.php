@@ -3,7 +3,8 @@
 add_action('admin_init', 'mello_check_required_plugins');
 add_action('admin_notices', 'mello_display_plugin_admin_notice');
 
-function mello_check_required_plugins() {
+function mello_check_required_plugins()
+{
     $missing_plugins = [];
 
     // Check for the private Mello Block Extensions plugin.
@@ -19,7 +20,7 @@ function mello_check_required_plugins() {
     // For ACF, require either the free version or ACF Pro.
     // The free version typically uses 'advanced-custom-fields/acf.php'
     // while ACF Pro uses 'advanced-custom-fields-pro/acf.php'.
-    if (!( is_plugin_active('advanced-custom-fields/acf.php') || is_plugin_active('advanced-custom-fields-pro/acf.php') )) {
+    if (!(is_plugin_active('advanced-custom-fields/acf.php') || is_plugin_active('advanced-custom-fields-pro/acf.php'))) {
         $missing_plugins[] = 'advanced-custom-fields (free or pro)';
     }
 
@@ -31,7 +32,8 @@ function mello_check_required_plugins() {
     }
 }
 
-function mello_display_plugin_admin_notice() {
+function mello_display_plugin_admin_notice()
+{
     if ($missing = get_transient('mello_missing_plugins')) {
         echo '<div class="notice notice-error"><p><strong>MelloBase Theme:</strong> The following required plugin(s) are not active:</p><ul>';
         foreach ($missing as $plugin) {
