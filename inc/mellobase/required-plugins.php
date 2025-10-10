@@ -12,11 +12,6 @@ function mello_check_required_plugins()
         $missing_plugins[] = 'mello-block-extensions/mello-block-extensions.php';
     }
 
-    // Check for the SVG Support plugin.
-    if (!is_plugin_active('svg-support/svg-support.php')) {
-        $missing_plugins[] = 'svg-support/svg-support.php';
-    }
-
     // For ACF, require either the free version or ACF Pro.
     // The free version typically uses 'advanced-custom-fields/acf.php'
     // while ACF Pro uses 'advanced-custom-fields-pro/acf.php'.
