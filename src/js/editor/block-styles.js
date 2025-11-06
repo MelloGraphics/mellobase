@@ -20,12 +20,10 @@ const registerBlockStyles = {
         {
             name: "tertiary",
             label: "Tertiary",
-        }
-    ],
-    "core/paragraph": [
+        },
         {
-            name: "icon",
-            label: "Icon",
+            name: "hidden",
+            label: "Hidden",
         }
     ],
     "core/navigation": [
@@ -50,6 +48,20 @@ const registerBlockStyles = {
             label: "Box",
         },
     ],
+    "core/image": [
+        {
+            name: "icon-small",
+            label: "Icon Small",
+        },
+        {
+            name: "icon-medium",
+            label: "Icon Medium",
+        },
+        {
+            name: "icon-large",
+            label: "Icon Large",
+        }
+    ]
 };
 
 domReady(() => {

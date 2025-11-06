@@ -70,8 +70,8 @@
 			]
 		},
 		"layout": {
-			"contentSize": "1000px",
-			"wideSize": "1400px"
+			"contentSize": "900px",
+			"wideSize": "1500px"
 		},
 		"spacing": {
 			"units": [
@@ -174,8 +174,20 @@
 						{
 							"fontFamily": "Fontawesome",
 							"fontStyle": "normal",
+							"fontWeight": "300",
+							"src": "file:./assets/fonts/fontawesome/fa-light-300.woff2"
+						},
+						{
+							"fontFamily": "Fontawesome",
+							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": "file:./assets/fonts/fontawesome/sharp/fa-sharp-regular-400.ttf"
+							"src": "file:./assets/fonts/fontawesome/fa-regular-400.woff2"
+						},
+						{
+							"fontFamily": "Fontawesome",
+							"fontStyle": "normal",
+							"fontWeight": "900",
+							"src": "file:./assets/fonts/fontawesome/fa-solid-900.woff2"
 						}
 					],
 					"fontFamily": "Fontawesome",
@@ -236,7 +248,10 @@
 			"ease-circ": "cubic-bezier(0.075, 0.820, 0.165, 1.000)",
 			"speed-fast": ".25s",
 			"speed-medium": ".5s",
-			"speed-slow": "1s"
+			"speed-slow": "1s",
+			"radius-large": "1.5rem",
+			"radius-medium": "1.25rem",
+			"radius-small": "1rem"
 		},
 		"useRootPaddingAwareAlignments": true
 	},
@@ -316,6 +331,13 @@
 								"textDecoration": "none"
 							}
 						}
+					}
+				}
+			},
+			"core/list": {
+				"spacing": {
+					"padding": {
+						"left": "1em"
 					}
 				}
 			},
@@ -515,14 +537,15 @@
 					"text": "var(--wp--preset--color--primary-contrast)"
 				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--small)"
+					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontWeight": "700"
 				},
 				"spacing": {
 					"padding": {
-						"top": "var(--wp--preset--spacing--medium)",
-						"right": "var(--wp--preset--spacing--medium)",
-						"bottom": "var(--wp--preset--spacing--medium)",
-						"left": "var(--wp--preset--spacing--medium)"
+						"top": ".75em",
+						"right": "1.25em",
+						"bottom": ".75em",
+						"left": "1.25em"
 					}
 				},
 				":hover": {}
@@ -537,15 +560,16 @@
 			"blockGap": "var(--wp--preset--spacing--medium)",
 			"padding": {
 				"top": "0",
-				"right": "var(--wp--preset--spacing--large)",
-				"bottom": "var(--wp--preset--spacing--large)",
-				"left": "var(--wp--preset--spacing--large)"
+				"right": "clamp(1.25rem, 8vw, 10rem)",
+				"bottom": "0",
+				"left": "clamp(1.25rem, 8vw, 10rem)"
 			}
 		}
 	},
 	"patterns": [
-			"submenu-columns",
-			"submenu-grid"
+		"submenu-columns",
+		"submenu-grid",
+		"hero-image-right"
 	],
 	"templateParts": [
 		{
@@ -565,20 +589,6 @@
 			"title": "Blank page",
 			"postTypes": [
 				"page"
-			]
-		},
-		{
-			"name": "archive-tests",
-			"title": "Archive: Tests",
-			"postTypes": [
-				"work"
-			]
-		},
-		{
-			"name": "single-tests",
-			"title": "Single Item: Test",
-			"postTypes": [
-				"tests"
 			]
 		}
 	]

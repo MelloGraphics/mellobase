@@ -34,13 +34,6 @@ $font-icon: var(--wp--preset--font-family--icon);
 
 $font-colour: $color-base;
 
-// $font-light: normal;
-// $font-heavy: bold;
-// $font-regular: 400;
-// $font-medium: 500;
-// $font-semi: 600;
-// $font-bold: 700;
-
 /**
  * Theme.json Set Spacing Variables
  */
@@ -66,30 +59,12 @@ $speed-medium: var(--wp--custom--speed-medium);
 $speed-slow: var(--wp--custom--speed-slow);
 $speed: $speed-medium; // default animation speed
 
-// other custom
-
-// $custom-fade: var(--wp--custom--mask);
-
-
-// Transitions
-// $transition-duration: 0.25s;
-// $ease-circ: cubic-bezier(0.46, 0.03, 0.52, 0.96);
-// $transition: $transition-duration $ease-circ;
+// radius
+$radius-large: var(--wp--custom--radius-large);
+$radius-medium: var(--wp--custom--radius-medium);
+$radius-small: var(--wp--custom--radius-small);
 
 /**
  * Wordpress misc Variables
  */
 $admin-bar: var(--wp-admin--admin-bar--height);
-
-// breakpoints
-
-$breakpoints: (
-	// TODO not really used remove?
-	xs: 375px,
-	sm: 500px,
-	md: 768px,
-	lg: 1024px,
-	xl: 1280px,
-	xxl: 1440px,
-	xxxl: 1920px
-);

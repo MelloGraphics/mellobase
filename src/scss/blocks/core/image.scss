@@ -1,0 +1,26 @@
+// Core Block Image Styles
+
+@use "../../utils" as *;
+
+
+.wp-block-image{
+    &.is-style-rounded img{
+        border-radius: .5rem;
+    }
+}
+
+// Icon styles for images not manually resized
+
+.wp-block-image:not(.is-resized) {
+    &.is-style-icon-small>* {
+        @include icon-small;
+    }
+
+    &.is-style-icon-medium>* {
+        @include icon-medium;
+    }
+
+    &.is-style-icon-large>* {
+        @include icon-large;
+    }
+}

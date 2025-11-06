@@ -4,7 +4,7 @@
 
 // Text hightlight styling
 
-mark{
+mark {
     background-color: inherit;
 }
 
@@ -13,7 +13,35 @@ mark{
     color: $color-base;
 }
 
-ul,
-ol {
-	padding: 0 0 0 $spacing-small;
+// ul,
+// ol {
+//     padding: 0 0 0 $spacing-small;
+// }
+
+::marker {
+    color: $color-secondary;
+}
+
+* {
+    text-wrap-style: auto;
+}
+
+@include for-tablet-portrait-up {
+    .has-x-large-font-size,
+    .has-xx-large-font-size {
+        text-wrap-style: balance;
+    }
+
+    .has-large-font-size{
+        text-wrap-style: pretty;
+    }
+}
+
+.has-x-large-font-size,
+.has-xx-large-font-size {
+    line-height: 1.1;
+}
+
+.has-icon-font-family {
+    display: block;
 }

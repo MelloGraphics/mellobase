@@ -1,0 +1,28 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/patterns/feature-point.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Theme.json widths
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Wordpress misc Variables
+ */
+.pattern--feature-point--icon-text.wp-block-group-is-layout-flex {
+  gap: 0.5rem;
+}
+.pattern--feature-point--icon-text.wp-block-group-is-layout-flex .has-icon-font-family {
+  width: 1.2em;
+  flex-shrink: 0;
+}

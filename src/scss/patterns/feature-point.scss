@@ -1,0 +1,11 @@
+@use "../utils" as *;
+
+
+.pattern--feature-point--icon-text.wp-block-group-is-layout-flex {
+    gap: .5rem;
+
+    .has-icon-font-family {
+        width: 1.2em;
+        flex-shrink: 0;
+    }
+}
