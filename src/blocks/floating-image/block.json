@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "mellobase/floating-image",
+	"version": "0.1.0",
+	"title": "Floating Image",
+	"category": "design",
+	"icon": "format-image",
+	"description": "A floating image you can position over another image within a group.",
+	"keywords": [
+		"floating",
+		"overlay",
+		"badge",
+		"sticker"
+	],
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"__experimentalBorder": false
+	},
+	"attributes": {
+		"url": {
+			"type": "string"
+		},
+		"id": {
+			"type": "number"
+		},
+		"alt": {
+			"type": "string",
+			"default": ""
+		},
+		"x": {
+			"type": "number",
+			"default": 0
+		},
+		"y": {
+			"type": "number",
+			"default": 0
+		},
+		"widthPercent": {
+			"type": "number",
+			"default": 30
+		},
+		"zIndex": {
+			"type": "number",
+			"default": 2
+		},
+		"transformAnchorCenter": {
+			"type": "boolean",
+			"default": false
+		},
+		"hasShadow": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"style": "file:./style-index.css",
+	"editorStyle": "file:./editor.css",
+	"editorScript": "file:./index.js"
+}
