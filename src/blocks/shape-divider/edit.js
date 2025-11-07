@@ -20,8 +20,8 @@ import { shapeDividers } from './theme-settings';
 export default function Edit({ attributes, setAttributes }) {
 	const {
 		dividerPath = 'wave1',
-		pathColor = '#000000',
-		backgroundColor = '#ffffff',
+		pathColor = '#ffffff',
+		backgroundColor = 'transparent',
 		flipVertical = false,
 		flipHorizontal = false,
 	} = attributes;
@@ -39,6 +39,13 @@ export default function Edit({ attributes, setAttributes }) {
 		if (flipVertical) transforms.push('scaleY(-1)');
 		if (flipHorizontal) transforms.push('scaleX(-1)');
 		return transforms.length > 0 ? transforms.join(' ') : 'none';
+	};
+
+	// Calculate container translation based on flip
+	const getContainerTransform = () => {
+		// If flipped vertically, the shape is at the top, translate up
+		// If not flipped, the shape is at the bottom, translate down
+		return flipVertical ? 'translateY(-1px)' : 'translateY(1px)';
 	};
 
 	const resetAll = () => {
@@ -67,7 +74,7 @@ export default function Edit({ attributes, setAttributes }) {
 					label={__('Color', 'shape-divider')}
 					resetAll={resetAll}
 					className="color-block-support-panel"
-					style={{ gap: 0 }}
+					style={{ gap: '0' }}
 				>
 					<ToolsPanelItem
 						hasValue={() => !!pathColor}
@@ -75,6 +82,7 @@ export default function Edit({ attributes, setAttributes }) {
 						onDeselect={() => setAttributes({ pathColor: undefined })}
 						isShownByDefault
 						className="block-editor-tools-panel-color-gradient-settings__item"
+						style={{ marginTop: '16px' }}
 					>
 						<Dropdown
 							className="block-editor-tools-panel-color-gradient-settings__dropdown"
@@ -112,7 +120,7 @@ export default function Edit({ attributes, setAttributes }) {
 						onDeselect={() => setAttributes({ backgroundColor: undefined })}
 						isShownByDefault
 						className="block-editor-tools-panel-color-gradient-settings__item"
-						style={{ marginTop: 0 }}
+						style={{ marginTop: '0' }}
 					>
 						<Dropdown
 							className="block-editor-tools-panel-color-gradient-settings__dropdown"
@@ -150,12 +158,14 @@ export default function Edit({ attributes, setAttributes }) {
 						label={__('Flip Vertical', 'shape-divider')}
 						checked={flipVertical}
 						onChange={(value) => setAttributes({ flipVertical: value })}
+						style={{ marginTop: 0 }}
 					/>
 
 					<ToggleControl
 						label={__('Flip Horizontal', 'shape-divider')}
 						checked={flipHorizontal}
 						onChange={(value) => setAttributes({ flipHorizontal: value })}
+						style={{ marginTop: 0 }}
 					/>
 				</PanelBody>
 			</InspectorControls>

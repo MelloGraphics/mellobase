@@ -25,8 +25,15 @@ export default function save({ attributes }) {
 		return transforms.length > 0 ? transforms.join(' ') : 'none';
 	};
 
+	// Calculate container translation based on flip
+	const getContainerTransform = () => {
+		// If flipped vertically, the shape is at the top, translate up
+		// If not flipped, the shape is at the bottom, translate down
+		return flipVertical ? 'translateY(1px)' : 'translateY(-1px)';
+	};
+
 	return (
-		<div {...blockProps}>
+		<div {...blockProps} style={{ backgroundColor, transform: getContainerTransform() }}>
 			<svg
 				data-name="Layer 1"
 				xmlns="http://www.w3.org/2000/svg"
