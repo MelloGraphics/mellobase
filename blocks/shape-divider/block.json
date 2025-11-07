@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mellobase/shape-divider",
+  "version": "0.1.0",
+  "title": "Shape Divider",
+  "category": "design",
+  "icon": "smiley",
+  "description": "Add a visual divider to your site's sections",
+  "example": {},
+  "attributes": {
+    "dividerPath": {
+      "type": "string",
+      "default": "shape-1"
+    },
+    "pathColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "transparent"
+    },
+    "flipVertical": {
+      "type": "boolean",
+      "default": false
+    },
+    "flipHorizontal": {
+      "type": "boolean",
+      "default": false
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "shape-divider",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

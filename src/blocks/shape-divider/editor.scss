@@ -1,0 +1,7 @@
+// Editor-specific styles
+.mellobase-block-shape-divider {
+	&.is-selected {
+		outline: 1px dashed rgba(0, 0, 0, 0.2);
+		outline-offset: 2px;
+	}
+}

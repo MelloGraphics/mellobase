@@ -1,0 +1,30 @@
+.mellobase-block-shape-divider {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+
+	svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 150px;
+	}
+
+	.shape-fill {
+		fill: currentColor;
+	}
+}
+
+// Responsive heights
+@media (max-width: 767px) {
+	.mellobase-block-shape-divider svg {
+		height: 80px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.mellobase-block-shape-divider svg {
+		height: 120px;
+	}
+}
