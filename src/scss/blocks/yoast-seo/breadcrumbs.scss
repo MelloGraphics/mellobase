@@ -2,15 +2,43 @@
 
 @use "../../utils" as *;
 
-.yoast-breadcrumbs{
-    span > span:first-child{ // home link icon is set in the yoast settings
+.yoast-breadcrumbs {
+    >span {
+        display: flex;
+        gap: .5em;
+        align-items: baseline;
+        font-size: .75em;
+        mask-image: linear-gradient(to left, transparent 0%, black $spacing-medium);
+        padding-right: $spacing-medium;
+        overflow-x: scroll;
+        overflow: auto;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    span>span:first-child a {
+        // home link icon is set in the yoast settings
         font-family: $font-icon;
     }
-    span, a{
+
+    span {
+        font-family: $font-icon;
+        line-height: 1;
+        min-width: max-content;
+    }
+
+    span a,
+    span.breadcrumb_last {
+        font-family: $font-primary;
         font-size: $font-size-small;
         text-transform: uppercase;
         font-weight: 500;
-        color: $color-tertiary-1;
+        color: $color-base;
         text-decoration: none;
     }
 }

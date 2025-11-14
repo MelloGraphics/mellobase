@@ -1,9 +1,9 @@
-import { animate, frame } from "motion";
 import Splitting from "splitting";
 // import "splitting/dist/splitting-cells.css";
 import "splitting/dist/splitting.css";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('mello-motion-ready', () => {
+    const { animate, frame } = window.MelloMotion;
     const cursor = document.querySelector('.wp-block-mellobase-cursor .cursor-location');
     const cursorDecoration = document.querySelector('.wp-block-mellobase-cursor .cursor-decoration');
     const cursorText = document.querySelector('.wp-block-mellobase-cursor .cursor-text');
