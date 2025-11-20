@@ -1,0 +1,51 @@
+/**
+ * Theme.json widths
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Wordpress misc Variables
+ */
+.yoast-breadcrumbs > span {
+  display: flex;
+  gap: 0.5em;
+  align-items: baseline;
+  font-size: 0.75em;
+  mask-image: linear-gradient(to left, transparent 0%, black var(--wp--preset--spacing--medium));
+  padding-right: var(--wp--preset--spacing--medium);
+  overflow-x: scroll;
+  overflow: auto;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+}
+.yoast-breadcrumbs > span::-webkit-scrollbar {
+  display: none;
+}
+.yoast-breadcrumbs span > span:first-child a {
+  font-family: var(--wp--preset--font-family--icon);
+}
+.yoast-breadcrumbs span {
+  font-family: var(--wp--preset--font-family--icon);
+  line-height: 1;
+  min-width: max-content;
+}
+.yoast-breadcrumbs span a,
+.yoast-breadcrumbs span.breadcrumb_last {
+  font-family: var(--wp--preset--font-family--primary);
+  font-size: var(--wp--preset--font-size--small);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--wp--preset--color--base);
+  text-decoration: none;
+}/*# sourceMappingURL=breadcrumbs.css.map */

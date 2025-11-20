@@ -1,0 +1,52 @@
+/**
+ * Theme.json widths
+ */
+/**
+ * Theme.json Set Color Variables
+ */
+/**
+ * Theme.json Set Font Variables
+ */
+/**
+ * Theme.json Set Spacing Variables
+ */
+/**
+ * Theme.json Custom Variables
+ */
+/**
+ * Wordpress misc Variables
+ */
+mark {
+  background-color: inherit;
+}
+
+::selection {
+  background: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--base);
+}
+
+::marker {
+  color: var(--wp--preset--color--secondary);
+}
+
+* {
+  text-wrap-style: auto;
+}
+
+@media (min-width: 781px) {
+  .has-x-large-font-size,
+  .has-xx-large-font-size {
+    text-wrap-style: balance;
+  }
+  .has-large-font-size {
+    text-wrap-style: pretty;
+  }
+}
+.has-x-large-font-size,
+.has-xx-large-font-size {
+  line-height: 1.1;
+}
+
+.has-icon-font-family {
+  display: block;
+}/*# sourceMappingURL=typography.css.map */
