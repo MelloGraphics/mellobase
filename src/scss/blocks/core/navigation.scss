@@ -1,6 +1,6 @@
 @use "../../utils" as *;
 
-$navigation-breakpoint: 750px; // Where the menu changes to hamburger
+$navigation-breakpoint: 860px; // Where the menu changes to hamburger
 
 @media (min-width: $navigation-breakpoint) {
   .wp-block-navigation__responsive-container-open:not(.always-shown) {
@@ -20,6 +20,10 @@ $navigation-breakpoint: 750px; // Where the menu changes to hamburger
   .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
     display: none;
   }
+
+  .pattern--header__main-wrapper{
+    padding-right: 0!important;
+  }
 }
 
 // registered style mega menu
@@ -32,9 +36,11 @@ header:has(.wp-block-navigation.is-style-mega-menu) .header__main-wrapper {
 
 .wp-block-navigation.is-style-mega-menu:not(:has(.is-menu-open)) {
   position: static;
+  margin: auto;
 
   .wp-block-navigation__responsive-container:not(.is-menu-open) {
     position: unset;
+    gap: clamp(0.25em, 1vw, 2em);
 
     .wp-block-navigation__responsive-dialog,
     .wp-block-navigation-submenu,
@@ -46,12 +52,8 @@ header:has(.wp-block-navigation.is-style-mega-menu) .header__main-wrapper {
       position: absolute;
       min-width: 100svw !important;
       min-height: min-content;
-      padding: $spacing-large;
+      padding: $spacing-medium;
     }
-  }
-
-  .wp-block-buttons {
-    padding-right: $spacing-small;
   }
 
 }
@@ -74,7 +76,7 @@ header:has(.wp-block-navigation.is-style-mega-menu) .header__main-wrapper {
     max-width: 100svw;
     overflow-x: clip;
     
-    .wp-block-navigation-item {
+    .wp-block-navigation-item:not(.is-style-box) {
       flex-direction: row;
       flex-wrap: nowrap;
       align-self: flex-start;
@@ -88,10 +90,11 @@ header:has(.wp-block-navigation.is-style-mega-menu) .header__main-wrapper {
       height: 100svh;
       padding: $spacing-medium;
       align-items: stretch;
+      // gap: clamp(.25em, 1vw, 2em);
 
       >*, .submenu__columns {
         min-width: 100%;
-        margin: auto;
+        // margin: auto;
 
         @include for-tablet-portrait-down {
 
