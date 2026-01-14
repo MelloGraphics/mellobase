@@ -6,6 +6,7 @@
 
 mark {
     background-color: inherit;
+    color: inherit;
 }
 
 ::selection {
@@ -30,6 +31,10 @@ mark {
     .has-large-font-size{
         text-wrap-style: pretty;
     }
+}
+    
+.has-text-align-center{
+    text-wrap-style: balance;
 }
 
 .has-x-large-font-size,
