@@ -1,6 +1,6 @@
 <?php
 /**
- * Enqueue scripts, styles, and functionality for sections.
+ * Enqueue section-specific styles based on core/group classnames `section--[name]`.
  *
  * @package MelloBase
  */
@@ -8,214 +8,192 @@
 namespace MelloBase\Enqueue\Blocks;
 
 /**
- * Enqueue CSS for section classes only when that class exists in the page content.
+ * Enqueue section styles for core/group blocks with section classes.
  */
-function enqueue_section_styles()
-{
-    if (is_admin()) {
-        return;
-    }
-
-    // Get available section styles
-    $section_files = glob(get_stylesheet_directory() . '/css/section--*.css');
-
-    // Safety check for glob failure
-    if (false === $section_files) {
-        return;
-    }
-
-    $theme_version = wp_get_theme()->get('Version');
-    $section_url = get_stylesheet_directory_uri() . '/css/';
-
-    // Get content to scan - use output buffering to capture rendered content
-    ob_start();
-    $content = get_all_page_content();
-    $buffer_content = ob_get_clean();
-
-    // Combine both content sources
-    $all_content = $content . ' ' . $buffer_content;
-
-    if (empty($all_content)) {
-        return;
-    }
-
-    foreach ($section_files as $file_path) {
-        $filename = basename($file_path);
-        $class_name = str_replace('.css', '', $filename);
-
-        // Check for section classes (including BEM modifiers) on group blocks or <section> elements
-        $base_class = preg_quote($class_name, '/');
-        $pattern = '/(?:<section[^>]*class=["\'][^"\']*\b' . $base_class . '(?:__[^\s"\']*)?[^"\']*["\'][^>]*>|wp:group[^}]*"className":"[^"]*\b' . $base_class . '(?:__[^\s"\']*)?[^"]*")/';
-
-        if (preg_match($pattern, $all_content)) {
-            $file_time = filemtime($file_path) ?: $theme_version;
-            wp_enqueue_style(
-                $class_name,
-                $section_url . $filename,
-                array(),
-                $theme_version . '.' . $file_time
-            );
-        }
-    }
-}
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_section_styles');
 
 /**
- * Also try enqueueing on template_redirect to catch archive pages.
+ * Enqueue section styles only for core/group blocks that have section--* classes.
  */
-add_action('template_redirect', __NAMESPACE__ . '\enqueue_section_styles_fallback');
-
-/**
- * Fallback enqueue function for archive pages.
- */
-function enqueue_section_styles_fallback()
+function enqueue_section_styles()
 {
-    // Only run this if we're on an archive and styles haven't been enqueued yet
-    if (!is_archive() && !is_home()) {
-        return;
-    }
+	// Only run on singular pages with content
+	if (!is_singular()) {
+		return;
+	}
 
-    // Simple check - if no section styles are enqueued, try again
-    global $wp_styles;
-    $section_styles_found = false;
+	global $post;
+	if (!$post || !has_blocks($post->post_content)) {
+		return;
+	}
 
-    if (isset($wp_styles->registered)) {
-        foreach ($wp_styles->registered as $handle => $style) {
-            if (strpos($handle, 'section--') === 0) {
-                $section_styles_found = true;
-                break;
-            }
-        }
-    }
+	$theme_version = wp_get_theme()->get('Version');
+	$section_stylesheets = get_section_stylesheets();
+	$section_classes = find_section_classes_in_content($post->post_content);
 
-    // If no section styles found, try enqueuing again
-    if (!$section_styles_found) {
-        enqueue_section_styles();
-    }
+	// Only enqueue stylesheets for sections actually used on the page
+	foreach ($section_classes as $section_class) {
+		if (isset($section_stylesheets[$section_class])) {
+			$stylesheet_info = $section_stylesheets[$section_class];
+			
+			wp_enqueue_style(
+				sanitize_title($section_class),
+				$stylesheet_info['src'],
+				array(),
+				$theme_version . '.' . filemtime($stylesheet_info['path'])
+			);
+		}
+	}
 }
 
 /**
- * Get all content that might contain section classes from various sources.
+ * Find all section--* classes used in core/group blocks.
  *
- * @return string Combined content from all page elements.
+ * @param string $content Post content to parse.
+ * @return array Array of section class names found (e.g., ['section--hero', 'section--cta']).
  */
-function get_all_page_content()
+function find_section_classes_in_content($content)
 {
-    global $post;
-    $content = '';
+	$section_classes = array();
+	$blocks = parse_blocks($content);
 
-    // Main post/page content
-    if (is_singular() && isset($post->post_content)) {
-        $content .= apply_filters('the_content', $post->post_content);
+	$section_classes = extract_section_classes_from_blocks($blocks);
 
-        // Include custom fields/meta that might have content
-        $custom_fields = get_post_meta($post->ID);
-        if (is_array($custom_fields)) {
-            foreach ($custom_fields as $key => $values) {
-                // Skip WordPress internal fields
-                if (strpos($key, '_') === 0 || !is_array($values)) {
-                    continue;
-                }
-                foreach ($values as $value) {
-                    if (is_string($value) && strlen($value) > 10) {
-                        $content .= ' ' . $value;
-                    }
-                }
-            }
-        }
-    }
-
-    // Archive pages - descriptions and full post content
-    if (is_archive() || is_home()) {
-        // Archive description
-        $archive_description = get_the_archive_description();
-        if ($archive_description) {
-            $content .= ' ' . $archive_description;
-        }
-
-        // Include full content from posts in the loop (not just excerpts)
-        if (have_posts()) {
-            while (have_posts()) {
-                the_post();
-                // Get full post content to catch section classes in archive posts
-                $post_content = apply_filters('the_content', get_the_content());
-                if ($post_content) {
-                    $content .= ' ' . $post_content;
-                }
-
-                // Also include excerpt as fallback
-                $excerpt = get_the_excerpt();
-                if ($excerpt) {
-                    $content .= ' ' . $excerpt;
-                }
-            }
-            wp_reset_postdata();
-        }
-    }
-
-    // Search results
-    if (is_search() && have_posts()) {
-        while (have_posts()) {
-            the_post();
-            $content .= ' ' . get_the_excerpt();
-        }
-        wp_reset_postdata();
-    }
-
-    // Block theme template parts (header, footer, and current page template)
-    $content .= get_block_theme_template_parts();
-
-    return $content;
+	return array_unique($section_classes);
 }
 
 /**
- * Get content from block theme template parts.
+ * Recursively extract section classes from blocks, including reusable blocks.
  *
- * @return string Combined template parts content.
+ * @param array $blocks Array of parsed blocks.
+ * @param int $depth Current recursion depth.
+ * @return array Array of section class names.
  */
-function get_block_theme_template_parts()
+function extract_section_classes_from_blocks($blocks, $depth = 0)
 {
-    $template_content = '';
+	$section_classes = array();
 
-    // Get the current template being used
-    $current_template_slug = get_page_template_slug();
-    if (empty($current_template_slug)) {
-        // Determine template based on page type
-        if (is_front_page()) {
-            $current_template_slug = 'front-page';
-        } elseif (is_home()) {
-            $current_template_slug = 'home';
-        } elseif (is_archive()) {
-            $current_template_slug = 'archive';
-        } elseif (is_search()) {
-            $current_template_slug = 'search';
-        } elseif (is_404()) {
-            $current_template_slug = '404';
-        } else {
-            $current_template_slug = 'index';
-        }
-    }
+	foreach ($blocks as $block) {
+		// Handle reusable blocks (core/block)
+		if ('core/block' === $block['blockName'] && !empty($block['attrs']['ref'])) {
+			// Get the reusable block content
+			$reusable_block = get_post($block['attrs']['ref']);
+			if ($reusable_block && $reusable_block->post_content) {
+				$inner_blocks = parse_blocks($reusable_block->post_content);
+				$inner_patterns = extract_section_classes_from_blocks($inner_blocks, $depth + 1);
+				$section_classes = array_merge($section_classes, $inner_patterns);
+			}
+		}
+		
+		// Check if this is a core/group block with section classes
+		if ('core/group' === $block['blockName'] && !empty($block['attrs']['className'])) {
+			$class_names = explode(' ', $block['attrs']['className']);
+			
+			foreach ($class_names as $class_name) {
+				if (strpos($class_name, 'section--') === 0) {
+					// Extract base section name for variants
+					// e.g., 'section--hero--centered' becomes 'section--hero'
+					$base_section = extract_base_section_name($class_name);
+					$section_classes[] = $base_section;
+				}
+			}
+		}
+		
+		// Check inner blocks
+		if (!empty($block['innerBlocks'])) {
+			$inner_patterns = extract_section_classes_from_blocks($block['innerBlocks'], $depth + 1);
+			$section_classes = array_merge($section_classes, $inner_patterns);
+		}
+	}
 
-    // Get the active template
-    $current_template = get_block_template(get_stylesheet() . '//' . $current_template_slug);
-    if (!$current_template) {
-        // Fallback to index template
-        $current_template = get_block_template(get_stylesheet() . '//' . 'index');
-    }
-
-    if ($current_template && isset($current_template->content)) {
-        $template_content .= ' ' . $current_template->content;
-    }
-
-    // Get common template parts
-    $template_parts = array('header', 'footer');
-    foreach ($template_parts as $part) {
-        $template_part = get_block_template(get_stylesheet() . '//' . $part, 'wp_template_part');
-        if ($template_part && isset($template_part->content)) {
-            $template_content .= ' ' . $template_part->content;
-        }
-    }
-
-    return $template_content;
+	return $section_classes;
 }
 
+/**
+ * Extract base section name from a section class.
+ * Handles both '--' and '__' as delimiters for variants.
+ * 
+ * Examples:
+ * - 'section--hero--centered' → 'section--hero'
+ * - 'section--hero__large-centered' → 'section--hero'
+ * - 'section--hero' → 'section--hero'
+ *
+ * @param string $class_name The full class name.
+ * @return string The base section name.
+ */
+function extract_base_section_name($class_name)
+{
+	// First, check if there's a '__' (double underscore) - this indicates a variant
+	if (strpos($class_name, '__') !== false) {
+		// Split at the first '__' and take everything before it
+		$parts = explode('__', $class_name, 2);
+		return $parts[0];
+	}
+	
+	// Otherwise, split by '--' to get parts
+	$parts = explode('--', $class_name);
+	
+	// If we have more than 2 parts (e.g., 'section', 'hero', 'centered')
+	// return just the first two parts (e.g., 'section--hero')
+	if (count($parts) > 2) {
+		return $parts[0] . '--' . $parts[1];
+	}
+	
+	// Otherwise return the original (e.g., 'section--hero')
+	return $class_name;
+}
+
+/**
+ * Get all available section stylesheets.
+ *
+ * @return array Array of section stylesheets with class name as key and file info as value.
+ */
+function get_section_stylesheets()
+{
+	$section_files = glob(get_stylesheet_directory() . '/css/section--*.css');
+
+	if (false === $section_files) {
+		return array();
+	}
+
+	$stylesheets = array();
+	$section_url = get_stylesheet_directory_uri() . '/css/';
+	$prefer_rtl = is_rtl();
+
+	foreach ($section_files as $file_path) {
+		$filename = basename($file_path);
+
+		// Skip RTL files if we're processing them separately
+		if ($prefer_rtl && strpos($filename, '-rtl.css') !== false) {
+			continue;
+		}
+
+		// Check if this is a base file (not RTL)
+		if (strpos($filename, '-rtl.css') !== false) {
+			continue;
+		}
+
+		$class_name = str_replace('.css', '', $filename); // e.g. 'section--hero'
+
+		// Choose RTL version if available and preferred
+		$final_filename = $filename;
+		$final_path = $file_path;
+
+		if ($prefer_rtl) {
+			$rtl_filename = str_replace('.css', '-rtl.css', $filename);
+			$rtl_path = get_stylesheet_directory() . '/css/' . $rtl_filename;
+
+			if (file_exists($rtl_path)) {
+				$final_filename = $rtl_filename;
+				$final_path = $rtl_path;
+			}
+		}
+
+		$stylesheets[$class_name] = array(
+			'path' => $final_path,
+			'src' => $section_url . $final_filename,
+		);
+	}
+
+	return $stylesheets;
+}

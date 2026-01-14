@@ -18,6 +18,28 @@ const registerBlockVariations = {
 			scope: ["inserter"],
 			isDefault: false,
 			icon: "layout",
+		},
+		{
+			name: "title-wrapper",
+			title: "Title Wrapper",
+			description: "A group block named 'Title Wrapper'.",
+			attributes: {
+				metadata: { name: "Title Wrapper" },
+			},
+			scope: ["inserter"],
+			isDefault: false,
+			icon: "layout",
+		},
+		{
+			name: "content-wrapper",
+			title: "Content Wrapper",
+			description: "A group block named 'Content Wrapper'.",
+			attributes: {
+				metadata: { name: "Content Wrapper" },
+			},
+			scope: ["inserter"],
+			isDefault: false,
+			icon: "layout",
 		}
 	],
 };

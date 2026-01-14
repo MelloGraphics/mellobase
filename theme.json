@@ -105,17 +105,17 @@
 					"name": "L"
 				},
 				{
-					"size": "clamp(3.75rem,  10.41vw, 5.625rem)",
+					"size": "clamp(3.75rem,  8.41vw, 5.625rem)",
 					"slug": "x-large",
 					"name": "XL"
 				},
 				{
-					"size": "clamp(4.0625rem, 11.72vw, 9.375rem)",
+					"size": "clamp(4.0625rem, 9.72vw, 9.375rem)",
 					"slug": "xx-large",
 					"name": "XXL"
 				},
 				{
-					"size": "clamp(4.375rem, 13.02vw, 11.25rem)",
+					"size": "clamp(4.375rem, 10.02vw, 11.25rem)",
 					"slug": "section",
 					"name": "Section"
 				}
@@ -132,36 +132,42 @@
 							"fontFamily": "Montserrat",
 							"fontStyle": "normal",
 							"fontWeight": "700",
+							"fontDisplay": "swap",
 							"src": "file:./assets/fonts/montserrat/Montserrat-Bold.ttf"
 						},
 						{
 							"fontFamily": "Montserrat",
 							"fontStyle": "italic",
 							"fontWeight": "700",
+							"fontDisplay": "swap",
 							"src": "file:./assets/fonts/montserrat/Montserrat-BoldItalic.ttf"
 						},
 						{
 							"fontFamily": "Montserrat",
 							"fontStyle": "normal",
 							"fontWeight": "500",
+							"fontDisplay": "swap",
 							"src": "file:./assets/fonts/montserrat/Montserrat-Medium.ttf"
 						},
 						{
 							"fontFamily": "Montserrat",
 							"fontStyle": "italic",
 							"fontWeight": "500",
+							"fontDisplay": "swap",
 							"src": "file:./assets/fonts/montserrat/Montserrat-MediumItalic.ttf"
 						},
 						{
 							"fontFamily": "Montserrat",
 							"fontStyle": "normal",
 							"fontWeight": "250",
+							"fontDisplay": "swap",
 							"src": "file:./assets/fonts/montserrat/Montserrat-Thin.ttf"
 						},
 						{
 							"fontFamily": "Montserrat",
 							"fontStyle": "italic",
 							"fontWeight": "250",
+							"fontDisplay": "swap",
 							"src": "file:./assets/fonts/montserrat/Montserrat-ThinItalic.ttf"
 						}
 					],

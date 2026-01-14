@@ -18,11 +18,11 @@ body {
 body {
 	-webkit-font-smoothing: antialiased;
 }
-img,
-picture,
-video,
-canvas,
-svg {
+img:not([hidden]),
+picture:not([hidden]),
+video:not([hidden]),
+canvas:not([hidden]),
+svg:not([hidden]) {
 	display: block;
 	max-width: 100%;
 	height: auto;

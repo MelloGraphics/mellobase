@@ -41,6 +41,6 @@
 		"create-block": "cd ./src/blocks && npx @wordpress/create-block --namespace=mellobase --no-plugin",
 		"create-block:dynamic": "cd ./src/blocks && npx @wordpress/create-block --namespace=mellobase --no-plugin --variant=dynamic",
 		"start": "wp-scripts start --config ./bin/webpack.config.js --webpack-src-dir=src/blocks",
-		"export": "npm run build && zip -r mellobase-export.zip theme.json style.css screenshot.png functions.php acf-json/*.json acf-json blocks css js inc parts patterns templates fonts -x '*.DS_Store' '*.map' 'src/*' 'bin/*' '.git/*' '.github/*' 'node_modules/*' '*.lock' '*.xml' '*.md' '.editorconfig' '.prettierrc'"
+		"export": "npm run build && cd .. && zip -r mellobase.zip mellobase -x 'mellobase/src/**' 'mellobase/bin/**' 'mellobase/node_modules/**' 'mellobase/.git/**' 'mellobase/.github/**' 'mellobase/composer.*' 'mellobase/package-lock.json' 'mellobase/package.json' 'mellobase/*.md' 'mellobase/*.xml' 'mellobase/*.map' 'mellobase/.editorconfig' 'mellobase/.prettierrc' 'mellobase/*.lock' 'mellobase/**/*.scss' 'mellobase/**/*~' 'mellobase/wp-env.json'"
 	}
 }

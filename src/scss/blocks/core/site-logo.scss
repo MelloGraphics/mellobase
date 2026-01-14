@@ -1,0 +1,11 @@
+//  Core site logo block styling
+
+@use "../../utils" as *;
+
+.wp-block-site-logo {
+    img,
+    svg,
+    picture {
+        width: clamp(100px, 20vw, 220px);
+    }
+}
