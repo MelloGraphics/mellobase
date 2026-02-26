@@ -20,6 +20,19 @@ const registerBlockVariations = {
 			icon: "layout",
 		},
 		{
+			name: "main",
+			title: "Main",
+			description: "A full-width group block using a <main> tag.",
+			attributes: {
+				align: "full",
+				tagName: "main",
+				metadata: { name: "Main" },
+			},
+			scope: ["inserter"],
+			isDefault: false,
+			icon: "layout",
+		},
+		{
 			name: "title-wrapper",
 			title: "Title Wrapper",
 			description: "A group block named 'Title Wrapper'.",

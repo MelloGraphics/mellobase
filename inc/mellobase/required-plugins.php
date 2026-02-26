@@ -35,8 +35,6 @@ function mello_display_plugin_admin_notice()
             // Display a custom message for ACF (either free or pro).
             if ($plugin === 'advanced-custom-fields (free or pro)') {
                 echo '<li><a href="https://wordpress.org/plugins/advanced-custom-fields/" target="_blank">ACF (Advanced Custom Fields) Free or ACF Pro</a></li>';
-            } elseif ($plugin === 'svg-support/svg-support.php') {
-                echo '<li><a href="https://wordpress.org/plugins/svg-support/" target="_blank">SVG Support</a></li>';
             } elseif ($plugin === 'mello-block-extensions/mello-block-extensions.php') {
                 echo '<li>Mello Block Extensions (private plugin)</li>';
             } else {

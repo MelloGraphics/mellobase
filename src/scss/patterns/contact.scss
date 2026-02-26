@@ -1,0 +1,32 @@
+@use "../utils" as *;
+
+// All cards hover
+
+.pattern--contact--columns{
+	&__content-wrapper {
+		@include for-tablet-portrait-down {
+			flex-direction: column;
+		}
+
+		* {
+			max-width: unset;
+		}
+	}
+
+	&__column {
+		@include for-tablet-portrait-down {
+			display: contents;
+			border-width: 10px;
+
+			.wp-block-heading,
+			.section-contact__intro {
+				order: -2;
+			}
+
+			.section-contact__form {
+				order: -1;
+                width: 100%;
+			}
+		}
+	}
+}
