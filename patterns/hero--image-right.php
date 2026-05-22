@@ -33,7 +33,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","className":"pattern\u002d\u002dhero pattern\u002d\u002dhero\u002d\u002dimage-right__image-wrapper","layout":{"type":"constrained"}} -->
 <div class="wp-block-column is-vertically-aligned-center pattern--hero pattern--hero--image-right__image-wrapper"><!-- wp:image {"id":98,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","metadata":{"name":"Image","bindings":{"__default":{"source":"core/pattern-overrides"}}},"align":"center","className":"is-style-crop-two","scrollSpeed":-1,"animationType":"slide-down","animateSelf":true} -->
-<figure class="wp-block-image aligncenter size-full is-style-crop-two" data-scroll-speed="-1" data-animation="true" data-animation-type="slide-down" data-animation-trigger="section" data-animation-duration="500" data-animation-delay="0" data-animation-trigger-point="-25"><img src="http://mellobase.local/wp-content/uploads/placeholder-image.png" alt="" class="wp-image-98" style="aspect-ratio:1;object-fit:cover"/></figure>
+<figure class="wp-block-image aligncenter size-full is-style-crop-two" data-scroll-speed="-1" data-animation="true" data-animation-type="slide-down" data-animation-trigger="section" data-animation-duration="500" data-animation-delay="0" data-animation-trigger-point="-25"><img src="/wp-content/uploads/placeholder-image.png" alt="" class="wp-image-98" style="aspect-ratio:1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></section>

@@ -1,7 +1,6 @@
 @forward "reset";
 @forward "typography";
 @forward "visually-hidden";
-@forward "forms";
 
 html{
     interpolate-size: allow-keywords;
@@ -10,4 +9,17 @@ html{
 
 .wp-site-blocks{
     overflow-x: clip;
+}
+
+// hide empty buttons from synced patterns
+
+.wp-block-buttons:not(:has(.wp-block-button)) {
+    display: none;
+}
+
+// hide empty paragraphs from synced patterns
+
+p:empty,
+p:has(br:only-child) {
+    display: none;
 }

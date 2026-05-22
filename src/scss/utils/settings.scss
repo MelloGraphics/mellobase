@@ -59,10 +59,14 @@ $speed-medium: var(--wp--custom--speed-medium);
 $speed-slow: var(--wp--custom--speed-slow);
 $speed: $speed-medium; // default animation speed
 
-// radius
-$radius-large: var(--wp--custom--radius-large);
-$radius-medium: var(--wp--custom--radius-medium);
-$radius-small: var(--wp--custom--radius-small);
+/**
+ * Theme.json Set Radius Variables
+ */
+$radius-full: var(--wp--preset--border-radius--full);
+$radius-large: var(--wp--preset--border-radius--large);
+$radius-medium: var(--wp--preset--border-radius--medium);
+$radius-small: var(--wp--preset--border-radius--small);
+$radius-x-small: var(--wp--preset--border-radius--x-small);
 
 /**
  * Wordpress misc Variables

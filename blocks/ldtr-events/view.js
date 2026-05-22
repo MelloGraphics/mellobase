@@ -1,1 +1,0 @@
-console.log("Hello World! (from mellobase-ldtr-event block)");

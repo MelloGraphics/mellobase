@@ -14,7 +14,7 @@
         gap: .5em;
 
         &::after{
-            content: '\e09f';
+            content: '';
             font-family: $font-icon;
         }
     }

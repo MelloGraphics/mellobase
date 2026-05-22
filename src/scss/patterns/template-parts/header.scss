@@ -20,7 +20,7 @@ header.wp-block-template-part:has(>.pattern--header__main-wrapper) {
 	// margin-right: calc($spacing-medium * -1);
 	// margin-left: calc($spacing-medium * 1);
 
-	.pattern--header__notification-bar-wrapper {
+	.pattern--header__notification-bar {
 		font-size: $font-size-small;
 		font-weight: 500;
 		padding: .1em;
@@ -132,7 +132,7 @@ header.wp-block-template-part:has(>.pattern--header__main-wrapper) {
 		}
 
 		.pattern--header__breadcrumbs-wrapper,
-		.pattern--header__notification-bar-wrapper {
+		.pattern--header__notification-bar {
 			height: 0;
 			padding-left: $spacing-small;
 			padding-right: $spacing-small;
